@@ -1,0 +1,103 @@
+name: Watch for a new PA shelter list
+
+# Every 3 hours, compare the list PA links on its Community Haze Shelters page
+# with the one the site uses. If they differ, open an issue listing what
+# changed and fail this run so GitHub emails you. To put the new list on the
+# site, run this workflow by hand with "Use PA's latest list" ticked.
+on:
+  schedule:
+    - cron: "41 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Use PA's latest list on the site now (if it changed)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: watch-pa
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Compare PA's list with the site's
+        id: watch
+        run: |
+          set +e
+          python scripts/watch_pa.py watch-output
+          code=$?
+          set -e
+          echo "exit=$code" >> "$GITHUB_OUTPUT"
+          if [ -f watch-output/result.json ]; then
+            echo "changed=$(jq -r .changed watch-output/result.json)" >> "$GITHUB_OUTPUT"
+            echo "sha=$(jq -r .sha256 watch-output/result.json | cut -c1-12)" >> "$GITHUB_OUTPUT"
+            cat watch-output/summary.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Alert that PA's page could not be checked
+        if: steps.watch.outputs.exit != '0'
+        run: |
+          title="Could not check PA's haze shelter page"
+          existing=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$existing" ]; then
+            gh issue create --title "$title" --body "The scheduled check couldn't read https://www.pa.gov.sg/our-network/community-clubs/shelters/ or find the list's PDF link on it. PA may have moved or redesigned the page. See the run log: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          fi
+          echo "::error::Could not check PA's page. See the issue."
+          exit 1
+
+      - name: Put the new list on the site
+        if: steps.watch.outputs.changed == 'true' && github.event.inputs.apply == 'true'
+        run: |
+          cp watch-output/new.pdf data/source.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/source.pdf
+          git commit -m "Use PA's latest haze shelter list"
+          git push
+          # Pushes made by this workflow don't start other workflows, so start
+          # the publish workflow directly.
+          gh workflow run site.yml --ref "$GITHUB_REF_NAME"
+          for n in $(gh issue list --state open --label pa-list --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Applied in $(git rev-parse --short HEAD). The site is republishing with PA's latest list."
+          done
+
+      - name: Alert that PA has a new list
+        if: steps.watch.outputs.changed == 'true' && github.event.inputs.apply != 'true'
+        run: |
+          sha="${{ steps.watch.outputs.sha }}"
+          existing=$(gh issue list --state open --search "$sha in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            echo "Already alerted in issue #$existing."
+            exit 0
+          fi
+          {
+            cat watch-output/summary.md
+            echo
+            echo "## To use it on the site"
+            echo
+            echo "Open **Actions → Watch for a new PA shelter list → Run workflow**, tick **Use PA's latest list on the site now**, and click **Run workflow**. The site republishes in a few minutes and this issue closes itself."
+            echo
+            echo "Then check \`data/geocode-report.md\` for entries whose address and postal code disagree."
+          } > body.md
+          gh label create pa-list --color E99695 --description "PA published a different shelter list" --force
+          gh issue create --title "New PA haze shelter list available ($sha)" --body-file body.md --label pa-list
+          echo "::error::PA has published a different shelter list. See the new issue."
+          exit 1
