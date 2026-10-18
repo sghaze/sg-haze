@@ -22,6 +22,7 @@ jobs:
   check:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
 
@@ -57,6 +58,7 @@ jobs:
       - name: OneMap diagnostics
         if: always()
         continue-on-error: true
+        timeout-minutes: 4
         env:
           SITE_URL: ${{ steps.site.outputs.url }}
         run: |
@@ -64,9 +66,12 @@ jobs:
           chrome="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
           headless="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.0.0 Safari/537.36"
           probe() { # $1=postal $2=label $3=user agent
-            curl -s -o /dev/null -D /tmp/h -A "$3" -H "Origin: $origin" \
+            : > /tmp/h
+            start=$(date +%s%N)
+            curl -s -m 10 -o /dev/null -D /tmp/h -A "$3" -H "Origin: $origin" \
               "https://www.onemap.gov.sg/api/common/elastic/search?searchVal=$1&returnGeom=Y&getAddrDetails=Y&pageNum=1"
-            printf '%s %-9s %s | acao=%s | %s\n' "$1" "$2" "$(head -1 /tmp/h | tr -d '\r')" \
+            ms=$(( ($(date +%s%N) - start) / 1000000 ))
+            printf '%s %-9s %5sms %s | acao=%s | %s\n' "$1" "$2" "$ms" "$(head -1 /tmp/h | tr -d '\r' || true)" \
               "$(grep -i '^access-control-allow-origin' /tmp/h | cut -d' ' -f2 | tr -d '\r' | paste -sd, -)" \
               "$(grep -iE '^(x-cache|server|age|via|retry-after|x-amz-cf-pop):' /tmp/h | tr -d '\r' | paste -sd' ' -)"
           }
