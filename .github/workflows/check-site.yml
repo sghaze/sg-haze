@@ -54,6 +54,29 @@ jobs:
           SITE_URL: ${{ steps.site.outputs.url }}
         run: node scripts/check_live_site.mjs "$SITE_URL" check-output
 
+      - name: OneMap diagnostics
+        if: always()
+        continue-on-error: true
+        env:
+          SITE_URL: ${{ steps.site.outputs.url }}
+        run: |
+          origin=$(echo "$SITE_URL" | sed -E 's#^(https?://[^/]+).*#\1#')
+          chrome="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+          headless="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.0.0 Safari/537.36"
+          probe() { # $1=postal $2=label $3=user agent
+            curl -s -o /dev/null -D /tmp/h -A "$3" -H "Origin: $origin" \
+              "https://www.onemap.gov.sg/api/common/elastic/search?searchVal=$1&returnGeom=Y&getAddrDetails=Y&pageNum=1"
+            printf '%s %-9s %s | acao=%s | %s\n' "$1" "$2" "$(head -1 /tmp/h | tr -d '\r')" \
+              "$(grep -i '^access-control-allow-origin' /tmp/h | cut -d' ' -f2 | tr -d '\r' | paste -sd, -)" \
+              "$(grep -iE '^(x-cache|server|age|via|retry-after|x-amz-cf-pop):' /tmp/h | tr -d '\r' | paste -sd' ' -)"
+          }
+          echo "== Spaced out, 2 s apart, normal Chrome user agent =="
+          for pc in 791457 650116 690119 828629 529204 390087 129605 560507; do probe $pc chrome "$chrome"; sleep 2; done
+          echo "== Same codes, headless Chrome user agent =="
+          for pc in 791457 650116 690119 828629; do probe $pc headless "$headless"; sleep 2; done
+          echo "== Burst, no pause =="
+          for pc in 791457 650116 690119 828629 529204 390087 129605 560507 050034 793441; do probe $pc burst "$chrome"; done
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:

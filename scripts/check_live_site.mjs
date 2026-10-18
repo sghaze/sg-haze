@@ -8,6 +8,9 @@ import { mkdirSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const [siteArg, outDir = 'check-output'] = process.argv.slice(2);
+// Pause between searches, like a person typing. Real visitors search once
+// or twice; firing searches back to back can trip OneMap's rate limits.
+const SEARCH_GAP_MS = Number(process.env.SEARCH_GAP_MS || 2000);
 if (!siteArg) {
   console.error('Usage: node scripts/check_live_site.mjs <site-url> <output-dir>');
   process.exit(2);
@@ -58,6 +61,16 @@ try {
   page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
   page.on('requestfailed', (r) => errors.push(`request failed: ${r.url()} ${r.failure()?.errorText}`));
 
+  // Record what OneMap actually sent back, so CORS failures can be diagnosed.
+  const onemap = new Map();
+  page.on('response', async (r) => {
+    if (!r.url().includes('onemap.gov.sg')) return;
+    const h = await r.allHeaders().catch(() => ({}));
+    const code = new URL(r.url()).searchParams.get('searchVal');
+    onemap.set(code, `OneMap HTTP ${r.status()}, allow-origin=${h['access-control-allow-origin'] || 'MISSING'}`
+      + `${h['x-cache'] ? `, x-cache=${h['x-cache']}` : ''}${h.server ? `, server=${h.server}` : ''}`);
+  });
+
   const res = await page.goto(SITE, { waitUntil: 'networkidle' });
   check(res && res.ok(), 'home page loads', `HTTP ${res && res.status()}`);
   check((await page.title()) === 'Haze Shelter Finder', 'page title', await page.title());
@@ -77,6 +90,7 @@ try {
       check(false, `search ${pc}`, 'no shelter with this postal code in the data any more');
       continue;
     }
+    await page.waitForTimeout(SEARCH_GAP_MS);
     const started = Date.now();
     await page.fill('#postal', pc);
     await page.click('#search button[type=submit]');
@@ -96,7 +110,7 @@ try {
     check(exact && first.includes(expected.name),
       `search ${pc} finds ${expected.name}`,
       exact ? `first result: ${first.replace(/^Nearest/, '').trim()}, ${dist}, ${ms} ms`
-        : `not an exact OneMap match. status="${status}" note="${note}"`);
+        : `not an exact OneMap match. ${onemap.get(pc) || 'no OneMap response seen'}. note="${note}"`);
   }
   await page.screenshot({ path: `${outDir}/desktop.png`, fullPage: true });
 
@@ -111,7 +125,8 @@ try {
   await page.click('#search button[type=submit]');
   check(((await page.textContent('#status')) || '').includes('6-digit'), 'rejects a 5-digit postal code');
 
-  check(errors.length === 0, 'no browser errors (CSP, scripts, failed requests)', errors.join(' | '));
+  check(errors.length === 0, 'no browser errors (CSP, scripts, failed requests)',
+    errors.length ? `${errors.length} errors, first: ${errors[0]}` : '');
   await context.close();
 
   // ---- Phone: layout and "use my location" ----
