@@ -1,0 +1,44 @@
+name: Probe air quality sources (temporary)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe data.gov.sg and haze.gov.sg
+        run: |
+          origin="https://sghaze.github.io"
+          probe() {
+            echo "================ $1"
+            curl -s -m 20 -D /tmp/h -o /tmp/b -H "Origin: $origin" "$1" || echo "curl failed: $?"
+            grep -iE '^(HTTP|access-control|content-type|x-ratelimit|ratelimit|retry-after|cache-control|age|server)' /tmp/h | tr -d '\r'
+            echo "--- body ($(wc -c < /tmp/b) bytes):"
+            head -c 2500 /tmp/b; echo
+          }
+          probe "https://api-open.data.gov.sg/v2/real-time/api/psi"
+          sleep 2
+          probe "https://api-open.data.gov.sg/v2/real-time/api/pm25"
+          sleep 2
+          probe "https://api.data.gov.sg/v1/environment/psi"
+          sleep 2
+          probe "https://api.data.gov.sg/v1/environment/pm25"
+          sleep 2
+          echo "================ preflight check (OPTIONS) for v2 psi"
+          curl -s -m 20 -X OPTIONS -D - -o /dev/null -H "Origin: $origin" -H "Access-Control-Request-Method: GET" \
+            "https://api-open.data.gov.sg/v2/real-time/api/psi" | grep -iE '^(HTTP|access-control)' | tr -d '\r'
+          echo "================ haze.gov.sg home page"
+          curl -sL -m 20 -D /tmp/h -o /tmp/haze.html "https://www.haze.gov.sg/" || echo "curl failed"
+          grep -iE '^(HTTP|content-type|access-control|x-frame-options|content-security-policy)' /tmp/h | tr -d '\r' | cut -c1-300
+          echo "--- size: $(wc -c < /tmp/haze.html)"
+          echo "--- URLs that look like data sources:"
+          grep -oE '(https?:)?//[A-Za-z0-9./_?=&%-]+' /tmp/haze.html | grep -iE 'api|json|psi|pm25|data' | sort -u | head -40
+          echo "--- script sources:"
+          grep -oE '<script[^>]+src="[^"]+"' /tmp/haze.html | head -20
+          echo "================ haze.gov.sg robots.txt"
+          curl -sL -m 20 "https://www.haze.gov.sg/robots.txt" | head -30
