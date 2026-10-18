@@ -82,7 +82,8 @@
   }
 
   function formatDistance(km, approx) {
-    const text = km < 1 ? `${Math.max(10, Math.round(km * 100) * 10)} m` : `${km.toFixed(1)} km`;
+    if (km < 0.05) return approx ? 'nearby' : 'under 50 m';
+    const text = km < 1 ? `${Math.round(km * 100) * 10} m` : `${km.toFixed(1)} km`;
     return approx ? `about ${text}` : text;
   }
 

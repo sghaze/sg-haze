@@ -38,6 +38,10 @@ docs/  (index.html, app.js, style.css, shelters.json, postal-areas.json) ──�
    data changes, and publishes `docs/` to GitHub Pages.
 4. In the browser, `docs/app.js` asks OneMap for the visitor's postal code location, then sorts
    shelters by distance. Nothing is sent to any other server.
+5. **`Check live site`** (`.github/workflows/check-site.yml`) opens the published site in a real
+   browser after every publish and every morning at 07:17 Singapore time. It runs live postal code
+   searches (`scripts/check_live_site.mjs`). If OneMap changes or the site breaks, the run fails
+   and GitHub emails you. Screenshots are saved with each run.
 
 **Backup if OneMap is down:** `docs/postal-areas.json` holds the rough centre of every postal area
 (the first 2–3 digits), built by `scripts/build_postal_areas.py`. If OneMap doesn't answer within

@@ -1,0 +1,62 @@
+name: Check live site
+
+# Opens the published site in a browser and runs real postal code searches.
+# Runs after each publish, every morning, and on demand.
+on:
+  workflow_run:
+    workflows: ["Update data and publish site"]
+    types: [completed]
+  schedule:
+    - cron: "17 23 * * *" # 07:17 Singapore time
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Site address to check (leave blank for the GitHub Pages address)"
+        required: false
+
+permissions:
+  contents: read
+  pages: read
+
+jobs:
+  check:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Find the site address
+        id: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_URL: ${{ inputs.url }}
+        run: |
+          url="$INPUT_URL"
+          if [ -z "$url" ]; then
+            url=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .html_url)
+          fi
+          echo "Checking $url"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: Install browser automation
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          google-chrome --version || npx playwright install --with-deps chromium
+
+      - name: Check the site
+        env:
+          SITE_URL: ${{ steps.site.outputs.url }}
+        run: node scripts/check_live_site.mjs "$SITE_URL" check-output
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots
+          path: check-output
+          retention-days: 14
