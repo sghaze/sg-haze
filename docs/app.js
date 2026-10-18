@@ -3,6 +3,7 @@
 (() => {
   const ONEMAP_URL = 'https://www.onemap.gov.sg/api/common/elastic/search';
   const ONEMAP_TIMEOUT_MS = 8000;
+  const ONEMAP_RETRY_DELAY_MS = 1500;
   const PAGE_SIZE = 5;
   const SG_BOUNDS = { minLat: 1.15, maxLat: 1.48, minLng: 103.59, maxLng: 104.1 };
 
@@ -100,6 +101,21 @@
   // Returns {lat, lng, label}, or null if OneMap doesn't know the postal code.
   // Throws if OneMap can't be reached.
   async function geocodePostal(pc) {
+    const started = Date.now();
+    try {
+      return await onemapSearch(pc);
+    } catch (err) {
+      // OneMap answers bursts of requests from one network with HTTP 429 and
+      // no CORS header, which the browser reports as a network error. That
+      // fails fast, so wait a moment and try once more. Don't retry slow
+      // failures (timeouts): the visitor has already waited long enough.
+      if (Date.now() - started > 3000) throw err;
+      await new Promise((resolve) => setTimeout(resolve, ONEMAP_RETRY_DELAY_MS));
+      return onemapSearch(pc);
+    }
+  }
+
+  async function onemapSearch(pc) {
     const params = new URLSearchParams({ searchVal: pc, returnGeom: 'Y', getAddrDetails: 'Y', pageNum: '1' });
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), ONEMAP_TIMEOUT_MS);

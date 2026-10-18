@@ -78,6 +78,10 @@ Checked against PA's own [OnePA](https://www.onepa.gov.sg/) pages:
 - **Opening hours and activation aren't in the data.** Shelters open only when activated, and
   hours differ by venue. The site says so and points to [haze.gov.sg](https://www.haze.gov.sg/)
   and [onepa.gov.sg](https://www.onepa.gov.sg/).
+- **OneMap limits rapid requests from one internet address.** It answers with HTTP 429 and no
+  CORS header, which browsers report as a network error. The site waits 1.5 s and retries once. If
+  many people on one shared network (office, school, some mobile carriers) search at the same
+  moment, some may still get the approximate postal-area result.
 - **English only.**
 - Two shelters are pinned to the next-door block (32–51 m away) because their address omits the
   block letter. See `data/geocode-report.md`.
