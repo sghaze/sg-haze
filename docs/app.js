@@ -595,6 +595,17 @@
     search(els.query.value);
   });
 
+  // The full disclaimer is folded away in the footer; open it when linked to.
+  function openDisclaimer() {
+    const d = document.getElementById('disclaimer');
+    if (d && !d.open) d.open = true;
+  }
+  document.addEventListener('click', (e) => {
+    if (e.target.closest && e.target.closest('a[href="#disclaimer"]')) openDisclaimer();
+  });
+  window.addEventListener('hashchange', () => { if (location.hash === '#disclaimer') openDisclaimer(); });
+  if (location.hash === '#disclaimer') openDisclaimer();
+
   els.locate.addEventListener('click', searchLocation);
   els.more.addEventListener('click', renderMore);
 
