@@ -1,0 +1,3838 @@
+{
+ "address:107 Canberra Street": [
+  {
+   "blk_no": "107",
+   "road_name": "CANBERRA STREET",
+   "building": "EASTBROOK @ CANBERRA",
+   "address": "107 CANBERRA STREET EASTBROOK @ CANBERRA SINGAPORE 750107",
+   "postal": "750107",
+   "lat": 1.449676077324481,
+   "lng": 103.8328081684579
+  }
+ ],
+ "address:185 Woodlands St 13": [
+  {
+   "blk_no": "185",
+   "road_name": "WOODLANDS STREET 13",
+   "building": "MARSILING GREENVIEW",
+   "address": "185 WOODLANDS STREET 13 MARSILING GREENVIEW SINGAPORE 730185",
+   "postal": "730185",
+   "lat": 1.436275658793144,
+   "lng": 103.7764722987432
+  }
+ ],
+ "postal:050034": [
+  {
+   "blk_no": "34",
+   "road_name": "UPPER CROSS STREET",
+   "building": "NIL",
+   "address": "34 UPPER CROSS STREET SINGAPORE 050034",
+   "postal": "050034",
+   "lat": 1.286235214831497,
+   "lng": 103.8423033408461
+  }
+ ],
+ "postal:080333": [
+  {
+   "blk_no": "333",
+   "road_name": "KRETA AYER ROAD",
+   "building": "NIL",
+   "address": "333 KRETA AYER ROAD SINGAPORE 080333",
+   "postal": "080333",
+   "lat": 1.280748336812734,
+   "lng": 103.8424634010201
+  }
+ ],
+ "postal:088995": [
+  {
+   "blk_no": "28A",
+   "road_name": "KRETA AYER ROAD",
+   "building": "KRETA AYER COMMUNITY CLUB",
+   "address": "28A KRETA AYER ROAD KRETA AYER COMMUNITY CLUB SINGAPORE 088995",
+   "postal": "088995",
+   "lat": 1.281208198577837,
+   "lng": 103.8430205222926
+  }
+ ],
+ "postal:089774": [
+  {
+   "blk_no": "101",
+   "road_name": "CANTONMENT ROAD",
+   "building": "TANJONG PAGAR COMMUNITY CLUB",
+   "address": "101 CANTONMENT ROAD TANJONG PAGAR COMMUNITY CLUB SINGAPORE 089774",
+   "postal": "089774",
+   "lat": 1.276166985796882,
+   "lng": 103.8415842055679
+  }
+ ],
+ "postal:090005": [
+  {
+   "blk_no": "5",
+   "road_name": "TELOK BLANGAH CRESCENT",
+   "building": "MOUNT FABER GREEN",
+   "address": "5 TELOK BLANGAH CRESCENT MOUNT FABER GREEN SINGAPORE 090005",
+   "postal": "090005",
+   "lat": 1.27872402905423,
+   "lng": 103.8192203848022
+  }
+ ],
+ "postal:090022": [
+  {
+   "blk_no": "22",
+   "road_name": "TELOK BLANGAH CRESCENT",
+   "building": "NIL",
+   "address": "22 TELOK BLANGAH CRESCENT SINGAPORE 090022",
+   "postal": "090022",
+   "lat": 1.276559215997678,
+   "lng": 103.8198219169021
+  }
+ ],
+ "postal:090034": [
+  {
+   "blk_no": "34",
+   "road_name": "TELOK BLANGAH WAY",
+   "building": "NIL",
+   "address": "34 TELOK BLANGAH WAY SINGAPORE 090034",
+   "postal": "090034",
+   "lat": 1.273517800574647,
+   "lng": 103.8224809884473
+  }
+ ],
+ "postal:098917": [
+  {
+   "blk_no": "51",
+   "road_name": "TELOK BLANGAH CRESCENT",
+   "building": "RADIN MAS COMMUNITY CLUB",
+   "address": "51 TELOK BLANGAH CRESCENT RADIN MAS COMMUNITY CLUB SINGAPORE 098917",
+   "postal": "098917",
+   "lat": 1.275806470252735,
+   "lng": 103.8198443889957
+  }
+ ],
+ "postal:100047": [
+  {
+   "blk_no": "47",
+   "road_name": "TELOK BLANGAH DRIVE",
+   "building": "BLANGAH COURT",
+   "address": "47 TELOK BLANGAH DRIVE BLANGAH COURT SINGAPORE 100047",
+   "postal": "100047",
+   "lat": 1.272044271037642,
+   "lng": 103.8100969536232
+  }
+ ],
+ "postal:100075": [
+  {
+   "blk_no": "75",
+   "road_name": "TELOK BLANGAH DRIVE",
+   "building": "NIL",
+   "address": "75 TELOK BLANGAH DRIVE SINGAPORE 100075",
+   "postal": "100075",
+   "lat": 1.27489670852233,
+   "lng": 103.8086953478791
+  }
+ ],
+ "postal:100092": [
+  {
+   "blk_no": "92",
+   "road_name": "TELOK BLANGAH STREET 31",
+   "building": "TELOK BLANGAH PARCVIEW",
+   "address": "92 TELOK BLANGAH STREET 31 TELOK BLANGAH PARCVIEW SINGAPORE 100092",
+   "postal": "100092",
+   "lat": 1.276214635341448,
+   "lng": 103.8076446585231
+  }
+ ],
+ "postal:103104": [
+  {
+   "blk_no": "104C",
+   "road_name": "DEPOT ROAD",
+   "building": "DEPOT HEIGHTS",
+   "address": "104C DEPOT ROAD DEPOT HEIGHTS SINGAPORE 103104",
+   "postal": "103104",
+   "lat": 1.28054679818301,
+   "lng": 103.811571533865
+  }
+ ],
+ "postal:108943": [
+  {
+   "blk_no": "450",
+   "road_name": "TELOK BLANGAH STREET 31",
+   "building": "TELOK BLANGAH COMMUNITY CLUB",
+   "address": "450 TELOK BLANGAH STREET 31 TELOK BLANGAH COMMUNITY CLUB SINGAPORE 108943",
+   "postal": "108943",
+   "lat": 1.274862657141187,
+   "lng": 103.8078754257342
+  }
+ ],
+ "postal:120343": [
+  {
+   "blk_no": "343",
+   "road_name": "CLEMENTI AVENUE 5",
+   "building": "NIL",
+   "address": "343 CLEMENTI AVENUE 5 SINGAPORE 120343",
+   "postal": "120343",
+   "lat": 1.317908525731415,
+   "lng": 103.770934449602
+  }
+ ],
+ "postal:120359": [
+  {
+   "blk_no": "359",
+   "road_name": "CLEMENTI AVENUE 2",
+   "building": "NIL",
+   "address": "359 CLEMENTI AVENUE 2 SINGAPORE 120359",
+   "postal": "120359",
+   "lat": 1.313492924255782,
+   "lng": 103.7698547810068
+  }
+ ],
+ "postal:129605": [
+  {
+   "blk_no": "2",
+   "road_name": "CLEMENTI WEST STREET 2",
+   "building": "WEST COAST COMMUNITY CENTRE",
+   "address": "2 CLEMENTI WEST STREET 2 WEST COAST COMMUNITY CENTRE SINGAPORE 129605",
+   "postal": "129605",
+   "lat": 1.302645563429425,
+   "lng": 103.7648320714911
+  }
+ ],
+ "postal:130001": [
+  {
+   "blk_no": "1",
+   "road_name": "DOVER ROAD",
+   "building": "DOVER COURT",
+   "address": "1 DOVER ROAD DOVER COURT SINGAPORE 130001",
+   "postal": "130001",
+   "lat": 1.302525746948527,
+   "lng": 103.7832731668167
+  }
+ ],
+ "postal:130005": [
+  {
+   "blk_no": "5",
+   "road_name": "DOVER CRESCENT",
+   "building": "DOVER COURT",
+   "address": "5 DOVER CRESCENT DOVER COURT SINGAPORE 130005",
+   "postal": "130005",
+   "lat": 1.304060127643129,
+   "lng": 103.7826372009359
+  }
+ ],
+ "postal:140104": [
+  {
+   "blk_no": "104",
+   "road_name": "COMMONWEALTH CRESCENT",
+   "building": "NIL",
+   "address": "104 COMMONWEALTH CRESCENT SINGAPORE 140104",
+   "postal": "140104",
+   "lat": 1.307958753118982,
+   "lng": 103.7999769429385
+  }
+ ],
+ "postal:141061": [
+  {
+   "blk_no": "61",
+   "road_name": "STRATHMORE AVENUE",
+   "building": "STRATHMORE GREEN",
+   "address": "61 STRATHMORE AVENUE STRATHMORE GREEN SINGAPORE 141061",
+   "postal": "141061",
+   "lat": 1.293997750075626,
+   "lng": 103.8109792121235
+  }
+ ],
+ "postal:141150": [
+  {
+   "blk_no": "150",
+   "road_name": "MEI LING STREET",
+   "building": "NIL",
+   "address": "150 MEI LING STREET SINGAPORE 141150",
+   "postal": "141150",
+   "lat": 1.294903078546949,
+   "lng": 103.8036992985747
+  }
+ ],
+ "postal:142053": [
+  {
+   "blk_no": "53",
+   "road_name": "COMMONWEALTH DRIVE",
+   "building": "COMMONWEALTH 10",
+   "address": "53 COMMONWEALTH DRIVE COMMONWEALTH 10 SINGAPORE 142053",
+   "postal": "142053",
+   "lat": 1.302058782570133,
+   "lng": 103.7965817391021
+  }
+ ],
+ "postal:142095": [
+  {
+   "blk_no": "95A",
+   "road_name": "DAWSON ROAD",
+   "building": "SKYPARC @ DAWSON",
+   "address": "95A DAWSON ROAD SKYPARC @ DAWSON SINGAPORE 142095",
+   "postal": "142095",
+   "lat": 1.296089005887497,
+   "lng": 103.8119429859388
+  }
+ ],
+ "postal:143083": [
+  {
+   "blk_no": "83B",
+   "road_name": "COMMONWEALTH CLOSE",
+   "building": "COMMONWEALTH HEIGHTS",
+   "address": "83B COMMONWEALTH CLOSE COMMONWEALTH HEIGHTS SINGAPORE 143083",
+   "postal": "143083",
+   "lat": 1.304914141640754,
+   "lng": 103.801041117911
+  }
+ ],
+ "postal:149732": [
+  {
+   "blk_no": "365",
+   "road_name": "COMMONWEALTH AVENUE",
+   "building": "QUEENSTOWN COMMUNITY CENTRE",
+   "address": "365 COMMONWEALTH AVENUE QUEENSTOWN COMMUNITY CENTRE SINGAPORE 149732",
+   "postal": "149732",
+   "lat": 1.298963200533658,
+   "lng": 103.8014866342131
+  }
+ ],
+ "postal:150003": [
+  {
+   "blk_no": "3",
+   "road_name": "JALAN BUKIT MERAH",
+   "building": "BRICKWORKS ESTATE",
+   "address": "3 JALAN BUKIT MERAH BRICKWORKS ESTATE SINGAPORE 150003",
+   "postal": "150003",
+   "lat": 1.287133554639335,
+   "lng": 103.8070005167375
+  }
+ ],
+ "postal:150049": [
+  {
+   "blk_no": "49",
+   "road_name": "HOY FATT ROAD",
+   "building": "NIL",
+   "address": "49 HOY FATT ROAD SINGAPORE 150049",
+   "postal": "150049",
+   "lat": 1.287489050018589,
+   "lng": 103.8117141196728
+  }
+ ],
+ "postal:150082": [
+  {
+   "blk_no": "82",
+   "road_name": "REDHILL LANE",
+   "building": "NIL",
+   "address": "82 REDHILL LANE SINGAPORE 150082",
+   "postal": "150082",
+   "lat": 1.287415991089298,
+   "lng": 103.8194747709198
+  }
+ ],
+ "postal:150129": [
+  {
+   "blk_no": "129",
+   "road_name": "BUKIT MERAH VIEW",
+   "building": "BUKIT MERAH VIEW",
+   "address": "129 BUKIT MERAH VIEW BUKIT MERAH VIEW SINGAPORE 150129",
+   "postal": "150129",
+   "lat": 1.283578705058982,
+   "lng": 103.8238192079618
+  }
+ ],
+ "postal:151096": [
+  {
+   "blk_no": "96A",
+   "road_name": "HENDERSON ROAD",
+   "building": "CITY VUE @HENDERSON",
+   "address": "96A HENDERSON ROAD CITY VUE @HENDERSON SINGAPORE 151096",
+   "postal": "151096",
+   "lat": 1.287988788366508,
+   "lng": 103.8219472603591
+  }
+ ],
+ "postal:152075": [
+  {
+   "blk_no": "75B",
+   "road_name": "REDHILL ROAD",
+   "building": "NIL",
+   "address": "75B REDHILL ROAD SINGAPORE 152075",
+   "postal": "152075",
+   "lat": 1.288480937798467,
+   "lng": 103.815878776808
+  }
+ ],
+ "postal:152119": [
+  {
+   "blk_no": "119",
+   "road_name": "BUKIT MERAH VIEW",
+   "building": "BUKIT MERAH VIEW",
+   "address": "119 BUKIT MERAH VIEW BUKIT MERAH VIEW SINGAPORE 152119",
+   "postal": "152119",
+   "lat": 1.283527551664666,
+   "lng": 103.820830012818
+  }
+ ],
+ "postal:159049": [
+  {
+   "blk_no": "400",
+   "road_name": "LENGKOK BAHRU",
+   "building": "LENG KEE COMMUNITY CLUB",
+   "address": "400 LENGKOK BAHRU LENG KEE COMMUNITY CLUB SINGAPORE 159049",
+   "postal": "159049",
+   "lat": 1.289559089513162,
+   "lng": 103.8146641088961
+  }
+ ],
+ "postal:159682": [
+  {
+   "blk_no": "500",
+   "road_name": "BUKIT MERAH VIEW",
+   "building": "HENDERSON COMMUNITY CLUB",
+   "address": "500 BUKIT MERAH VIEW HENDERSON COMMUNITY CLUB SINGAPORE 159682",
+   "postal": "159682",
+   "lat": 1.286010159391979,
+   "lng": 103.8233153131407
+  }
+ ],
+ "postal:160003": [
+  {
+   "blk_no": "3",
+   "road_name": "DELTA AVENUE",
+   "building": "NIL",
+   "address": "3 DELTA AVENUE SINGAPORE 160003",
+   "postal": "160003",
+   "lat": 1.291698334803547,
+   "lng": 103.8273345231317
+  }
+ ],
+ "postal:160026": [
+  {
+   "blk_no": "26",
+   "road_name": "JALAN KLINIK",
+   "building": "NIL",
+   "address": "26 JALAN KLINIK SINGAPORE 160026",
+   "postal": "160026",
+   "lat": 1.288171345385611,
+   "lng": 103.8284540240921
+  }
+ ],
+ "postal:160094": [
+  {
+   "blk_no": "94",
+   "road_name": "HAVELOCK ROAD",
+   "building": "HAVELOCK HEIGHTS",
+   "address": "94 HAVELOCK ROAD HAVELOCK HEIGHTS SINGAPORE 160094",
+   "postal": "160094",
+   "lat": 1.288213201125532,
+   "lng": 103.8332335260923
+  }
+ ],
+ "postal:160109": [
+  {
+   "blk_no": "109",
+   "road_name": "JALAN BUKIT MERAH",
+   "building": "NIL",
+   "address": "109 JALAN BUKIT MERAH SINGAPORE 160109",
+   "postal": "160109",
+   "lat": 1.279426714350229,
+   "lng": 103.8260869161225
+  }
+ ],
+ "postal:160136": [
+  {
+   "blk_no": "136",
+   "road_name": "JALAN BUKIT MERAH",
+   "building": "NIL",
+   "address": "136 JALAN BUKIT MERAH SINGAPORE 160136",
+   "postal": "160136",
+   "lat": 1.278287639075264,
+   "lng": 103.8275372467706
+  }
+ ],
+ "postal:161051": [
+  {
+   "blk_no": "51",
+   "road_name": "HAVELOCK ROAD",
+   "building": "HAVELOCK VIEW",
+   "address": "51 HAVELOCK ROAD HAVELOCK VIEW SINGAPORE 161051",
+   "postal": "161051",
+   "lat": 1.289946184564526,
+   "lng": 103.8276797204819
+  }
+ ],
+ "postal:161118": [
+  {
+   "blk_no": "118A",
+   "road_name": "JALAN MEMBINA",
+   "building": "MEMBINA 118",
+   "address": "118A JALAN MEMBINA MEMBINA 118 SINGAPORE 161118",
+   "postal": "161118",
+   "lat": 1.28142028197973,
+   "lng": 103.8256452163112
+  }
+ ],
+ "postal:162008": [
+  {
+   "blk_no": "8",
+   "road_name": "JALAN KUKOH",
+   "building": "CHIN SWEE VIEW",
+   "address": "8 JALAN KUKOH CHIN SWEE VIEW SINGAPORE 162008",
+   "postal": "162008",
+   "lat": 1.287377626822412,
+   "lng": 103.8394070605943
+  }
+ ],
+ "postal:163008": [
+  {
+   "blk_no": "8",
+   "road_name": "KIM TIAN PLACE",
+   "building": "NIL",
+   "address": "8 KIM TIAN PLACE SINGAPORE 163008",
+   "postal": "163008",
+   "lat": 1.283029656104111,
+   "lng": 103.8272367153632
+  }
+ ],
+ "postal:169715": [
+  {
+   "blk_no": "67A",
+   "road_name": "EU CHIN STREET",
+   "building": "TIONG BAHRU COMMUNITY CENTRE",
+   "address": "67A EU CHIN STREET TIONG BAHRU COMMUNITY CENTRE SINGAPORE 169715",
+   "postal": "169715",
+   "lat": 1.283049169922838,
+   "lng": 103.8321965065365
+  }
+ ],
+ "postal:180271": [
+  {
+   "blk_no": "271",
+   "road_name": "QUEEN STREET",
+   "building": "NIL",
+   "address": "271 QUEEN STREET SINGAPORE 180271",
+   "postal": "180271",
+   "lat": 1.30093267323152,
+   "lng": 103.8539910047731
+  }
+ ],
+ "postal:190012": [
+  {
+   "blk_no": "12",
+   "road_name": "NORTH BRIDGE ROAD",
+   "building": "GOLDEN BEACH VISTA",
+   "address": "12 NORTH BRIDGE ROAD GOLDEN BEACH VISTA SINGAPORE 190012",
+   "postal": "190012",
+   "lat": 1.304310427273832,
+   "lng": 103.8627814782923
+  }
+ ],
+ "postal:190461": [
+  {
+   "blk_no": "461",
+   "road_name": "CRAWFORD LANE",
+   "building": "CRAWFORD COURT",
+   "address": "461 CRAWFORD LANE CRAWFORD COURT SINGAPORE 190461",
+   "postal": "190461",
+   "lat": 1.305104174150729,
+   "lng": 103.8608693518577
+  }
+ ],
+ "postal:199581": [
+  {
+   "blk_no": "385",
+   "road_name": "BEACH ROAD",
+   "building": "KAMPONG GLAM COMMUNITY CLUB",
+   "address": "385 BEACH ROAD KAMPONG GLAM COMMUNITY CLUB SINGAPORE 199581",
+   "postal": "199581",
+   "lat": 1.302795227115325,
+   "lng": 103.8635978518025
+  }
+ ],
+ "postal:200025": [
+  {
+   "blk_no": "25",
+   "road_name": "JALAN BERSEH",
+   "building": "NIL",
+   "address": "25 JALAN BERSEH SINGAPORE 200025",
+   "postal": "200025",
+   "lat": 1.306215164354309,
+   "lng": 103.8582215105207
+  }
+ ],
+ "postal:200804": [
+  {
+   "blk_no": "804",
+   "road_name": "KING GEORGE'S AVENUE",
+   "building": "NIL",
+   "address": "804 KING GEORGE'S AVENUE SINGAPORE 200804",
+   "postal": "200804",
+   "lat": 1.307875079170636,
+   "lng": 103.8607920246802
+  }
+ ],
+ "postal:208737": [
+  {
+   "blk_no": "69",
+   "road_name": "JELLICOE ROAD",
+   "building": "JALAN BESAR COMMUNITY CLUB",
+   "address": "69 JELLICOE ROAD JALAN BESAR COMMUNITY CLUB SINGAPORE 208737",
+   "postal": "208737",
+   "lat": 1.308004174711576,
+   "lng": 103.8617865683514
+  }
+ ],
+ "postal:210048": [
+  {
+   "blk_no": "48",
+   "road_name": "DORSET ROAD",
+   "building": "DORSET VIEW",
+   "address": "48 DORSET ROAD DORSET VIEW SINGAPORE 210048",
+   "postal": "210048",
+   "lat": 1.314241210195872,
+   "lng": 103.8506228128472
+  }
+ ],
+ "postal:219458": [
+  {
+   "blk_no": "21",
+   "road_name": "GLOUCESTER ROAD",
+   "building": "PEK KIO COMMUNITY CENTRE",
+   "address": "21 GLOUCESTER ROAD PEK KIO COMMUNITY CENTRE SINGAPORE 219458",
+   "postal": "219458",
+   "lat": 1.313058655249113,
+   "lng": 103.8513738449606
+  }
+ ],
+ "postal:229944": [
+  {
+   "blk_no": "1",
+   "road_name": "ANTHONY ROAD",
+   "building": "CAIRNHILL COMMUNITY CLUB",
+   "address": "1 ANTHONY ROAD CAIRNHILL COMMUNITY CLUB SINGAPORE 229944",
+   "postal": "229944",
+   "lat": 1.310387674550274,
+   "lng": 103.8388827078064
+  }
+ ],
+ "postal:270017": [
+  {
+   "blk_no": "17",
+   "road_name": "GHIM MOH ROAD",
+   "building": "NIL",
+   "address": "17 GHIM MOH ROAD SINGAPORE 270017",
+   "postal": "270017",
+   "lat": 1.309892258713428,
+   "lng": 103.7874322265274
+  }
+ ],
+ "postal:270036": [
+  {
+   "blk_no": "36",
+   "road_name": "HOLLAND DRIVE",
+   "building": "BUONA VISTA COMMUNITY CLUB COMPLEX",
+   "address": "36 HOLLAND DRIVE BUONA VISTA COMMUNITY CLUB COMPLEX SINGAPORE 270036",
+   "postal": "270036",
+   "lat": 1.309183033138679,
+   "lng": 103.7926404803258
+  }
+ ],
+ "postal:271004": [
+  {
+   "blk_no": "4",
+   "road_name": "HOLLAND CLOSE",
+   "building": "NIL",
+   "address": "4 HOLLAND CLOSE SINGAPORE 271004",
+   "postal": "271004",
+   "lat": 1.307968263605528,
+   "lng": 103.7956464623117
+  }
+ ],
+ "postal:279621": [
+  {
+   "blk_no": "170",
+   "road_name": "GHIM MOH ROAD",
+   "building": "ULU PANDAN COMMUNITY BUILDING",
+   "address": "170 GHIM MOH ROAD ULU PANDAN COMMUNITY BUILDING SINGAPORE 279621",
+   "postal": "279621",
+   "lat": 1.312214305347446,
+   "lng": 103.7897231883314
+  }
+ ],
+ "postal:297829": [
+  {
+   "blk_no": "245",
+   "road_name": "WHITLEY ROAD",
+   "building": "TANGLIN COMMUNITY CLUB",
+   "address": "245 WHITLEY ROAD TANGLIN COMMUNITY CLUB SINGAPORE 297829",
+   "postal": "297829",
+   "lat": 1.323406523887087,
+   "lng": 103.8269051200673
+  }
+ ],
+ "postal:310050": [
+  {
+   "blk_no": "50",
+   "road_name": "LORONG 5 TOA PAYOH",
+   "building": "EAST PAYOH PALM",
+   "address": "50 LORONG 5 TOA PAYOH EAST PAYOH PALM SINGAPORE 310050",
+   "postal": "310050",
+   "lat": 1.336989889331905,
+   "lng": 103.8526929016017
+  }
+ ],
+ "postal:310058": [
+  {
+   "blk_no": "58",
+   "road_name": "LORONG 4 TOA PAYOH",
+   "building": "TOA PAYOH VISTA",
+   "address": "58 LORONG 4 TOA PAYOH TOA PAYOH VISTA SINGAPORE 310058",
+   "postal": "310058",
+   "lat": 1.336746255373663,
+   "lng": 103.8505246405647
+  }
+ ],
+ "postal:310122": [
+  {
+   "blk_no": "122",
+   "road_name": "LORONG 2 TOA PAYOH",
+   "building": "TOA PAYOH VIEW",
+   "address": "122 LORONG 2 TOA PAYOH TOA PAYOH VIEW SINGAPORE 310122",
+   "postal": "310122",
+   "lat": 1.339805239615545,
+   "lng": 103.8462811963057
+  }
+ ],
+ "postal:310131": [
+  {
+   "blk_no": "131",
+   "road_name": "LORONG 1 TOA PAYOH",
+   "building": "TOA PAYOH CREST",
+   "address": "131 LORONG 1 TOA PAYOH TOA PAYOH CREST SINGAPORE 310131",
+   "postal": "310131",
+   "lat": 1.337984588826065,
+   "lng": 103.8432888456413
+  }
+ ],
+ "postal:310157": [
+  {
+   "blk_no": "157",
+   "road_name": "LORONG 1 TOA PAYOH",
+   "building": "NIL",
+   "address": "157 LORONG 1 TOA PAYOH SINGAPORE 310157",
+   "postal": "310157",
+   "lat": 1.332206263212489,
+   "lng": 103.8454528617383
+  }
+ ],
+ "postal:310179": [
+  {
+   "blk_no": "179",
+   "road_name": "TOA PAYOH CENTRAL",
+   "building": "TOA PAYOH CENTRAL",
+   "address": "179 TOA PAYOH CENTRAL TOA PAYOH CENTRAL SINGAPORE 310179",
+   "postal": "310179",
+   "lat": 1.333900999763312,
+   "lng": 103.8500928785156
+  }
+ ],
+ "postal:310225": [
+  {
+   "blk_no": "225",
+   "road_name": "LORONG 8 TOA PAYOH",
+   "building": "TOA PAYOH EIGHT",
+   "address": "225 LORONG 8 TOA PAYOH TOA PAYOH EIGHT SINGAPORE 310225",
+   "postal": "310225",
+   "lat": 1.339507531355659,
+   "lng": 103.8559141627423
+  }
+ ],
+ "postal:310228": [
+  {
+   "blk_no": "228",
+   "road_name": "LORONG 8 TOA PAYOH",
+   "building": "TOA PAYOH EIGHT",
+   "address": "228 LORONG 8 TOA PAYOH TOA PAYOH EIGHT SINGAPORE 310228",
+   "postal": "310228",
+   "lat": 1.339148800252314,
+   "lng": 103.8587796618375
+  }
+ ],
+ "postal:310255": [
+  {
+   "blk_no": "255",
+   "road_name": "KIM KEAT AVENUE",
+   "building": "NIL",
+   "address": "255 KIM KEAT AVENUE SINGAPORE 310255",
+   "postal": "310255",
+   "lat": 1.331659373468797,
+   "lng": 103.8577615459231
+  }
+ ],
+ "postal:312099": [
+  {
+   "blk_no": "99C",
+   "road_name": "LORONG 2 TOA PAYOH",
+   "building": "TOA PAYOH PALM SPRING",
+   "address": "99C LORONG 2 TOA PAYOH TOA PAYOH PALM SPRING SINGAPORE 312099",
+   "postal": "312099",
+   "lat": 1.339016129617543,
+   "lng": 103.8474493560302
+  }
+ ],
+ "postal:319194": [
+  {
+   "blk_no": "93",
+   "road_name": "TOA PAYOH CENTRAL",
+   "building": "TOA PAYOH CENTRAL COMMUNITY BUILDING",
+   "address": "93 TOA PAYOH CENTRAL TOA PAYOH CENTRAL COMMUNITY BUILDING SINGAPORE 319194",
+   "postal": "319194",
+   "lat": 1.334934520548422,
+   "lng": 103.8502045427675
+  }
+ ],
+ "postal:319258": [
+  {
+   "blk_no": "1999",
+   "road_name": "LORONG 8 TOA PAYOH",
+   "building": "TOA PAYOH SOUTH COMMUNITY CLUB",
+   "address": "1999 LORONG 8 TOA PAYOH TOA PAYOH SOUTH COMMUNITY CLUB SINGAPORE 319258",
+   "postal": "319258",
+   "lat": 1.334890374736527,
+   "lng": 103.8593789746666
+  }
+ ],
+ "postal:319380": [
+  {
+   "blk_no": "160",
+   "road_name": "LORONG 6 TOA PAYOH",
+   "building": "TOA PAYOH EAST COMMUNITY CLUB",
+   "address": "160 LORONG 6 TOA PAYOH TOA PAYOH EAST COMMUNITY CLUB SINGAPORE 319380",
+   "postal": "319380",
+   "lat": 1.336315364964432,
+   "lng": 103.8548484372016
+  }
+ ],
+ "postal:319642": [
+  {
+   "blk_no": "200",
+   "road_name": "LORONG 2 TOA PAYOH",
+   "building": "TOA PAYOH WEST COMMUNITY CLUB",
+   "address": "200 LORONG 2 TOA PAYOH TOA PAYOH WEST COMMUNITY CLUB SINGAPORE 319642",
+   "postal": "319642",
+   "lat": 1.335221249794357,
+   "lng": 103.8451058001388
+  }
+ ],
+ "postal:320076": [
+  {
+   "blk_no": "76",
+   "road_name": "LORONG LIMAU",
+   "building": "WHAMPOA SPRING",
+   "address": "76 LORONG LIMAU WHAMPOA SPRING SINGAPORE 320076",
+   "postal": "320076",
+   "lat": 1.325024278861667,
+   "lng": 103.854232129189
+  }
+ ],
+ "postal:320111": [
+  {
+   "blk_no": "111",
+   "road_name": "MCNAIR ROAD",
+   "building": "MCNAIR SPRING",
+   "address": "111 MCNAIR ROAD MCNAIR SPRING SINGAPORE 320111",
+   "postal": "320111",
+   "lat": 1.321303988394461,
+   "lng": 103.8582727280635
+  }
+ ],
+ "postal:320116": [
+  {
+   "blk_no": "116",
+   "road_name": "JALAN TENTERAM",
+   "building": "TENTERAM PEAK",
+   "address": "116 JALAN TENTERAM TENTERAM PEAK SINGAPORE 320116",
+   "postal": "320116",
+   "lat": 1.327699937045262,
+   "lng": 103.8612363694804
+  }
+ ],
+ "postal:327737": [
+  {
+   "blk_no": "300",
+   "road_name": "WHAMPOA DRIVE",
+   "building": "WHAMPOA COMMUNITY CLUB",
+   "address": "300 WHAMPOA DRIVE WHAMPOA COMMUNITY CLUB SINGAPORE 327737",
+   "postal": "327737",
+   "lat": 1.324867492965702,
+   "lng": 103.8572012109099
+  }
+ ],
+ "postal:330022": [
+  {
+   "blk_no": "22",
+   "road_name": "BOON KENG ROAD",
+   "building": "BENDEMEER VILLE",
+   "address": "22 BOON KENG ROAD BENDEMEER VILLE SINGAPORE 330022",
+   "postal": "330022",
+   "lat": 1.318176426750386,
+   "lng": 103.8614037951587
+  }
+ ],
+ "postal:330056": [
+  {
+   "blk_no": "56",
+   "road_name": "GEYLANG BAHRU",
+   "building": "GEYLANG BAHRU RIVERPOINT",
+   "address": "56 GEYLANG BAHRU GEYLANG BAHRU RIVERPOINT SINGAPORE 330056",
+   "postal": "330056",
+   "lat": 1.323645147739973,
+   "lng": 103.8682952926223
+  }
+ ],
+ "postal:339631": [
+  {
+   "blk_no": "1",
+   "road_name": "GEYLANG BAHRU LANE",
+   "building": "KOLAM AYER COMMUNITY CLUB",
+   "address": "1 GEYLANG BAHRU LANE KOLAM AYER COMMUNITY CLUB SINGAPORE 339631",
+   "postal": "339631",
+   "lat": 1.324060635348187,
+   "lng": 103.8699195867526
+  }
+ ],
+ "postal:339771": [
+  {
+   "blk_no": "45",
+   "road_name": "BOON KENG ROAD",
+   "building": "KALLANG COMMUNITY CLUB",
+   "address": "45 BOON KENG ROAD KALLANG COMMUNITY CLUB SINGAPORE 339771",
+   "postal": "339771",
+   "lat": 1.31801131952192,
+   "lng": 103.8624012888067
+  }
+ ],
+ "postal:341107": [
+  {
+   "blk_no": "107A",
+   "road_name": "BIDADARI PARK DRIVE",
+   "building": "ALKAFF OASIS",
+   "address": "107A BIDADARI PARK DRIVE ALKAFF OASIS SINGAPORE 341107",
+   "postal": "341107",
+   "lat": 1.334779767862864,
+   "lng": 103.872399131107
+  }
+ ],
+ "postal:358361": [
+  {
+   "blk_no": "6",
+   "road_name": "POTONG PASIR AVENUE 2",
+   "building": "POTONG PASIR COMMUNITY CLUB",
+   "address": "6 POTONG PASIR AVENUE 2 POTONG PASIR COMMUNITY CLUB SINGAPORE 358361",
+   "postal": "358361",
+   "lat": 1.332633815456039,
+   "lng": 103.8671516737261
+  }
+ ],
+ "postal:367803": [
+  {
+   "blk_no": "11",
+   "road_name": "BIDADARI PARK DRIVE",
+   "building": "THE WOODLEIGH MALL",
+   "address": "11 BIDADARI PARK DRIVE THE WOODLEIGH MALL SINGAPORE 367803",
+   "postal": "367803",
+   "lat": 1.33873066388193,
+   "lng": 103.8716700081919
+  }
+ ],
+ "postal:370031": [
+  {
+   "blk_no": "31",
+   "road_name": "BALAM ROAD",
+   "building": "BALAM GARDENS",
+   "address": "31 BALAM ROAD BALAM GARDENS SINGAPORE 370031",
+   "postal": "370031",
+   "lat": 1.329682323431534,
+   "lng": 103.8854079935951
+  }
+ ],
+ "postal:370042": [
+  {
+   "blk_no": "42",
+   "road_name": "CIRCUIT ROAD",
+   "building": "NIL",
+   "address": "42 CIRCUIT ROAD SINGAPORE 370042",
+   "postal": "370042",
+   "lat": 1.326849239677329,
+   "lng": 103.886293541726
+  }
+ ],
+ "postal:370065": [
+  {
+   "blk_no": "65",
+   "road_name": "CIRCUIT ROAD",
+   "building": "NIL",
+   "address": "65 CIRCUIT ROAD SINGAPORE 370065",
+   "postal": "370065",
+   "lat": 1.327400310020149,
+   "lng": 103.887203611284
+  }
+ ],
+ "postal:370090": [
+  {
+   "blk_no": "90",
+   "road_name": "PIPIT ROAD",
+   "building": "NIL",
+   "address": "90 PIPIT ROAD SINGAPORE 370090",
+   "postal": "370090",
+   "lat": 1.323379652137275,
+   "lng": 103.8865213282861
+  }
+ ],
+ "postal:372082": [
+  {
+   "blk_no": "82B",
+   "road_name": "CIRCUIT ROAD",
+   "building": "MACPHERSON SPRING",
+   "address": "82B CIRCUIT ROAD MACPHERSON SPRING SINGAPORE 372082",
+   "postal": "372082",
+   "lat": 1.32372337837322,
+   "lng": 103.8894014567555
+  }
+ ],
+ "postal:379131": [
+  {
+   "blk_no": "400",
+   "road_name": "PAYA LEBAR WAY",
+   "building": "MACPHERSON COMMUNITY CLUB",
+   "address": "400 PAYA LEBAR WAY MACPHERSON COMMUNITY CLUB SINGAPORE 379131",
+   "postal": "379131",
+   "lat": 1.323473899118196,
+   "lng": 103.8846383700013
+  }
+ ],
+ "postal:380008": [
+  {
+   "blk_no": "8",
+   "road_name": "UPPER BOON KENG ROAD",
+   "building": "KALLANG TRIVISTA",
+   "address": "8 UPPER BOON KENG ROAD KALLANG TRIVISTA SINGAPORE 380008",
+   "postal": "380008",
+   "lat": 1.312707294755106,
+   "lng": 103.8706905856641
+  }
+ ],
+ "postal:380096": [
+  {
+   "blk_no": "96",
+   "road_name": "ALJUNIED CRESCENT",
+   "building": "NIL",
+   "address": "96 ALJUNIED CRESCENT SINGAPORE 380096",
+   "postal": "380096",
+   "lat": 1.321656497869169,
+   "lng": 103.8854233569775
+  }
+ ],
+ "postal:383002": [
+  {
+   "blk_no": "2C",
+   "road_name": "UPPER BOON KENG ROAD",
+   "building": "KALLANG HEIGHTS",
+   "address": "2C UPPER BOON KENG ROAD KALLANG HEIGHTS SINGAPORE 383002",
+   "postal": "383002",
+   "lat": 1.313127969044793,
+   "lng": 103.8717370056644
+  }
+ ],
+ "postal:387311": [
+  {
+   "blk_no": "1205",
+   "road_name": "UPPER BOON KENG ROAD",
+   "building": "GEYLANG WEST COMMUNITY CLUB",
+   "address": "1205 UPPER BOON KENG ROAD GEYLANG WEST COMMUNITY CLUB SINGAPORE 387311",
+   "postal": "387311",
+   "lat": 1.315691111066291,
+   "lng": 103.8723878541104
+  }
+ ],
+ "postal:390054": [
+  {
+   "blk_no": "54",
+   "road_name": "CASSIA CRESCENT",
+   "building": "NIL",
+   "address": "54 CASSIA CRESCENT SINGAPORE 390054",
+   "postal": "390054",
+   "lat": 1.310048005510802,
+   "lng": 103.8846781981189
+  }
+ ],
+ "postal:390087": [
+  {
+   "blk_no": "87",
+   "road_name": "JALAN SATU",
+   "building": "MOUNTBATTEN COMMUNITY CLUB",
+   "address": "87 JALAN SATU MOUNTBATTEN COMMUNITY CLUB SINGAPORE 390087",
+   "postal": "390087",
+   "lat": 1.309204537033517,
+   "lng": 103.8869183001058
+  }
+ ],
+ "postal:400010": [
+  {
+   "blk_no": "10",
+   "road_name": "EUNOS CRESCENT",
+   "building": "NIL",
+   "address": "10 EUNOS CRESCENT SINGAPORE 400010",
+   "postal": "400010",
+   "lat": 1.322286558630672,
+   "lng": 103.902720513959
+  }
+ ],
+ "postal:400415": [
+  {
+   "blk_no": "415",
+   "road_name": "EUNOS ROAD 5",
+   "building": "NIL",
+   "address": "415 EUNOS ROAD 5 SINGAPORE 400415",
+   "postal": "400415",
+   "lat": 1.318226618595351,
+   "lng": 103.8978549413732
+  }
+ ],
+ "postal:404358": [
+  {
+   "blk_no": "358D",
+   "road_name": "UBI ROAD 3",
+   "building": "UBI GROVE",
+   "address": "358D UBI ROAD 3 UBI GROVE SINGAPORE 404358",
+   "postal": "404358",
+   "lat": 1.329466941349518,
+   "lng": 103.8999332166859
+  }
+ ],
+ "postal:408528": [
+  {
+   "blk_no": "1",
+   "road_name": "ENGKU AMAN TURN",
+   "building": "WISMA GEYLANG SERAI",
+   "address": "1 ENGKU AMAN TURN WISMA GEYLANG SERAI SINGAPORE 408528",
+   "postal": "408528",
+   "lat": 1.316494157439073,
+   "lng": 103.8967884183523
+  }
+ ],
+ "postal:409075": [
+  {
+   "blk_no": "10",
+   "road_name": "JALAN UBI",
+   "building": "KAMPONG UBI COMMUNITY CENTRE",
+   "address": "10 JALAN UBI KAMPONG UBI COMMUNITY CENTRE SINGAPORE 409075",
+   "postal": "409075",
+   "lat": 1.317846441026898,
+   "lng": 103.9007501235604
+  }
+ ],
+ "postal:410109": [
+  {
+   "blk_no": "109",
+   "road_name": "LENGKONG TIGA",
+   "building": "KEMBANGAN GARDENS",
+   "address": "109 LENGKONG TIGA KEMBANGAN GARDENS SINGAPORE 410109",
+   "postal": "410109",
+   "lat": 1.324580762449695,
+   "lng": 103.9106975310816
+  }
+ ],
+ "postal:427633": [
+  {
+   "blk_no": "405",
+   "road_name": "JOO CHIAT ROAD",
+   "building": "JOO CHIAT COMMUNITY CLUB",
+   "address": "405 JOO CHIAT ROAD JOO CHIAT COMMUNITY CLUB SINGAPORE 427633",
+   "postal": "427633",
+   "lat": 1.307420014126264,
+   "lng": 103.9042184353152
+  }
+ ],
+ "postal:438178": [
+  {
+   "blk_no": "51",
+   "road_name": "KAMPONG ARANG ROAD",
+   "building": "KATONG COMMUNITY CENTRE",
+   "address": "51 KAMPONG ARANG ROAD KATONG COMMUNITY CENTRE SINGAPORE 438178",
+   "postal": "438178",
+   "lat": 1.300446657937457,
+   "lng": 103.8848084939037
+  }
+ ],
+ "postal:440020": [
+  {
+   "blk_no": "20",
+   "road_name": "MARINE TERRACE",
+   "building": "MARINE TERRACE BREEZE",
+   "address": "20 MARINE TERRACE MARINE TERRACE BREEZE SINGAPORE 440020",
+   "postal": "440020",
+   "lat": 1.303715887288522,
+   "lng": 103.9150670203215
+  }
+ ],
+ "postal:440061": [
+  {
+   "blk_no": "61",
+   "road_name": "MARINE DRIVE",
+   "building": "MARINE DRIVE GARDENS",
+   "address": "61 MARINE DRIVE MARINE DRIVE GARDENS SINGAPORE 440061",
+   "postal": "440061",
+   "lat": 1.303093485695588,
+   "lng": 103.9087515316223
+  }
+ ],
+ "postal:456441": [
+  {
+   "blk_no": "6",
+   "road_name": "PALM ROAD",
+   "building": "SIGLAP SOUTH COMMUNITY CENTRE",
+   "address": "6 PALM ROAD SIGLAP SOUTH COMMUNITY CENTRE SINGAPORE 456441",
+   "postal": "456441",
+   "lat": 1.313158953246566,
+   "lng": 103.9306234665326
+  }
+ ],
+ "postal:460037": [
+  {
+   "blk_no": "37",
+   "road_name": "BEDOK SOUTH AVENUE 2",
+   "building": "BEDOK SOUTH PARKVIEW",
+   "address": "37 BEDOK SOUTH AVENUE 2 BEDOK SOUTH PARKVIEW SINGAPORE 460037",
+   "postal": "460037",
+   "lat": 1.321906636172868,
+   "lng": 103.9398472138616
+  }
+ ],
+ "postal:460061": [
+  {
+   "blk_no": "61",
+   "road_name": "CHAI CHEE ROAD",
+   "building": "PING-AN GARDENS",
+   "address": "61 CHAI CHEE ROAD PING-AN GARDENS SINGAPORE 460061",
+   "postal": "460061",
+   "lat": 1.325108719282373,
+   "lng": 103.9207381888836
+  }
+ ],
+ "postal:460093": [
+  {
+   "blk_no": "93",
+   "road_name": "BEDOK NORTH AVENUE 4",
+   "building": "NIL",
+   "address": "93 BEDOK NORTH AVENUE 4 SINGAPORE 460093",
+   "postal": "460093",
+   "lat": 1.332888999313476,
+   "lng": 103.9413097343375
+  }
+ ],
+ "postal:460111": [
+  {
+   "blk_no": "111",
+   "road_name": "BEDOK NORTH ROAD",
+   "building": "NIL",
+   "address": "111 BEDOK NORTH ROAD SINGAPORE 460111",
+   "postal": "460111",
+   "lat": 1.331455740281891,
+   "lng": 103.9354586441414
+  }
+ ],
+ "postal:460151": [
+  {
+   "blk_no": "151",
+   "road_name": "BEDOK SOUTH ROAD",
+   "building": "SIGLAP COMMUNITY CLUB",
+   "address": "151 BEDOK SOUTH ROAD SIGLAP COMMUNITY CLUB SINGAPORE 460151",
+   "postal": "460151",
+   "lat": 1.317322244857148,
+   "lng": 103.9468001465131
+  }
+ ],
+ "postal:460504": [
+  {
+   "blk_no": "504",
+   "road_name": "BEDOK NORTH STREET 3",
+   "building": "KAKI BUKIT VILLE",
+   "address": "504 BEDOK NORTH STREET 3 KAKI BUKIT VILLE SINGAPORE 460504",
+   "postal": "460504",
+   "lat": 1.331880003054789,
+   "lng": 103.9323893590436
+  }
+ ],
+ "postal:460517": [
+  {
+   "blk_no": "517",
+   "road_name": "BEDOK NORTH AVENUE 2",
+   "building": "KAKI BUKIT GREEN",
+   "address": "517 BEDOK NORTH AVENUE 2 KAKI BUKIT GREEN SINGAPORE 460517",
+   "postal": "460517",
+   "lat": 1.331089066029576,
+   "lng": 103.9292045360116
+  }
+ ],
+ "postal:460546": [
+  {
+   "blk_no": "546",
+   "road_name": "BEDOK NORTH STREET 3",
+   "building": "BEDOK NORTH GREEN",
+   "address": "546 BEDOK NORTH STREET 3 BEDOK NORTH GREEN SINGAPORE 460546",
+   "postal": "460546",
+   "lat": 1.330820059192435,
+   "lng": 103.9255958402878
+  }
+ ],
+ "postal:460550": [
+  {
+   "blk_no": "550",
+   "road_name": "BEDOK NORTH AVENUE 1",
+   "building": "NIL",
+   "address": "550 BEDOK NORTH AVENUE 1 SINGAPORE 460550",
+   "postal": "460550",
+   "lat": 1.332693179527918,
+   "lng": 103.9266174029073
+  }
+ ],
+ "postal:461032": [
+  {
+   "blk_no": "32",
+   "road_name": "CHAI CHEE AVENUE",
+   "building": "ANSAR GARDEN",
+   "address": "32 CHAI CHEE AVENUE ANSAR GARDEN SINGAPORE 461032",
+   "postal": "461032",
+   "lat": 1.323717283877492,
+   "lng": 103.9250010845097
+  }
+ ],
+ "postal:461043": [
+  {
+   "blk_no": "43",
+   "road_name": "CHAI CHEE STREET",
+   "building": "PING YI GARDENS",
+   "address": "43 CHAI CHEE STREET PING YI GARDENS SINGAPORE 461043",
+   "postal": "461043",
+   "lat": 1.328346685030775,
+   "lng": 103.9256548103762
+  }
+ ],
+ "postal:461430": [
+  {
+   "blk_no": "430A",
+   "road_name": "BEDOK NORTH ROAD",
+   "building": "BEDOK NORTH WOODS",
+   "address": "430A BEDOK NORTH ROAD BEDOK NORTH WOODS SINGAPORE 461430",
+   "postal": "461430",
+   "lat": 1.329700004988613,
+   "lng": 103.9329909952738
+  }
+ ],
+ "postal:461808": [
+  {
+   "blk_no": "808A",
+   "road_name": "CHAI CHEE ROAD",
+   "building": "PING YI GREENS",
+   "address": "808A CHAI CHEE ROAD PING YI GREENS SINGAPORE 461808",
+   "postal": "461808",
+   "lat": 1.326870445653303,
+   "lng": 103.9238481940606
+  }
+ ],
+ "postal:462010": [
+  {
+   "blk_no": "10C",
+   "road_name": "BEDOK SOUTH AVENUE 2",
+   "building": "NIL",
+   "address": "10C BEDOK SOUTH AVENUE 2 SINGAPORE 462010",
+   "postal": "462010",
+   "lat": 1.322094235642828,
+   "lng": 103.9362235860816
+  }
+ ],
+ "postal:462187": [
+  {
+   "blk_no": "187B",
+   "road_name": "BEDOK NORTH STREET 4",
+   "building": "FENGSHAN GREENVILLE",
+   "address": "187B BEDOK NORTH STREET 4 FENGSHAN GREENVILLE SINGAPORE 462187",
+   "postal": "462187",
+   "lat": 1.330381466074705,
+   "lng": 103.9400884012029
+  }
+ ],
+ "postal:467352": [
+  {
+   "blk_no": "850",
+   "road_name": "NEW UPPER CHANGI ROAD",
+   "building": "BEDOK COMMUNITY CENTRE",
+   "address": "850 NEW UPPER CHANGI ROAD BEDOK COMMUNITY CENTRE SINGAPORE 467352",
+   "postal": "467352",
+   "lat": 1.324224481162681,
+   "lng": 103.9360636483703
+  }
+ ],
+ "postal:469627": [
+  {
+   "blk_no": "670",
+   "road_name": "BEDOK NORTH STREET 3",
+   "building": "KAKI BUKIT COMMUNITY CENTRE",
+   "address": "670 BEDOK NORTH STREET 3 KAKI BUKIT COMMUNITY CENTRE SINGAPORE 469627",
+   "postal": "469627",
+   "lat": 1.333358009261465,
+   "lng": 103.9268572027348
+  }
+ ],
+ "postal:469644": [
+  {
+   "blk_no": "20",
+   "road_name": "BEDOK NORTH STREET 2",
+   "building": "FENGSHAN COMMUNITY CLUB",
+   "address": "20 BEDOK NORTH STREET 2 FENGSHAN COMMUNITY CLUB SINGAPORE 469644",
+   "postal": "469644",
+   "lat": 1.330723342500432,
+   "lng": 103.9368154178622
+  }
+ ],
+ "postal:469662": [
+  {
+   "blk_no": "11",
+   "road_name": "BEDOK NORTH STREET 1",
+   "building": "HEARTBEAT @ BEDOK",
+   "address": "11 BEDOK NORTH STREET 1 HEARTBEAT @ BEDOK SINGAPORE 469662",
+   "postal": "469662",
+   "lat": 1.326864385535107,
+   "lng": 103.932129515964
+  }
+ ],
+ "postal:470609": [
+  {
+   "blk_no": "609",
+   "road_name": "BEDOK RESERVOIR ROAD",
+   "building": "EUNOS RAINBOW",
+   "address": "609 BEDOK RESERVOIR ROAD EUNOS RAINBOW SINGAPORE 470609",
+   "postal": "470609",
+   "lat": 1.331839214592192,
+   "lng": 103.9123648550766
+  }
+ ],
+ "postal:470616": [
+  {
+   "blk_no": "616",
+   "road_name": "BEDOK RESERVOIR ROAD",
+   "building": "EUNOS GROVE",
+   "address": "616 BEDOK RESERVOIR ROAD EUNOS GROVE SINGAPORE 470616",
+   "postal": "470616",
+   "lat": 1.331903960955805,
+   "lng": 103.9151377591255
+  }
+ ],
+ "postal:470627": [
+  {
+   "blk_no": "627",
+   "road_name": "BEDOK RESERVOIR ROAD",
+   "building": "EUNOS HEIGHTS",
+   "address": "627 BEDOK RESERVOIR ROAD EUNOS HEIGHTS SINGAPORE 470627",
+   "postal": "470627",
+   "lat": 1.33396186689746,
+   "lng": 103.9155993191437
+  }
+ ],
+ "postal:479220": [
+  {
+   "blk_no": "180",
+   "road_name": "BEDOK RESERVOIR ROAD",
+   "building": "EUNOS COMMUNITY CLUB (U/C)",
+   "address": "180 BEDOK RESERVOIR ROAD EUNOS COMMUNITY CLUB (U/C) SINGAPORE 479220",
+   "postal": "479220",
+   "lat": 1.332626783121991,
+   "lng": 103.9152300250942
+  }
+ ],
+ "postal:510140": [
+  {
+   "blk_no": "140",
+   "road_name": "PASIR RIS STREET 11",
+   "building": "NIL",
+   "address": "140 PASIR RIS STREET 11 SINGAPORE 510140",
+   "postal": "510140",
+   "lat": 1.363948458990248,
+   "lng": 103.9591810359715
+  }
+ ],
+ "postal:510192": [
+  {
+   "blk_no": "192",
+   "road_name": "PASIR RIS STREET 12",
+   "building": "NIL",
+   "address": "192 PASIR RIS STREET 12 SINGAPORE 510192",
+   "postal": "510192",
+   "lat": 1.366247333540541,
+   "lng": 103.9590569477329
+  }
+ ],
+ "postal:510207": [
+  {
+   "blk_no": "207",
+   "road_name": "PASIR RIS STREET 21",
+   "building": "NIL",
+   "address": "207 PASIR RIS STREET 21 SINGAPORE 510207",
+   "postal": "510207",
+   "lat": 1.366303329425134,
+   "lng": 103.9622877614086
+  }
+ ],
+ "postal:510226": [
+  {
+   "blk_no": "226",
+   "road_name": "PASIR RIS STREET 21",
+   "building": "NIL",
+   "address": "226 PASIR RIS STREET 21 SINGAPORE 510226",
+   "postal": "510226",
+   "lat": 1.371012120626376,
+   "lng": 103.9617258726466
+  }
+ ],
+ "postal:510484": [
+  {
+   "blk_no": "484",
+   "road_name": "PASIR RIS DRIVE 4",
+   "building": "NIL",
+   "address": "484 PASIR RIS DRIVE 4 SINGAPORE 510484",
+   "postal": "510484",
+   "lat": 1.373603457553308,
+   "lng": 103.9605578240163
+  }
+ ],
+ "postal:510536": [
+  {
+   "blk_no": "536",
+   "road_name": "PASIR RIS DRIVE 1",
+   "building": "NIL",
+   "address": "536 PASIR RIS DRIVE 1 SINGAPORE 510536",
+   "postal": "510536",
+   "lat": 1.370631438391105,
+   "lng": 103.9498276302797
+  }
+ ],
+ "postal:510612": [
+  {
+   "blk_no": "612",
+   "road_name": "ELIAS ROAD",
+   "building": "NIL",
+   "address": "612 ELIAS ROAD SINGAPORE 510612",
+   "postal": "510612",
+   "lat": 1.374629851012797,
+   "lng": 103.9420210097383
+  }
+ ],
+ "postal:510706": [
+  {
+   "blk_no": "706",
+   "road_name": "PASIR RIS DRIVE 10",
+   "building": "NIL",
+   "address": "706 PASIR RIS DRIVE 10 SINGAPORE 510706",
+   "postal": "510706",
+   "lat": 1.380804458815312,
+   "lng": 103.9382386989311
+  }
+ ],
+ "postal:510741": [
+  {
+   "blk_no": "741",
+   "road_name": "PASIR RIS STREET 71",
+   "building": "NIL",
+   "address": "741 PASIR RIS STREET 71 SINGAPORE 510741",
+   "postal": "510741",
+   "lat": 1.377553846778826,
+   "lng": 103.9363835369125
+  }
+ ],
+ "postal:510753": [
+  {
+   "blk_no": "753",
+   "road_name": "PASIR RIS STREET 71",
+   "building": "NIL",
+   "address": "753 PASIR RIS STREET 71 SINGAPORE 510753",
+   "postal": "510753",
+   "lat": 1.377156176976135,
+   "lng": 103.9344823222992
+  }
+ ],
+ "postal:510766": [
+  {
+   "blk_no": "766",
+   "road_name": "PASIR RIS STREET 71",
+   "building": "NIL",
+   "address": "766 PASIR RIS STREET 71 SINGAPORE 510766",
+   "postal": "510766",
+   "lat": 1.375947588670488,
+   "lng": 103.9360008783569
+  }
+ ],
+ "postal:512527": [
+  {
+   "blk_no": "527B",
+   "road_name": "PASIR RIS STREET 51",
+   "building": "COSTA RIS",
+   "address": "527B PASIR RIS STREET 51 COSTA RIS SINGAPORE 512527",
+   "postal": "512527",
+   "lat": 1.368994531144321,
+   "lng": 103.9477100690137
+  }
+ ],
+ "postal:519457": [
+  {
+   "blk_no": "1",
+   "road_name": "PASIR RIS DRIVE 4",
+   "building": "PASIR RIS EAST COMMUNITY CLUB",
+   "address": "1 PASIR RIS DRIVE 4 PASIR RIS EAST COMMUNITY CLUB SINGAPORE 519457",
+   "postal": "519457",
+   "lat": 1.368485527501331,
+   "lng": 103.9594284394219
+  },
+  {
+   "blk_no": "1",
+   "road_name": "PASIR RIS DRIVE 4",
+   "building": "NIL",
+   "address": "1 PASIR RIS DRIVE 4 SINGAPORE 519457",
+   "postal": "519457",
+   "lat": 1.36880057366301,
+   "lng": 103.9591823774772
+  },
+  {
+   "blk_no": "1",
+   "road_name": "PASIR RIS DRIVE 4",
+   "building": "PASIR RIS NEIGHBOURHOOD POLICE CENTRE",
+   "address": "1 PASIR RIS DRIVE 4 PASIR RIS NEIGHBOURHOOD POLICE CENTRE SINGAPORE 519457",
+   "postal": "519457",
+   "lat": 1.368349107538624,
+   "lng": 103.959595073675
+  }
+ ],
+ "postal:519498": [
+  {
+   "blk_no": "93",
+   "road_name": "PASIR RIS DRIVE 3",
+   "building": "PASIR RIS ELIAS COMMUNITY CLUB",
+   "address": "93 PASIR RIS DRIVE 3 PASIR RIS ELIAS COMMUNITY CLUB SINGAPORE 519498",
+   "postal": "519498",
+   "lat": 1.378439311559019,
+   "lng": 103.9425490674502
+  }
+ ],
+ "postal:520209": [
+  {
+   "blk_no": "209",
+   "road_name": "TAMPINES STREET 21",
+   "building": "NIL",
+   "address": "209 TAMPINES STREET 21 SINGAPORE 520209",
+   "postal": "520209",
+   "lat": 1.351917436475065,
+   "lng": 103.9528322231023
+  }
+ ],
+ "postal:520285": [
+  {
+   "blk_no": "285",
+   "road_name": "TAMPINES STREET 22",
+   "building": "NIL",
+   "address": "285 TAMPINES STREET 22 SINGAPORE 520285",
+   "postal": "520285",
+   "lat": 1.350010741942631,
+   "lng": 103.952816059954
+  }
+ ],
+ "postal:520430": [
+  {
+   "blk_no": "430",
+   "road_name": "TAMPINES STREET 41",
+   "building": "NIL",
+   "address": "430 TAMPINES STREET 41 SINGAPORE 520430",
+   "postal": "520430",
+   "lat": 1.359552580805391,
+   "lng": 103.9501481941627
+  }
+ ],
+ "postal:520480": [
+  {
+   "blk_no": "480",
+   "road_name": "TAMPINES STREET 44",
+   "building": "NIL",
+   "address": "480 TAMPINES STREET 44 SINGAPORE 520480",
+   "postal": "520480",
+   "lat": 1.361898695462108,
+   "lng": 103.9536130624485
+  }
+ ],
+ "postal:520494": [
+  {
+   "blk_no": "494B",
+   "road_name": "TAMPINES AVENUE 9",
+   "building": "NIL",
+   "address": "494B TAMPINES AVENUE 9 SINGAPORE 520494",
+   "postal": "520494",
+   "lat": 1.363008289405472,
+   "lng": 103.9527048975022
+  }
+ ],
+ "postal:520874": [
+  {
+   "blk_no": "874",
+   "road_name": "TAMPINES STREET 84",
+   "building": "TAMPINES VISTA",
+   "address": "874 TAMPINES STREET 84 TAMPINES VISTA SINGAPORE 520874",
+   "postal": "520874",
+   "lat": 1.353712588984095,
+   "lng": 103.9319447565705
+  }
+ ],
+ "postal:520880": [
+  {
+   "blk_no": "880",
+   "road_name": "TAMPINES AVENUE 8",
+   "building": "TAMPINES SPRING",
+   "address": "880 TAMPINES AVENUE 8 TAMPINES SPRING SINGAPORE 520880",
+   "postal": "520880",
+   "lat": 1.351326081588526,
+   "lng": 103.9314788036679
+  }
+ ],
+ "postal:521111": [
+  {
+   "blk_no": "111",
+   "road_name": "TAMPINES STREET 11",
+   "building": "NIL",
+   "address": "111 TAMPINES STREET 11 SINGAPORE 521111",
+   "postal": "521111",
+   "lat": 1.346914713784628,
+   "lng": 103.9474164646421
+  }
+ ],
+ "postal:523605": [
+  {
+   "blk_no": "605C",
+   "road_name": "TAMPINES STREET 61",
+   "building": "TAMPINES GREENRIDGES",
+   "address": "605C TAMPINES STREET 61 TAMPINES GREENRIDGES SINGAPORE 523605",
+   "postal": "523605",
+   "lat": 1.361872358822428,
+   "lng": 103.9355624465659
+  }
+ ],
+ "postal:523610": [
+  {
+   "blk_no": "610C",
+   "road_name": "TAMPINES NORTH DRIVE 1",
+   "building": "TAMPINES GREENWEAVE",
+   "address": "610C TAMPINES NORTH DRIVE 1 TAMPINES GREENWEAVE SINGAPORE 523610",
+   "postal": "523610",
+   "lat": 1.364417760020228,
+   "lng": 103.9355583401576
+  }
+ ],
+ "postal:524519": [
+  {
+   "blk_no": "519D",
+   "road_name": "TAMPINES CENTRAL 8",
+   "building": "CENTRALE 8 AT TAMPINES",
+   "address": "519D TAMPINES CENTRAL 8 CENTRALE 8 AT TAMPINES SINGAPORE 524519",
+   "postal": "524519",
+   "lat": 1.356207821027841,
+   "lng": 103.9395939650273
+  }
+ ],
+ "postal:528523": [
+  {
+   "blk_no": "1",
+   "road_name": "TAMPINES WALK",
+   "building": "OUR TAMPINES HUB",
+   "address": "1 TAMPINES WALK OUR TAMPINES HUB SINGAPORE 528523",
+   "postal": "528523",
+   "lat": 1.353133598288117,
+   "lng": 103.9404081353108
+  }
+ ],
+ "postal:529204": [
+  {
+   "blk_no": "2",
+   "road_name": "TAMPINES STREET 41",
+   "building": "TAMPINES NORTH COMMUNITY CLUB",
+   "address": "2 TAMPINES STREET 41 TAMPINES NORTH COMMUNITY CLUB SINGAPORE 529204",
+   "postal": "529204",
+   "lat": 1.357364792739423,
+   "lng": 103.9466026761619
+  }
+ ],
+ "postal:529341": [
+  {
+   "blk_no": "10",
+   "road_name": "TAMPINES STREET 23",
+   "building": "TAMPINES EAST COMMUNITY CLUB",
+   "address": "10 TAMPINES STREET 23 TAMPINES EAST COMMUNITY CLUB SINGAPORE 529341",
+   "postal": "529341",
+   "lat": 1.35335683374898,
+   "lng": 103.9546204577829
+  }
+ ],
+ "postal:529453": [
+  {
+   "blk_no": "13",
+   "road_name": "TAMPINES STREET 11",
+   "building": "TAMPINES CHANGKAT COMMUNITY CLUB",
+   "address": "13 TAMPINES STREET 11 TAMPINES CHANGKAT COMMUNITY CLUB SINGAPORE 529453",
+   "postal": "529453",
+   "lat": 1.345849850368457,
+   "lng": 103.9475498098061
+  }
+ ],
+ "postal:529498": [
+  {
+   "blk_no": "498M",
+   "road_name": "TAMPINES STREET 45",
+   "building": "NIL",
+   "address": "498M TAMPINES STREET 45 SINGAPORE 529498",
+   "postal": "529498",
+   "lat": 1.361890482304403,
+   "lng": 103.957741457309
+  }
+ ],
+ "postal:529705": [
+  {
+   "blk_no": "5",
+   "road_name": "TAMPINES AVENUE 3",
+   "building": "TAMPINES WEST COMMUNITY CLUB",
+   "address": "5 TAMPINES AVENUE 3 TAMPINES WEST COMMUNITY CLUB SINGAPORE 529705",
+   "postal": "529705",
+   "lat": 1.348759501114116,
+   "lng": 103.9356896377617
+  }
+ ],
+ "postal:529915": [
+  {
+   "blk_no": "10",
+   "road_name": "SIMEI STREET 2",
+   "building": "CHANGI-SIMEI COMMUNITY BUILDING",
+   "address": "10 SIMEI STREET 2 CHANGI-SIMEI COMMUNITY BUILDING SINGAPORE 529915",
+   "postal": "529915",
+   "lat": 1.344965635419699,
+   "lng": 103.9551677668283
+  }
+ ],
+ "postal:530002": [
+  {
+   "blk_no": "2",
+   "road_name": "HOUGANG AVENUE 3",
+   "building": "NIL",
+   "address": "2 HOUGANG AVENUE 3 SINGAPORE 530002",
+   "postal": "530002",
+   "lat": 1.363137207532554,
+   "lng": 103.8931845409031
+  }
+ ],
+ "postal:530101": [
+  {
+   "blk_no": "101",
+   "road_name": "HOUGANG AVENUE 1",
+   "building": "NIL",
+   "address": "101 HOUGANG AVENUE 1 SINGAPORE 530101",
+   "postal": "530101",
+   "lat": 1.354937478005636,
+   "lng": 103.891360573947
+  }
+ ],
+ "postal:530110": [
+  {
+   "blk_no": "110",
+   "road_name": "HOUGANG AVENUE 1",
+   "building": "NIL",
+   "address": "110 HOUGANG AVENUE 1 SINGAPORE 530110",
+   "postal": "530110",
+   "lat": 1.354805424248316,
+   "lng": 103.8896145852647
+  }
+ ],
+ "postal:530207": [
+  {
+   "blk_no": "207",
+   "road_name": "HOUGANG STREET 21",
+   "building": "PAYA LEBAR KOVAN COMMUNITY CLUB",
+   "address": "207 HOUGANG STREET 21 PAYA LEBAR KOVAN COMMUNITY CLUB SINGAPORE 530207",
+   "postal": "530207",
+   "lat": 1.35759831007159,
+   "lng": 103.8863135310425
+  }
+ ],
+ "postal:530341": [
+  {
+   "blk_no": "341",
+   "road_name": "HOUGANG AVENUE 7",
+   "building": "NIL",
+   "address": "341 HOUGANG AVENUE 7 SINGAPORE 530341",
+   "postal": "530341",
+   "lat": 1.370445490241515,
+   "lng": 103.898588733978
+  }
+ ],
+ "postal:530572": [
+  {
+   "blk_no": "572",
+   "road_name": "HOUGANG STREET 51",
+   "building": "NIL",
+   "address": "572 HOUGANG STREET 51 SINGAPORE 530572",
+   "postal": "530572",
+   "lat": 1.378270724882904,
+   "lng": 103.8874850986399
+  }
+ ],
+ "postal:531006": [
+  {
+   "blk_no": "6",
+   "road_name": "LORONG LEW LIAN",
+   "building": "LEW LIAN GARDENS",
+   "address": "6 LORONG LEW LIAN LEW LIAN GARDENS SINGAPORE 531006",
+   "postal": "531006",
+   "lat": 1.349438107959056,
+   "lng": 103.8773264492957
+  }
+ ],
+ "postal:531985": [
+  {
+   "blk_no": "985A",
+   "road_name": "BUANGKOK CRESCENT",
+   "building": "NIL",
+   "address": "985A BUANGKOK CRESCENT SINGAPORE 531985",
+   "postal": "531985",
+   "lat": 1.381195248487927,
+   "lng": 103.8800662696869
+  }
+ ],
+ "postal:537981": [
+  {
+   "blk_no": "981D",
+   "road_name": "BUANGKOK CRESCENT",
+   "building": "NIL",
+   "address": "981D BUANGKOK CRESCENT SINGAPORE 537981",
+   "postal": "537981",
+   "lat": 1.380452307929524,
+   "lng": 103.8793331947142
+  }
+ ],
+ "postal:538776": [
+  {
+   "blk_no": "51",
+   "road_name": "HOUGANG AVENUE 9",
+   "building": "CI YUAN COMMUNITY CLUB",
+   "address": "51 HOUGANG AVENUE 9 CI YUAN COMMUNITY CLUB SINGAPORE 538776",
+   "postal": "538776",
+   "lat": 1.375322537735674,
+   "lng": 103.8829319300397
+  }
+ ],
+ "postal:538808": [
+  {
+   "blk_no": "3",
+   "road_name": "HOUGANG AVENUE 6",
+   "building": "PUNGGOL COMMUNITY CLUB",
+   "address": "3 HOUGANG AVENUE 6 PUNGGOL COMMUNITY CLUB SINGAPORE 538808",
+   "postal": "538808",
+   "lat": 1.374369988219469,
+   "lng": 103.8919119303212
+  }
+ ],
+ "postal:538840": [
+  {
+   "blk_no": "35",
+   "road_name": "HOUGANG AVENUE 3",
+   "building": "HOUGANG COMMUNITY CLUB",
+   "address": "35 HOUGANG AVENUE 3 HOUGANG COMMUNITY CLUB SINGAPORE 538840",
+   "postal": "538840",
+   "lat": 1.364751243812483,
+   "lng": 103.8927279945726
+  }
+ ],
+ "postal:540351": [
+  {
+   "blk_no": "351",
+   "road_name": "ANCHORVALE ROAD",
+   "building": "ANCHORVALE FIELDS",
+   "address": "351 ANCHORVALE ROAD ANCHORVALE FIELDS SINGAPORE 540351",
+   "postal": "540351",
+   "lat": 1.393327865815169,
+   "lng": 103.8866176251127
+  }
+ ],
+ "postal:541274": [
+  {
+   "blk_no": "274A",
+   "road_name": "COMPASSVALE BOW",
+   "building": "COMPASSVALE HELM",
+   "address": "274A COMPASSVALE BOW COMPASSVALE HELM SINGAPORE 541274",
+   "postal": "541274",
+   "lat": 1.381553553609417,
+   "lng": 103.8905630709136
+  }
+ ],
+ "postal:542279": [
+  {
+   "blk_no": "279B",
+   "road_name": "SENGKANG EAST AVENUE",
+   "building": "COMPASSVALE ANCILLA",
+   "address": "279B SENGKANG EAST AVENUE COMPASSVALE ANCILLA SINGAPORE 542279",
+   "postal": "542279",
+   "lat": 1.385415594504446,
+   "lng": 103.8929860781822
+  }
+ ],
+ "postal:542303": [
+  {
+   "blk_no": "303B",
+   "road_name": "ANCHORVALE LINK",
+   "building": "ANCHORVALE COURT",
+   "address": "303B ANCHORVALE LINK ANCHORVALE COURT SINGAPORE 542303",
+   "postal": "542303",
+   "lat": 1.387423767595534,
+   "lng": 103.8898487581342
+  }
+ ],
+ "postal:543180": [
+  {
+   "blk_no": "180C",
+   "road_name": "RIVERVALE CRESCENT",
+   "building": "RIVERVALE ARC",
+   "address": "180C RIVERVALE CRESCENT RIVERVALE ARC SINGAPORE 543180",
+   "postal": "543180",
+   "lat": 1.389491501761167,
+   "lng": 103.9096604265293
+  }
+ ],
+ "postal:543211": [
+  {
+   "blk_no": "211C",
+   "road_name": "COMPASSVALE LANE",
+   "building": "COMPASSVALE BEACON",
+   "address": "211C COMPASSVALE LANE COMPASSVALE BEACON SINGAPORE 543211",
+   "postal": "543211",
+   "lat": 1.385144912257344,
+   "lng": 103.8992911770264
+  }
+ ],
+ "postal:543286": [
+  {
+   "blk_no": "286C",
+   "road_name": "COMPASSVALE CRESCENT",
+   "building": "COMPASSVALE CAPE",
+   "address": "286C COMPASSVALE CRESCENT COMPASSVALE CAPE SINGAPORE 543286",
+   "postal": "543286",
+   "lat": 1.398117867200827,
+   "lng": 103.8964236860367
+  }
+ ],
+ "postal:543326": [
+  {
+   "blk_no": "326C",
+   "road_name": "ANCHORVALE ROAD",
+   "building": "ANCHORVALE HORIZON",
+   "address": "326C ANCHORVALE ROAD ANCHORVALE HORIZON SINGAPORE 543326",
+   "postal": "543326",
+   "lat": 1.395717128404177,
+   "lng": 103.8880654319942
+  }
+ ],
+ "postal:544583": [
+  {
+   "blk_no": "2",
+   "road_name": "RIVERVALE CLOSE",
+   "building": "RIVERVALE COMMUNITY CENTRE",
+   "address": "2 RIVERVALE CLOSE RIVERVALE COMMUNITY CENTRE SINGAPORE 544583",
+   "postal": "544583",
+   "lat": 1.38514646288139,
+   "lng": 103.9023503904399
+  }
+ ],
+ "postal:544692": [
+  {
+   "blk_no": "70",
+   "road_name": "COMPASSVALE BOW",
+   "building": "SENGKANG GRAND MALL",
+   "address": "70 COMPASSVALE BOW SENGKANG GRAND MALL SINGAPORE 544692",
+   "postal": "544692",
+   "lat": 1.382981632033452,
+   "lng": 103.8927210077455
+  }
+ ],
+ "postal:544965": [
+  {
+   "blk_no": "59",
+   "road_name": "ANCHORVALE ROAD",
+   "building": "ANCHORVALE COMMUNITY CLUB",
+   "address": "59 ANCHORVALE ROAD ANCHORVALE COMMUNITY CLUB SINGAPORE 544965",
+   "postal": "544965",
+   "lat": 1.397083297925743,
+   "lng": 103.8866942404779
+  },
+  {
+   "blk_no": "59",
+   "road_name": "ANCHORVALE ROAD",
+   "building": "SENGKANG SPORTS COMPLEX",
+   "address": "59 ANCHORVALE ROAD SENGKANG SPORTS COMPLEX SINGAPORE 544965",
+   "postal": "544965",
+   "lat": 1.396422944247762,
+   "lng": 103.8870732961981
+  }
+ ],
+ "postal:545025": [
+  {
+   "blk_no": "2",
+   "road_name": "SENGKANG SQUARE",
+   "building": "SENGKANG COMMUNITY HUB",
+   "address": "2 SENGKANG SQUARE SENGKANG COMMUNITY HUB SINGAPORE 545025",
+   "postal": "545025",
+   "lat": 1.39272027516125,
+   "lng": 103.8940822761537
+  }
+ ],
+ "postal:550103": [
+  {
+   "blk_no": "103",
+   "road_name": "SERANGOON NORTH AVENUE 1",
+   "building": "HWI YOH COURT",
+   "address": "103 SERANGOON NORTH AVENUE 1 HWI YOH COURT SINGAPORE 550103",
+   "postal": "550103",
+   "lat": 1.370655487027874,
+   "lng": 103.8702689311561
+  }
+ ],
+ "postal:550123": [
+  {
+   "blk_no": "123",
+   "road_name": "SERANGOON NORTH AVENUE 1",
+   "building": "NIL",
+   "address": "123 SERANGOON NORTH AVENUE 1 SINGAPORE 550123",
+   "postal": "550123",
+   "lat": 1.366958512980815,
+   "lng": 103.8725935511918
+  }
+ ],
+ "postal:550228": [
+  {
+   "blk_no": "228",
+   "road_name": "SERANGOON AVENUE 4",
+   "building": "BOUNDARY VILLE",
+   "address": "228 SERANGOON AVENUE 4 BOUNDARY VILLE SINGAPORE 550228",
+   "postal": "550228",
+   "lat": 1.356364014957245,
+   "lng": 103.8702598533937
+  }
+ ],
+ "postal:550535": [
+  {
+   "blk_no": "535",
+   "road_name": "SERANGOON NORTH AVENUE 4",
+   "building": "NIL",
+   "address": "535 SERANGOON NORTH AVENUE 4 SINGAPORE 550535",
+   "postal": "550535",
+   "lat": 1.373806030935258,
+   "lng": 103.8739802376354
+  }
+ ],
+ "postal:555877": [
+  {
+   "blk_no": "10",
+   "road_name": "SERANGOON NORTH AVENUE 2",
+   "building": "THE SERANGOON COMMUNITY CLUB",
+   "address": "10 SERANGOON NORTH AVENUE 2 THE SERANGOON COMMUNITY CLUB SINGAPORE 555877",
+   "postal": "555877",
+   "lat": 1.36996170692484,
+   "lng": 103.8741742167752
+  }
+ ],
+ "postal:556129": [
+  {
+   "blk_no": "50",
+   "road_name": "SERANGOON AVENUE 2",
+   "building": "BRADDELL HEIGHTS COMMUNITY CLUB",
+   "address": "50 SERANGOON AVENUE 2 BRADDELL HEIGHTS COMMUNITY CLUB SINGAPORE 556129",
+   "postal": "556129",
+   "lat": 1.351690381546186,
+   "lng": 103.870408875865
+  },
+  {
+   "blk_no": "50",
+   "road_name": "SERANGOON AVENUE 2",
+   "building": "SERANGOON NEIGHBOURHOOD POLICE CENTRE",
+   "address": "50 SERANGOON AVENUE 2 SERANGOON NEIGHBOURHOOD POLICE CENTRE SINGAPORE 556129",
+   "postal": "556129",
+   "lat": 1.351920232328544,
+   "lng": 103.870439814295
+  }
+ ],
+ "postal:560112": [
+  {
+   "blk_no": "112",
+   "road_name": "ANG MO KIO AVENUE 4",
+   "building": "KEBUN BARU HEIGHTS",
+   "address": "112 ANG MO KIO AVENUE 4 KEBUN BARU HEIGHTS SINGAPORE 560112",
+   "postal": "560112",
+   "lat": 1.371278651455192,
+   "lng": 103.8357665657406
+  }
+ ],
+ "postal:560121": [
+  {
+   "blk_no": "121",
+   "road_name": "ANG MO KIO AVENUE 3",
+   "building": "NIL",
+   "address": "121 ANG MO KIO AVENUE 3 SINGAPORE 560121",
+   "postal": "560121",
+   "lat": 1.369705634783257,
+   "lng": 103.8435159813106
+  }
+ ],
+ "postal:560177": [
+  {
+   "blk_no": "177",
+   "road_name": "ANG MO KIO AVENUE 4",
+   "building": "KEBUN BARU LINK 2",
+   "address": "177 ANG MO KIO AVENUE 4 KEBUN BARU LINK 2 SINGAPORE 560177",
+   "postal": "560177",
+   "lat": 1.375838271396531,
+   "lng": 103.8381230548251
+  }
+ ],
+ "postal:560212": [
+  {
+   "blk_no": "212",
+   "road_name": "ANG MO KIO AVENUE 3",
+   "building": "NIL",
+   "address": "212 ANG MO KIO AVENUE 3 SINGAPORE 560212",
+   "postal": "560212",
+   "lat": 1.368803594184696,
+   "lng": 103.8416180726031
+  }
+ ],
+ "postal:560220": [
+  {
+   "blk_no": "220",
+   "road_name": "ANG MO KIO AVENUE 1",
+   "building": "ANG MO KIO GROVE",
+   "address": "220 ANG MO KIO AVENUE 1 ANG MO KIO GROVE SINGAPORE 560220",
+   "postal": "560220",
+   "lat": 1.365588335930647,
+   "lng": 103.8405188832536
+  }
+ ],
+ "postal:560225": [
+  {
+   "blk_no": "225",
+   "road_name": "ANG MO KIO AVENUE 1",
+   "building": "NIL",
+   "address": "225 ANG MO KIO AVENUE 1 SINGAPORE 560225",
+   "postal": "560225",
+   "lat": 1.367396127768607,
+   "lng": 103.8381500074636
+  }
+ ],
+ "postal:560253": [
+  {
+   "blk_no": "253",
+   "road_name": "ANG MO KIO STREET 21",
+   "building": "NIL",
+   "address": "253 ANG MO KIO STREET 21 SINGAPORE 560253",
+   "postal": "560253",
+   "lat": 1.369460544578401,
+   "lng": 103.8346590460161
+  }
+ ],
+ "postal:560321": [
+  {
+   "blk_no": "321",
+   "road_name": "ANG MO KIO AVENUE 1",
+   "building": "TECK GHEE VISTA",
+   "address": "321 ANG MO KIO AVENUE 1 TECK GHEE VISTA SINGAPORE 560321",
+   "postal": "560321",
+   "lat": 1.365117670928736,
+   "lng": 103.8483963341709
+  }
+ ],
+ "postal:560325": [
+  {
+   "blk_no": "325",
+   "road_name": "ANG MO KIO AVENUE 3",
+   "building": "ANG MO KIO 31",
+   "address": "325 ANG MO KIO AVENUE 3 ANG MO KIO 31 SINGAPORE 560325",
+   "postal": "560325",
+   "lat": 1.367899869568226,
+   "lng": 103.8468874013863
+  }
+ ],
+ "postal:560344": [
+  {
+   "blk_no": "344",
+   "road_name": "ANG MO KIO AVENUE 3",
+   "building": "TECK GHEE EVERGREEN",
+   "address": "344 ANG MO KIO AVENUE 3 TECK GHEE EVERGREEN SINGAPORE 560344",
+   "postal": "560344",
+   "lat": 1.36797705108685,
+   "lng": 103.8492648393978
+  }
+ ],
+ "postal:560404": [
+  {
+   "blk_no": "404",
+   "road_name": "ANG MO KIO AVENUE 10",
+   "building": "NIL",
+   "address": "404 ANG MO KIO AVENUE 10 SINGAPORE 560404",
+   "postal": "560404",
+   "lat": 1.361677670608536,
+   "lng": 103.854726492538
+  }
+ ],
+ "postal:560418": [
+  {
+   "blk_no": "418",
+   "road_name": "ANG MO KIO AVENUE 10",
+   "building": "TECK GHEE HEARTLANDS",
+   "address": "418 ANG MO KIO AVENUE 10 TECK GHEE HEARTLANDS SINGAPORE 560418",
+   "postal": "560418",
+   "lat": 1.364946013779112,
+   "lng": 103.854043379775
+  }
+ ],
+ "postal:560470": [
+  {
+   "blk_no": "470",
+   "road_name": "ANG MO KIO AVENUE 10",
+   "building": "TECK GHEE HORIZON",
+   "address": "470 ANG MO KIO AVENUE 10 TECK GHEE HORIZON SINGAPORE 560470",
+   "postal": "560470",
+   "lat": 1.364098079194025,
+   "lng": 103.8566942207035
+  }
+ ],
+ "postal:560507": [
+  {
+   "blk_no": "507",
+   "road_name": "ANG MO KIO AVENUE 8",
+   "building": "CHENG SAN CREST",
+   "address": "507 ANG MO KIO AVENUE 8 CHENG SAN CREST SINGAPORE 560507",
+   "postal": "560507",
+   "lat": 1.374431399335043,
+   "lng": 103.8501574847044
+  }
+ ],
+ "postal:560624": [
+  {
+   "blk_no": "624",
+   "road_name": "ANG MO KIO AVENUE 4",
+   "building": "NIL",
+   "address": "624 ANG MO KIO AVENUE 4 SINGAPORE 560624",
+   "postal": "560624",
+   "lat": 1.38156171229824,
+   "lng": 103.8400022687298
+  }
+ ],
+ "postal:560646": [
+  {
+   "blk_no": "646",
+   "road_name": "ANG MO KIO AVENUE 6",
+   "building": "ANG MO KIO 61",
+   "address": "646 ANG MO KIO AVENUE 6 ANG MO KIO 61 SINGAPORE 560646",
+   "postal": "560646",
+   "lat": 1.379395176878682,
+   "lng": 103.843763599411
+  }
+ ],
+ "postal:563309": [
+  {
+   "blk_no": "309B",
+   "road_name": "ANG MO KIO STREET 31",
+   "building": "TECK GHEE VISTA",
+   "address": "309B ANG MO KIO STREET 31 TECK GHEE VISTA SINGAPORE 563309",
+   "postal": "563309",
+   "lat": 1.364647456411906,
+   "lng": 103.8463100135139
+  }
+ ],
+ "postal:569163": [
+  {
+   "blk_no": "50",
+   "road_name": "ANG MO KIO STREET 61",
+   "building": "YIO CHU KANG COMMUNITY CLUB",
+   "address": "50 ANG MO KIO STREET 61 YIO CHU KANG COMMUNITY CLUB SINGAPORE 569163",
+   "postal": "569163",
+   "lat": 1.381325785670567,
+   "lng": 103.8414504686704
+  }
+ ],
+ "postal:569205": [
+  {
+   "blk_no": "6",
+   "road_name": "ANG MO KIO STREET 53",
+   "building": "CHENG SAN COMMUNITY CLUB (U/C)",
+   "address": "6 ANG MO KIO STREET 53 CHENG SAN COMMUNITY CLUB (U/C) SINGAPORE 569205",
+   "postal": "569205",
+   "lat": 1.371915234634771,
+   "lng": 103.8493750246645
+  }
+ ],
+ "postal:569734": [
+  {
+   "blk_no": "861",
+   "road_name": "ANG MO KIO AVENUE 10",
+   "building": "TECK GHEE COMMUNITY CLUB",
+   "address": "861 ANG MO KIO AVENUE 10 TECK GHEE COMMUNITY CLUB SINGAPORE 569734",
+   "postal": "569734",
+   "lat": 1.363106005257572,
+   "lng": 103.8535605086277
+  }
+ ],
+ "postal:569897": [
+  {
+   "blk_no": "216",
+   "road_name": "ANG MO KIO AVENUE 4",
+   "building": "KEBUN BARU COMMUNITY CLUB",
+   "address": "216 ANG MO KIO AVENUE 4 KEBUN BARU COMMUNITY CLUB SINGAPORE 569897",
+   "postal": "569897",
+   "lat": 1.373007501602539,
+   "lng": 103.8376124212941
+  }
+ ],
+ "postal:569976": [
+  {
+   "blk_no": "795",
+   "road_name": "ANG MO KIO AVENUE 1",
+   "building": "ANG MO KIO COMMUNITY CENTRE",
+   "address": "795 ANG MO KIO AVENUE 1 ANG MO KIO COMMUNITY CENTRE SINGAPORE 569976",
+   "postal": "569976",
+   "lat": 1.366861255273488,
+   "lng": 103.8406851914611
+  }
+ ],
+ "postal:570145": [
+  {
+   "blk_no": "145",
+   "road_name": "BISHAN STREET 11",
+   "building": "BISHAN GREEN",
+   "address": "145 BISHAN STREET 11 BISHAN GREEN SINGAPORE 570145",
+   "postal": "570145",
+   "lat": 1.344886009124616,
+   "lng": 103.8542844956701
+  }
+ ],
+ "postal:570406": [
+  {
+   "blk_no": "406",
+   "road_name": "SIN MING AVENUE",
+   "building": "SIN MING GARDEN",
+   "address": "406 SIN MING AVENUE SIN MING GARDEN SINGAPORE 570406",
+   "postal": "570406",
+   "lat": 1.3629445537469,
+   "lng": 103.8340935001691
+  }
+ ],
+ "postal:574339": [
+  {
+   "blk_no": "194",
+   "road_name": "UPPER THOMSON ROAD",
+   "building": "THOMSON COMMUNITY CLUB",
+   "address": "194 UPPER THOMSON ROAD THOMSON COMMUNITY CLUB SINGAPORE 574339",
+   "postal": "574339",
+   "lat": 1.351202992134877,
+   "lng": 103.8363139796527
+  }
+ ],
+ "postal:575738": [
+  {
+   "blk_no": "191",
+   "road_name": "SIN MING AVENUE",
+   "building": "EUNOIA JUNIOR COLLEGE",
+   "address": "191 SIN MING AVENUE EUNOIA JUNIOR COLLEGE SINGAPORE 575738",
+   "postal": "575738",
+   "lat": 1.362137571561742,
+   "lng": 103.8412861688494
+  },
+  {
+   "blk_no": "191",
+   "road_name": "SIN MING AVENUE",
+   "building": "MARYMOUNT COMMUNITY CLUB",
+   "address": "191 SIN MING AVENUE MARYMOUNT COMMUNITY CLUB SINGAPORE 575738",
+   "postal": "575738",
+   "lat": 1.36150584133083,
+   "lng": 103.841442648888
+  }
+ ],
+ "postal:579799": [
+  {
+   "blk_no": "51",
+   "road_name": "BISHAN STREET 13",
+   "building": "BISHAN COMMUNITY CLUB",
+   "address": "51 BISHAN STREET 13 BISHAN COMMUNITY CLUB SINGAPORE 579799",
+   "postal": "579799",
+   "lat": 1.349478346230655,
+   "lng": 103.8507462048994
+  }
+ ],
+ "postal:590004": [
+  {
+   "blk_no": "4",
+   "road_name": "TOH YI DRIVE",
+   "building": "TOH YI GARDENS",
+   "address": "4 TOH YI DRIVE TOH YI GARDENS SINGAPORE 590004",
+   "postal": "590004",
+   "lat": 1.338512067233299,
+   "lng": 103.7745698235268
+  }
+ ],
+ "postal:596569": [
+  {
+   "blk_no": "20",
+   "road_name": "TOH YI DRIVE",
+   "building": "BUKIT TIMAH COMMUNITY CLUB",
+   "address": "20 TOH YI DRIVE BUKIT TIMAH COMMUNITY CLUB SINGAPORE 596569",
+   "postal": "596569",
+   "lat": 1.340444374847296,
+   "lng": 103.7717094593513
+  }
+ ],
+ "postal:600020": [
+  {
+   "blk_no": "20",
+   "road_name": "TEBAN GARDENS ROAD",
+   "building": "TEBAN VISTA",
+   "address": "20 TEBAN GARDENS ROAD TEBAN VISTA SINGAPORE 600020",
+   "postal": "600020",
+   "lat": 1.323783550417066,
+   "lng": 103.7385183842001
+  }
+ ],
+ "postal:600032": [
+  {
+   "blk_no": "32",
+   "road_name": "TEBAN GARDENS ROAD",
+   "building": "NIL",
+   "address": "32 TEBAN GARDENS ROAD SINGAPORE 600032",
+   "postal": "600032",
+   "lat": 1.321843962960118,
+   "lng": 103.7398725219544
+  }
+ ],
+ "postal:600107": [
+  {
+   "blk_no": "107",
+   "road_name": "JURONG EAST STREET 13",
+   "building": "JURONG EAST VILLE",
+   "address": "107 JURONG EAST STREET 13 JURONG EAST VILLE SINGAPORE 600107",
+   "postal": "600107",
+   "lat": 1.337754568475875,
+   "lng": 103.7380933521199
+  }
+ ],
+ "postal:600240": [
+  {
+   "blk_no": "240",
+   "road_name": "JURONG EAST STREET 21",
+   "building": "NIL",
+   "address": "240 JURONG EAST STREET 21 SINGAPORE 600240",
+   "postal": "600240",
+   "lat": 1.341067510964955,
+   "lng": 103.7415731998953
+  }
+ ],
+ "postal:600260": [
+  {
+   "blk_no": "260",
+   "road_name": "JURONG EAST STREET 24",
+   "building": "NIL",
+   "address": "260 JURONG EAST STREET 24 SINGAPORE 600260",
+   "postal": "600260",
+   "lat": 1.34372175616441,
+   "lng": 103.7402228689089
+  }
+ ],
+ "postal:600282": [
+  {
+   "blk_no": "282",
+   "road_name": "TOH GUAN ROAD",
+   "building": "TOH GUAN VIEW",
+   "address": "282 TOH GUAN ROAD TOH GUAN VIEW SINGAPORE 600282",
+   "postal": "600282",
+   "lat": 1.339605829896912,
+   "lng": 103.7471112539228
+  }
+ ],
+ "postal:600320": [
+  {
+   "blk_no": "320",
+   "road_name": "JURONG EAST STREET 31",
+   "building": "NIL",
+   "address": "320 JURONG EAST STREET 31 SINGAPORE 600320",
+   "postal": "600320",
+   "lat": 1.348757860212912,
+   "lng": 103.7307086750427
+  }
+ ],
+ "postal:600340": [
+  {
+   "blk_no": "340",
+   "road_name": "JURONG EAST AVENUE 1",
+   "building": "NIL",
+   "address": "340 JURONG EAST AVENUE 1 SINGAPORE 600340",
+   "postal": "600340",
+   "lat": 1.350126616515329,
+   "lng": 103.730687889533
+  }
+ ],
+ "postal:609335": [
+  {
+   "blk_no": "150",
+   "road_name": "PANDAN GARDENS",
+   "building": "AYER RAJAH COMMUNITY CLUB",
+   "address": "150 PANDAN GARDENS AYER RAJAH COMMUNITY CLUB SINGAPORE 609335",
+   "postal": "609335",
+   "lat": 1.320961547327516,
+   "lng": 103.7476984267228
+  }
+ ],
+ "postal:609958": [
+  {
+   "blk_no": "90",
+   "road_name": "BOON LAY WAY",
+   "building": "YUHUA COMMUNITY CLUB",
+   "address": "90 BOON LAY WAY YUHUA COMMUNITY CLUB SINGAPORE 609958",
+   "postal": "609958",
+   "lat": 1.339958513193786,
+   "lng": 103.737115832566
+  }
+ ],
+ "postal:612138": [
+  {
+   "blk_no": "138B",
+   "road_name": "YUAN CHING ROAD",
+   "building": "LAKE VISTA @ YUAN CHING",
+   "address": "138B YUAN CHING ROAD LAKE VISTA @ YUAN CHING SINGAPORE 612138",
+   "postal": "612138",
+   "lat": 1.32841510984309,
+   "lng": 103.7243041477644
+  }
+ ],
+ "postal:612175": [
+  {
+   "blk_no": "175B",
+   "road_name": "YUNG KUANG ROAD",
+   "building": "CORPORATION TIARA",
+   "address": "175B YUNG KUANG ROAD CORPORATION TIARA SINGAPORE 612175",
+   "postal": "612175",
+   "lat": 1.332833592826985,
+   "lng": 103.7210433814235
+  }
+ ],
+ "postal:618495": [
+  {
+   "blk_no": "1",
+   "road_name": "YUNG SHENG ROAD",
+   "building": "TAMAN JURONG COMMUNITY CLUB",
+   "address": "1 YUNG SHENG ROAD TAMAN JURONG COMMUNITY CLUB SINGAPORE 618495",
+   "postal": "618495",
+   "lat": 1.335296561353875,
+   "lng": 103.7217015637389
+  }
+ ],
+ "postal:640190": [
+  {
+   "blk_no": "190",
+   "road_name": "BOON LAY DRIVE",
+   "building": "BOON LAY VISTA",
+   "address": "190 BOON LAY DRIVE BOON LAY VISTA SINGAPORE 640190",
+   "postal": "640190",
+   "lat": 1.34507676207704,
+   "lng": 103.7118504259263
+  }
+ ],
+ "postal:640260": [
+  {
+   "blk_no": "260",
+   "road_name": "BOON LAY DRIVE",
+   "building": "BOON LAY CREST",
+   "address": "260 BOON LAY DRIVE BOON LAY CREST SINGAPORE 640260",
+   "postal": "640260",
+   "lat": 1.345093736075019,
+   "lng": 103.708033296536
+  }
+ ],
+ "postal:640475": [
+  {
+   "blk_no": "475",
+   "road_name": "JURONG WEST STREET 41",
+   "building": "JURONGVILLE @ STREET 41",
+   "address": "475 JURONG WEST STREET 41 JURONGVILLE @ STREET 41 SINGAPORE 640475",
+   "postal": "640475",
+   "lat": 1.348098041072745,
+   "lng": 103.7250872263781
+  }
+ ],
+ "postal:640527": [
+  {
+   "blk_no": "527",
+   "road_name": "JURONG WEST STREET 52",
+   "building": "NIL",
+   "address": "527 JURONG WEST STREET 52 SINGAPORE 640527",
+   "postal": "640527",
+   "lat": 1.347884171935017,
+   "lng": 103.7164173898649
+  }
+ ],
+ "postal:640555": [
+  {
+   "blk_no": "555",
+   "road_name": "JURONG WEST STREET 42",
+   "building": "NIL",
+   "address": "555 JURONG WEST STREET 42 SINGAPORE 640555",
+   "postal": "640555",
+   "lat": 1.353668604514571,
+   "lng": 103.7188531456144
+  }
+ ],
+ "postal:640705": [
+  {
+   "blk_no": "705",
+   "road_name": "JURONG WEST STREET 71",
+   "building": "NIL",
+   "address": "705 JURONG WEST STREET 71 SINGAPORE 640705",
+   "postal": "640705",
+   "lat": 1.340912429457731,
+   "lng": 103.6946509903976
+  }
+ ],
+ "postal:640726": [
+  {
+   "blk_no": "726",
+   "road_name": "JURONG WEST AVENUE 5",
+   "building": "NANYANG SAPPHIRE",
+   "address": "726 JURONG WEST AVENUE 5 NANYANG SAPPHIRE SINGAPORE 640726",
+   "postal": "640726",
+   "lat": 1.3459430568526,
+   "lng": 103.6971345893265
+  }
+ ],
+ "postal:640760": [
+  {
+   "blk_no": "760",
+   "road_name": "JURONG WEST STREET 74",
+   "building": "NIL",
+   "address": "760 JURONG WEST STREET 74 SINGAPORE 640760",
+   "postal": "640760",
+   "lat": 1.349412382559544,
+   "lng": 103.6999340958944
+  }
+ ],
+ "postal:641183": [
+  {
+   "blk_no": "183A",
+   "road_name": "BOON LAY AVENUE",
+   "building": "BOON LAY GROVE",
+   "address": "183A BOON LAY AVENUE BOON LAY GROVE SINGAPORE 641183",
+   "postal": "641183",
+   "lat": 1.348617948018033,
+   "lng": 103.7097377001759
+  }
+ ],
+ "postal:648346": [
+  {
+   "blk_no": "60",
+   "road_name": "JURONG WEST CENTRAL 3",
+   "building": "JURONG WEST COMMUNITY BUILDING",
+   "address": "60 JURONG WEST CENTRAL 3 JURONG WEST COMMUNITY BUILDING SINGAPORE 648346",
+   "postal": "648346",
+   "lat": 1.340561245964539,
+   "lng": 103.7045268763662
+  }
+ ],
+ "postal:649040": [
+  {
+   "blk_no": "60",
+   "road_name": "JURONG WEST STREET 91",
+   "building": "NANYANG COMMUNITY CLUB",
+   "address": "60 JURONG WEST STREET 91 NANYANG COMMUNITY CLUB SINGAPORE 649040",
+   "postal": "649040",
+   "lat": 1.342428289441089,
+   "lng": 103.6924351631345
+  }
+ ],
+ "postal:649296": [
+  {
+   "blk_no": "8",
+   "road_name": "JURONG WEST STREET 52",
+   "building": "JURONG SPRING COMMUNITY CLUB",
+   "address": "8 JURONG WEST STREET 52 JURONG SPRING COMMUNITY CLUB SINGAPORE 649296",
+   "postal": "649296",
+   "lat": 1.348330172368306,
+   "lng": 103.7181556955453
+  }
+ ],
+ "postal:649520": [
+  {
+   "blk_no": "6",
+   "road_name": "JURONG WEST AVENUE 1",
+   "building": "JURONG GREEN COMMUNITY CLUB",
+   "address": "6 JURONG WEST AVENUE 1 JURONG GREEN COMMUNITY CLUB SINGAPORE 649520",
+   "postal": "649520",
+   "lat": 1.350547171512804,
+   "lng": 103.7253976807254
+  }
+ ],
+ "postal:649882": [
+  {
+   "blk_no": "10",
+   "road_name": "BOON LAY PLACE",
+   "building": "BOON LAY COMMUNITY CLUB",
+   "address": "10 BOON LAY PLACE BOON LAY COMMUNITY CLUB SINGAPORE 649882",
+   "postal": "649882",
+   "lat": 1.348349166433201,
+   "lng": 103.7113816191467
+  }
+ ],
+ "postal:650104": [
+  {
+   "blk_no": "104",
+   "road_name": "BUKIT BATOK CENTRAL",
+   "building": "NIL",
+   "address": "104 BUKIT BATOK CENTRAL SINGAPORE 650104",
+   "postal": "650104",
+   "lat": 1.348995002555493,
+   "lng": 103.7472582186053
+  }
+ ],
+ "postal:650116": [
+  {
+   "blk_no": "116",
+   "road_name": "BUKIT BATOK WEST AVENUE 6",
+   "building": "NIL",
+   "address": "116 BUKIT BATOK WEST AVENUE 6 SINGAPORE 650116",
+   "postal": "650116",
+   "lat": 1.349628664525118,
+   "lng": 103.7463810732923
+  }
+ ],
+ "postal:650120": [
+  {
+   "blk_no": "120",
+   "road_name": "BUKIT BATOK CENTRAL",
+   "building": "NIL",
+   "address": "120 BUKIT BATOK CENTRAL SINGAPORE 650120",
+   "postal": "650120",
+   "lat": 1.35105942734691,
+   "lng": 103.7477122775047
+  }
+ ],
+ "postal:650210": [
+  {
+   "blk_no": "210",
+   "road_name": "BUKIT BATOK STREET 21",
+   "building": "NIL",
+   "address": "210 BUKIT BATOK STREET 21 SINGAPORE 650210",
+   "postal": "650210",
+   "lat": 1.34548008232168,
+   "lng": 103.7499560958499
+  }
+ ],
+ "postal:650419": [
+  {
+   "blk_no": "419",
+   "road_name": "BUKIT BATOK WEST AVENUE 2",
+   "building": "NIL",
+   "address": "419 BUKIT BATOK WEST AVENUE 2 SINGAPORE 650419",
+   "postal": "650419",
+   "lat": 1.361947382181469,
+   "lng": 103.7461963779915
+  }
+ ],
+ "postal:650531": [
+  {
+   "blk_no": "531",
+   "road_name": "BUKIT BATOK STREET 51",
+   "building": "NIL",
+   "address": "531 BUKIT BATOK STREET 51 SINGAPORE 650531",
+   "postal": "650531",
+   "lat": 1.356289239445525,
+   "lng": 103.7504097157564
+  }
+ ],
+ "postal:651461": [
+  {
+   "blk_no": "461A",
+   "road_name": "BUKIT BATOK WEST AVENUE 8",
+   "building": "WEST ROCK @ BUKIT BATOK",
+   "address": "461A BUKIT BATOK WEST AVENUE 8 WEST ROCK @ BUKIT BATOK SINGAPORE 651461",
+   "postal": "651461",
+   "lat": 1.35492017502697,
+   "lng": 103.7399731600669
+  }
+ ],
+ "postal:651464": [
+  {
+   "blk_no": "464A",
+   "road_name": "BUKIT BATOK WEST AVENUE 8",
+   "building": "WEST PLAINS @ BUKIT BATOK",
+   "address": "464A BUKIT BATOK WEST AVENUE 8 WEST PLAINS @ BUKIT BATOK SINGAPORE 651464",
+   "postal": "651464",
+   "lat": 1.357370214143069,
+   "lng": 103.7417496817024
+  }
+ ],
+ "postal:653439": [
+  {
+   "blk_no": "439C",
+   "road_name": "BUKIT BATOK WEST AVENUE 8",
+   "building": "WEST EDGE @ BUKIT BATOK",
+   "address": "439C BUKIT BATOK WEST AVENUE 8 WEST EDGE @ BUKIT BATOK SINGAPORE 653439",
+   "postal": "653439",
+   "lat": 1.357628612959266,
+   "lng": 103.7388575244064
+  }
+ ],
+ "postal:653441": [
+  {
+   "blk_no": "441C",
+   "road_name": "BUKIT BATOK WEST AVENUE 8",
+   "building": "WEST RIDGES @ BUKIT BATOK",
+   "address": "441C BUKIT BATOK WEST AVENUE 8 WEST RIDGES @ BUKIT BATOK SINGAPORE 653441",
+   "postal": "653441",
+   "lat": 1.355568167738437,
+   "lng": 103.7387044847214
+  }
+ ],
+ "postal:653448": [
+  {
+   "blk_no": "448C",
+   "road_name": "BUKIT BATOK WEST AVENUE 9",
+   "building": "WEST VALLEY @ BUKIT BATOK",
+   "address": "448C BUKIT BATOK WEST AVENUE 9 WEST VALLEY @ BUKIT BATOK SINGAPORE 653448",
+   "postal": "653448",
+   "lat": 1.35272258284344,
+   "lng": 103.7412400024436
+  }
+ ],
+ "postal:653451": [
+  {
+   "blk_no": "451C",
+   "road_name": "BUKIT BATOK WEST AVENUE 6",
+   "building": "WEST TERRA @ BUKIT BATOK",
+   "address": "451C BUKIT BATOK WEST AVENUE 6 WEST TERRA @ BUKIT BATOK SINGAPORE 653451",
+   "postal": "653451",
+   "lat": 1.352767326812536,
+   "lng": 103.7430111089835
+  }
+ ],
+ "postal:659440": [
+  {
+   "blk_no": "30",
+   "road_name": "BUKIT BATOK STREET 31",
+   "building": "HONG KAH NORTH COMMUNITY CLUB",
+   "address": "30 BUKIT BATOK STREET 31 HONG KAH NORTH COMMUNITY CLUB SINGAPORE 659440",
+   "postal": "659440",
+   "lat": 1.359033397249325,
+   "lng": 103.7494868198429
+  }
+ ],
+ "postal:659841": [
+  {
+   "blk_no": "23",
+   "road_name": "BUKIT BATOK EAST AVENUE 4",
+   "building": "BUKIT BATOK NEIGHBOURHOOD POLICE CENTRE",
+   "address": "23 BUKIT BATOK EAST AVENUE 4 BUKIT BATOK NEIGHBOURHOOD POLICE CENTRE SINGAPORE 659841",
+   "postal": "659841",
+   "lat": 1.349090086100352,
+   "lng": 103.7584802662112
+  },
+  {
+   "blk_no": "23",
+   "road_name": "BUKIT BATOK EAST AVENUE 4",
+   "building": "BUKIT BATOK EAST COMMUNITY CLUB",
+   "address": "23 BUKIT BATOK EAST AVENUE 4 BUKIT BATOK EAST COMMUNITY CLUB SINGAPORE 659841",
+   "postal": "659841",
+   "lat": 1.348959046869652,
+   "lng": 103.7582818603222
+  }
+ ],
+ "postal:667970": [
+  {
+   "blk_no": "1",
+   "road_name": "HILLVIEW RISE",
+   "building": "HILLVIEW COMMUNITY CLUB",
+   "address": "1 HILLVIEW RISE HILLVIEW COMMUNITY CLUB SINGAPORE 667970",
+   "postal": "667970",
+   "lat": 1.361967253416799,
+   "lng": 103.7642663820927
+  }
+ ],
+ "postal:670441": [
+  {
+   "blk_no": "441",
+   "road_name": "FAJAR ROAD",
+   "building": "NIL",
+   "address": "441 FAJAR ROAD SINGAPORE 670441",
+   "postal": "670441",
+   "lat": 1.383222191172856,
+   "lng": 103.7708368845732
+  }
+ ],
+ "postal:670456": [
+  {
+   "blk_no": "456",
+   "road_name": "SEGAR ROAD",
+   "building": "SEGAR MEADOWS",
+   "address": "456 SEGAR ROAD SEGAR MEADOWS SINGAPORE 670456",
+   "postal": "670456",
+   "lat": 1.3875453701888,
+   "lng": 103.7704423534548
+  }
+ ],
+ "postal:672635": [
+  {
+   "blk_no": "635B",
+   "road_name": "SENJA ROAD",
+   "building": "SENJA GATEWAY",
+   "address": "635B SENJA ROAD SENJA GATEWAY SINGAPORE 672635",
+   "postal": "672635",
+   "lat": 1.386602752375775,
+   "lng": 103.7577104678676
+  }
+ ],
+ "postal:677738": [
+  {
+   "blk_no": "1",
+   "road_name": "SEGAR ROAD",
+   "building": "ZHENGHUA COMMUNITY CLUB (U/C)",
+   "address": "1 SEGAR ROAD ZHENGHUA COMMUNITY CLUB (U/C) SINGAPORE 677738",
+   "postal": "677738",
+   "lat": 1.386807457641798,
+   "lng": 103.7718085813902
+  },
+  {
+   "blk_no": "1",
+   "road_name": "SEGAR ROAD",
+   "building": "ZHENGHUA COMMUNITY CLUB",
+   "address": "1 SEGAR ROAD ZHENGHUA COMMUNITY CLUB SINGAPORE 677738",
+   "postal": "677738",
+   "lat": 1.386776581332976,
+   "lng": 103.7715753922954
+  }
+ ],
+ "postal:678295": [
+  {
+   "blk_no": "8",
+   "road_name": "PENDING ROAD",
+   "building": "BUKIT PANJANG COMMUNITY CLUB",
+   "address": "8 PENDING ROAD BUKIT PANJANG COMMUNITY CLUB SINGAPORE 678295",
+   "postal": "678295",
+   "lat": 1.376450755554642,
+   "lng": 103.7705588026539
+  }
+ ],
+ "postal:679910": [
+  {
+   "blk_no": "101",
+   "road_name": "BUKIT PANJANG ROAD",
+   "building": "SENJA-CASHEW COMMUNITY CLUB",
+   "address": "101 BUKIT PANJANG ROAD SENJA-CASHEW COMMUNITY CLUB SINGAPORE 679910",
+   "postal": "679910",
+   "lat": 1.381638133193397,
+   "lng": 103.7646762509678
+  }
+ ],
+ "postal:680015": [
+  {
+   "blk_no": "15",
+   "road_name": "TECK WHYE LANE",
+   "building": "TECK WHYE HEIGHTS III",
+   "address": "15 TECK WHYE LANE TECK WHYE HEIGHTS III SINGAPORE 680015",
+   "postal": "680015",
+   "lat": 1.379133572567952,
+   "lng": 103.7547387163996
+  }
+ ],
+ "postal:680163": [
+  {
+   "blk_no": "163",
+   "road_name": "JALAN TECK WHYE",
+   "building": "NIL",
+   "address": "163 JALAN TECK WHYE SINGAPORE 680163",
+   "postal": "680163",
+   "lat": 1.380910276713725,
+   "lng": 103.7569258244138
+  }
+ ],
+ "postal:680505": [
+  {
+   "blk_no": "505",
+   "road_name": "CHOA CHU KANG STREET 51",
+   "building": "NIL",
+   "address": "505 CHOA CHU KANG STREET 51 SINGAPORE 680505",
+   "postal": "680505",
+   "lat": 1.389074186390439,
+   "lng": 103.7421408853388
+  }
+ ],
+ "postal:680549": [
+  {
+   "blk_no": "549",
+   "road_name": "CHOA CHU KANG STREET 52",
+   "building": "NIL",
+   "address": "549 CHOA CHU KANG STREET 52 SINGAPORE 680549",
+   "postal": "680549",
+   "lat": 1.393390171981235,
+   "lng": 103.7427471082855
+  }
+ ],
+ "postal:680561": [
+  {
+   "blk_no": "561",
+   "road_name": "CHOA CHU KANG NORTH 6",
+   "building": "NIL",
+   "address": "561 CHOA CHU KANG NORTH 6 SINGAPORE 680561",
+   "postal": "680561",
+   "lat": 1.396326453324138,
+   "lng": 103.7449571716265
+  }
+ ],
+ "postal:680753": [
+  {
+   "blk_no": "753",
+   "road_name": "CHOA CHU KANG NORTH 5",
+   "building": "NIL",
+   "address": "753 CHOA CHU KANG NORTH 5 SINGAPORE 680753",
+   "postal": "680753",
+   "lat": 1.392340906278617,
+   "lng": 103.7469435947791
+  }
+ ],
+ "postal:680785": [
+  {
+   "blk_no": "785",
+   "road_name": "CHOA CHU KANG DRIVE",
+   "building": "NIL",
+   "address": "785 CHOA CHU KANG DRIVE SINGAPORE 680785",
+   "postal": "680785",
+   "lat": 1.394855245081225,
+   "lng": 103.748044130582
+  }
+ ],
+ "postal:681489": [
+  {
+   "blk_no": "489A",
+   "road_name": "CHOA CHU KANG AVENUE 5",
+   "building": "SUNSHINE GARDENS",
+   "address": "489A CHOA CHU KANG AVENUE 5 SUNSHINE GARDENS SINGAPORE 681489",
+   "postal": "681489",
+   "lat": 1.375600948184221,
+   "lng": 103.7403600096891
+  }
+ ],
+ "postal:681811": [
+  {
+   "blk_no": "811A",
+   "road_name": "CHOA CHU KANG AVENUE 7",
+   "building": "KEAT HONG COLOURS",
+   "address": "811A CHOA CHU KANG AVENUE 7 KEAT HONG COLOURS SINGAPORE 681811",
+   "postal": "681811",
+   "lat": 1.373730848190214,
+   "lng": 103.7459297845303
+  }
+ ],
+ "postal:682807": [
+  {
+   "blk_no": "807B",
+   "road_name": "CHOA CHU KANG AVENUE 1",
+   "building": "KEAT HONG AXIS",
+   "address": "807B CHOA CHU KANG AVENUE 1 KEAT HONG AXIS SINGAPORE 682807",
+   "postal": "682807",
+   "lat": 1.376044181650929,
+   "lng": 103.7451708827274
+  }
+ ],
+ "postal:688892": [
+  {
+   "blk_no": "35",
+   "road_name": "TECK WHYE AVENUE",
+   "building": "CHUA CHU KANG COMMUNITY CLUB",
+   "address": "35 TECK WHYE AVENUE CHUA CHU KANG COMMUNITY CLUB SINGAPORE 688892",
+   "postal": "688892",
+   "lat": 1.381155291170583,
+   "lng": 103.751903879838
+  }
+ ],
+ "postal:689286": [
+  {
+   "blk_no": "20",
+   "road_name": "CHOA CHU KANG STREET 52",
+   "building": "YEW TEE COMMUNITY BUILDING",
+   "address": "20 CHOA CHU KANG STREET 52 YEW TEE COMMUNITY BUILDING SINGAPORE 689286",
+   "postal": "689286",
+   "lat": 1.394833124559626,
+   "lng": 103.744790526006
+  }
+ ],
+ "postal:689687": [
+  {
+   "blk_no": "2",
+   "road_name": "CHOA CHU KANG LOOP",
+   "building": "KEAT HONG COMMUNITY CLUB",
+   "address": "2 CHOA CHU KANG LOOP KEAT HONG COMMUNITY CLUB SINGAPORE 689687",
+   "postal": "689687",
+   "lat": 1.384095872355775,
+   "lng": 103.7449493592743
+  }
+ ],
+ "postal:690119": [
+  {
+   "blk_no": "119",
+   "road_name": "PLANTATION CRESCENT",
+   "building": "TENGAH COMMUNITY CLUB",
+   "address": "119 PLANTATION CRESCENT TENGAH COMMUNITY CLUB SINGAPORE 690119",
+   "postal": "690119",
+   "lat": 1.356752427301931,
+   "lng": 103.7345000424129
+  }
+ ],
+ "postal:730002": [
+  {
+   "blk_no": "2",
+   "road_name": "MARSILING DRIVE",
+   "building": "MARSILING SPRING",
+   "address": "2 MARSILING DRIVE MARSILING SPRING SINGAPORE 730002",
+   "postal": "730002",
+   "lat": 1.439938287586006,
+   "lng": 103.7766947503977
+  }
+ ],
+ "postal:730008": [
+  {
+   "blk_no": "8",
+   "road_name": "MARSILING DRIVE",
+   "building": "MARSILING GARDENS",
+   "address": "8 MARSILING DRIVE MARSILING GARDENS SINGAPORE 730008",
+   "postal": "730008",
+   "lat": 1.441345041074568,
+   "lng": 103.777182721751
+  }
+ ],
+ "postal:730123": [
+  {
+   "blk_no": "123",
+   "road_name": "MARSILING RISE",
+   "building": "NIL",
+   "address": "123 MARSILING RISE SINGAPORE 730123",
+   "postal": "730123",
+   "lat": 1.439112423022226,
+   "lng": 103.778949135126
+  }
+ ],
+ "postal:730206": [
+  {
+   "blk_no": "206",
+   "road_name": "MARSILING DRIVE",
+   "building": "MARSILING ADMIRALTY PARK",
+   "address": "206 MARSILING DRIVE MARSILING ADMIRALTY PARK SINGAPORE 730206",
+   "postal": "730206",
+   "lat": 1.445407295786023,
+   "lng": 103.77336982144
+  }
+ ],
+ "postal:730310": [
+  {
+   "blk_no": "310",
+   "road_name": "WOODLANDS STREET 31",
+   "building": "NIL",
+   "address": "310 WOODLANDS STREET 31 SINGAPORE 730310",
+   "postal": "730310",
+   "lat": 1.430103780775478,
+   "lng": 103.7759771166933
+  }
+ ],
+ "postal:730353": [
+  {
+   "blk_no": "353",
+   "road_name": "WOODLANDS AVENUE 1",
+   "building": "NIL",
+   "address": "353 WOODLANDS AVENUE 1 SINGAPORE 730353",
+   "postal": "730353",
+   "lat": 1.431816487071708,
+   "lng": 103.7851624488421
+  }
+ ],
+ "postal:731782": [
+  {
+   "blk_no": "782A",
+   "road_name": "WOODLANDS CRESCENT",
+   "building": "WOODLANDS MEADOW",
+   "address": "782A WOODLANDS CRESCENT WOODLANDS MEADOW SINGAPORE 731782",
+   "postal": "731782",
+   "lat": 1.447466503204837,
+   "lng": 103.8026612946303
+  }
+ ],
+ "postal:731890": [
+  {
+   "blk_no": "890A",
+   "road_name": "WOODLANDS DRIVE 50",
+   "building": "TREETRAIL@WOODLANDS",
+   "address": "890A WOODLANDS DRIVE 50 TREETRAIL@WOODLANDS SINGAPORE 731890",
+   "postal": "731890",
+   "lat": 1.438282211583782,
+   "lng": 103.7932164711473
+  }
+ ],
+ "postal:732185": [
+  {
+   "blk_no": "185B",
+   "road_name": "WOODLANDS STREET 13",
+   "building": "MARSILING GREENVIEW",
+   "address": "185B WOODLANDS STREET 13 MARSILING GREENVIEW SINGAPORE 732185",
+   "postal": "732185",
+   "lat": 1.435856503831984,
+   "lng": 103.7762941099958
+  }
+ ],
+ "postal:732572": [
+  {
+   "blk_no": "572B",
+   "road_name": "WOODLANDS AVENUE 1",
+   "building": "CHAMPIONS COURT",
+   "address": "572B WOODLANDS AVENUE 1 CHAMPIONS COURT SINGAPORE 732572",
+   "postal": "732572",
+   "lat": 1.431606894279233,
+   "lng": 103.7896089110681
+  }
+ ],
+ "postal:733693": [
+  {
+   "blk_no": "693C",
+   "road_name": "WOODLANDS AVENUE 6",
+   "building": "ADMIRALTY GROVE",
+   "address": "693C WOODLANDS AVENUE 6 ADMIRALTY GROVE SINGAPORE 733693",
+   "postal": "733693",
+   "lat": 1.438099633087429,
+   "lng": 103.8044298837988
+  }
+ ],
+ "postal:733784": [
+  {
+   "blk_no": "784C",
+   "road_name": "WOODLANDS RISE",
+   "building": "WOODLANDS PASTURE II",
+   "address": "784C WOODLANDS RISE WOODLANDS PASTURE II SINGAPORE 733784",
+   "postal": "733784",
+   "lat": 1.445930972224704,
+   "lng": 103.8051624184654
+  }
+ ],
+ "postal:738526": [
+  {
+   "blk_no": "1",
+   "road_name": "WOODLANDS STREET 81",
+   "building": "WOODLANDS COMMUNITY CLUB",
+   "address": "1 WOODLANDS STREET 81 WOODLANDS COMMUNITY CLUB SINGAPORE 738526",
+   "postal": "738526",
+   "lat": 1.439815123874102,
+   "lng": 103.7882442100488
+  }
+ ],
+ "postal:738581": [
+  {
+   "blk_no": "1",
+   "road_name": "WOODLANDS STREET 31",
+   "building": "FUCHUN COMMUNITY CLUB",
+   "address": "1 WOODLANDS STREET 31 FUCHUN COMMUNITY CLUB SINGAPORE 738581",
+   "postal": "738581",
+   "lat": 1.429586606495955,
+   "lng": 103.7748501250456
+  }
+ ],
+ "postal:738991": [
+  {
+   "blk_no": "31",
+   "road_name": "WOODLANDS AVENUE 6",
+   "building": "WOODLANDS GALAXY COMMUNITY CLUB",
+   "address": "31 WOODLANDS AVENUE 6 WOODLANDS GALAXY COMMUNITY CLUB SINGAPORE 738991",
+   "postal": "738991",
+   "lat": 1.439008031250475,
+   "lng": 103.8026575517165
+  }
+ ],
+ "postal:739069": [
+  {
+   "blk_no": "120",
+   "road_name": "WOODLANDS AVENUE 1",
+   "building": "ACE THE PLACE COMMUNITY CLUB",
+   "address": "120 WOODLANDS AVENUE 1 ACE THE PLACE COMMUNITY CLUB SINGAPORE 739069",
+   "postal": "739069",
+   "lat": 1.427492789543658,
+   "lng": 103.7922407676256
+  }
+ ],
+ "postal:750362": [
+  {
+   "blk_no": "362",
+   "road_name": "SEMBAWANG CRESCENT",
+   "building": "SUN NATURA",
+   "address": "362 SEMBAWANG CRESCENT SUN NATURA SINGAPORE 750362",
+   "postal": "750362",
+   "lat": 1.447477934778545,
+   "lng": 103.8140731669746
+  }
+ ],
+ "postal:750462": [
+  {
+   "blk_no": "462",
+   "road_name": "SEMBAWANG DRIVE",
+   "building": "NIL",
+   "address": "462 SEMBAWANG DRIVE SINGAPORE 750462",
+   "postal": "750462",
+   "lat": 1.45445319201859,
+   "lng": 103.8140351932643
+  }
+ ],
+ "postal:751107": [
+  {
+   "blk_no": "107A",
+   "road_name": "CANBERRA STREET",
+   "building": "EASTBROOK @ CANBERRA",
+   "address": "107A CANBERRA STREET EASTBROOK @ CANBERRA SINGAPORE 751107",
+   "postal": "751107",
+   "lat": 1.449904746220004,
+   "lng": 103.8329792409641
+  }
+ ],
+ "postal:751365": [
+  {
+   "blk_no": "365A",
+   "road_name": "SEMBAWANG CRESCENT",
+   "building": "SUN BREEZE",
+   "address": "365A SEMBAWANG CRESCENT SUN BREEZE SINGAPORE 751365",
+   "postal": "751365",
+   "lat": 1.444052813768111,
+   "lng": 103.8170276898481
+  }
+ ],
+ "postal:752117": [
+  {
+   "blk_no": "117B",
+   "road_name": "CANBERRA CRESCENT",
+   "building": "EASTLINK II @ CANBERRA",
+   "address": "117B CANBERRA CRESCENT EASTLINK II @ CANBERRA SINGAPORE 752117",
+   "postal": "752117",
+   "lat": 1.444795697880211,
+   "lng": 103.8301595881415
+  }
+ ],
+ "postal:752510": [
+  {
+   "blk_no": "510B",
+   "road_name": "WELLINGTON CIRCLE",
+   "building": "WELLINGTON VIEW",
+   "address": "510B WELLINGTON CIRCLE WELLINGTON VIEW SINGAPORE 752510",
+   "postal": "752510",
+   "lat": 1.453608954893003,
+   "lng": 103.8208836317678
+  }
+ ],
+ "postal:757632": [
+  {
+   "blk_no": "2",
+   "road_name": "SEMBAWANG CRESCENT",
+   "building": "CANBERRA COMMUNITY CLUB",
+   "address": "2 SEMBAWANG CRESCENT CANBERRA COMMUNITY CLUB SINGAPORE 757632",
+   "postal": "757632",
+   "lat": 1.445044137018635,
+   "lng": 103.8194737311238
+  }
+ ],
+ "postal:760108": [
+  {
+   "blk_no": "108",
+   "road_name": "YISHUN RING ROAD",
+   "building": "NIL",
+   "address": "108 YISHUN RING ROAD SINGAPORE 760108",
+   "postal": "760108",
+   "lat": 1.432323550809123,
+   "lng": 103.8290719711769
+  }
+ ],
+ "postal:760120": [
+  {
+   "blk_no": "120",
+   "road_name": "YISHUN RING ROAD",
+   "building": "CHONG PANG VALE",
+   "address": "120 YISHUN RING ROAD CHONG PANG VALE SINGAPORE 760120",
+   "postal": "760120",
+   "lat": 1.434821388337223,
+   "lng": 103.8293478009859
+  }
+ ],
+ "postal:760157": [
+  {
+   "blk_no": "157",
+   "road_name": "YISHUN STREET 11",
+   "building": "CHONG PANG VISTA",
+   "address": "157 YISHUN STREET 11 CHONG PANG VISTA SINGAPORE 760157",
+   "postal": "760157",
+   "lat": 1.432217900968717,
+   "lng": 103.8340913734784
+  }
+ ],
+ "postal:760259": [
+  {
+   "blk_no": "259",
+   "road_name": "YISHUN STREET 22",
+   "building": "NIL",
+   "address": "259 YISHUN STREET 22 SINGAPORE 760259",
+   "postal": "760259",
+   "lat": 1.434980063585643,
+   "lng": 103.8389647185999
+  }
+ ],
+ "postal:760413": [
+  {
+   "blk_no": "413",
+   "road_name": "YISHUN RING ROAD",
+   "building": "NIL",
+   "address": "413 YISHUN RING ROAD SINGAPORE 760413",
+   "postal": "760413",
+   "lat": 1.425010743131353,
+   "lng": 103.8464282273058
+  }
+ ],
+ "postal:760440": [
+  {
+   "blk_no": "440",
+   "road_name": "YISHUN AVENUE 11",
+   "building": "NIL",
+   "address": "440 YISHUN AVENUE 11 SINGAPORE 760440",
+   "postal": "760440",
+   "lat": 1.422331396005031,
+   "lng": 103.8461330585198
+  }
+ ],
+ "postal:760455": [
+  {
+   "blk_no": "455",
+   "road_name": "YISHUN STREET 41",
+   "building": "DEW SPRING @ YISHUN",
+   "address": "455 YISHUN STREET 41 DEW SPRING @ YISHUN SINGAPORE 760455",
+   "postal": "760455",
+   "lat": 1.419980451717836,
+   "lng": 103.8443839809654
+  }
+ ],
+ "postal:760671": [
+  {
+   "blk_no": "671",
+   "road_name": "YISHUN AVENUE 4",
+   "building": "VINE GROVE @ YISHUN",
+   "address": "671 YISHUN AVENUE 4 VINE GROVE @ YISHUN SINGAPORE 760671",
+   "postal": "760671",
+   "lat": 1.419191163140909,
+   "lng": 103.8415812712964
+  }
+ ],
+ "postal:760701": [
+  {
+   "blk_no": "701",
+   "road_name": "YISHUN AVENUE 5",
+   "building": "CHONG PANG GREEN",
+   "address": "701 YISHUN AVENUE 5 CHONG PANG GREEN SINGAPORE 760701",
+   "postal": "760701",
+   "lat": 1.429954557061192,
+   "lng": 103.8288352353483
+  }
+ ],
+ "postal:761431": [
+  {
+   "blk_no": "431A",
+   "road_name": "YISHUN AVENUE 1",
+   "building": "VISTA SPRING @ YISHUN",
+   "address": "431A YISHUN AVENUE 1 VISTA SPRING @ YISHUN SINGAPORE 761431",
+   "postal": "761431",
+   "lat": 1.419606824978973,
+   "lng": 103.8472882371097
+  }
+ ],
+ "postal:761471": [
+  {
+   "blk_no": "471A",
+   "road_name": "YISHUN STREET 42",
+   "building": "FOREST SPRING @ YISHUN",
+   "address": "471A YISHUN STREET 42 FOREST SPRING @ YISHUN SINGAPORE 761471",
+   "postal": "761471",
+   "lat": 1.425924489172675,
+   "lng": 103.852905361663
+  }
+ ],
+ "postal:762508": [
+  {
+   "blk_no": "508B",
+   "road_name": "YISHUN AVENUE 4",
+   "building": "ANGSANA BREEZE @ YISHUN",
+   "address": "508B YISHUN AVENUE 4 ANGSANA BREEZE @ YISHUN SINGAPORE 762508",
+   "postal": "762508",
+   "lat": 1.41429103817708,
+   "lng": 103.8398399367186
+  }
+ ],
+ "postal:768019": [
+  {
+   "blk_no": "1",
+   "road_name": "NORTHPOINT DRIVE",
+   "building": "NORTHPOINT CITY",
+   "address": "1 NORTHPOINT DRIVE NORTHPOINT CITY SINGAPORE 768019",
+   "postal": "768019",
+   "lat": 1.427902889913047,
+   "lng": 103.8361776509722
+  }
+ ],
+ "postal:768455": [
+  {
+   "blk_no": "30",
+   "road_name": "YISHUN STREET 81",
+   "building": "NEE SOON SOUTH COMMUNITY CLUB",
+   "address": "30 YISHUN STREET 81 NEE SOON SOUTH COMMUNITY CLUB SINGAPORE 768455",
+   "postal": "768455",
+   "lat": 1.415186858620795,
+   "lng": 103.8347662265862
+  }
+ ],
+ "postal:768893": [
+  {
+   "blk_no": "1",
+   "road_name": "YISHUN AVENUE 9",
+   "building": "NEE SOON EAST COMMUNITY CLUB",
+   "address": "1 YISHUN AVENUE 9 NEE SOON EAST COMMUNITY CLUB SINGAPORE 768893",
+   "postal": "768893",
+   "lat": 1.430771055149032,
+   "lng": 103.8385982235699
+  }
+ ],
+ "postal:791457": [
+  {
+   "blk_no": "457A",
+   "road_name": "SENGKANG WEST ROAD",
+   "building": "FERNVALE WOODS",
+   "address": "457A SENGKANG WEST ROAD FERNVALE WOODS SINGAPORE 791457",
+   "postal": "791457",
+   "lat": 1.392498363513846,
+   "lng": 103.8701885728906
+  }
+ ],
+ "postal:792414": [
+  {
+   "blk_no": "414B",
+   "road_name": "FERNVALE LINK",
+   "building": "FERNVALE RIVERBOW",
+   "address": "414B FERNVALE LINK FERNVALE RIVERBOW SINGAPORE 792414",
+   "postal": "792414",
+   "lat": 1.390019617839054,
+   "lng": 103.8795743146957
+  }
+ ],
+ "postal:792468": [
+  {
+   "blk_no": "468B",
+   "road_name": "FERNVALE LINK",
+   "building": "FERNVALE LEA",
+   "address": "468B FERNVALE LINK FERNVALE LEA SINGAPORE 792468",
+   "postal": "792468",
+   "lat": 1.39745479369412,
+   "lng": 103.8780103910391
+  }
+ ],
+ "postal:792472": [
+  {
+   "blk_no": "472B",
+   "road_name": "FERNVALE STREET",
+   "building": "FERNVALE RIVERGROVE",
+   "address": "472B FERNVALE STREET FERNVALE RIVERGROVE SINGAPORE 792472",
+   "postal": "792472",
+   "lat": 1.396771770496765,
+   "lng": 103.881104301377
+  }
+ ],
+ "postal:793441": [
+  {
+   "blk_no": "441C",
+   "road_name": "FERNVALE ROAD",
+   "building": "FERNVALE VISTA",
+   "address": "441C FERNVALE ROAD FERNVALE VISTA SINGAPORE 793441",
+   "postal": "793441",
+   "lat": 1.39220060795464,
+   "lng": 103.874778712417
+  }
+ ],
+ "postal:797650": [
+  {
+   "blk_no": "21",
+   "road_name": "SENGKANG WEST AVENUE",
+   "building": "FERNVALE COMMUNITY CLUB",
+   "address": "21 SENGKANG WEST AVENUE FERNVALE COMMUNITY CLUB SINGAPORE 797650",
+   "postal": "797650",
+   "lat": 1.391722092792314,
+   "lng": 103.877039073044
+  }
+ ],
+ "postal:821260": [
+  {
+   "blk_no": "260A",
+   "road_name": "PUNGGOL WAY",
+   "building": "PUNGGOL TOPAZ",
+   "address": "260A PUNGGOL WAY PUNGGOL TOPAZ SINGAPORE 821260",
+   "postal": "821260",
+   "lat": 1.404797137928791,
+   "lng": 103.8966160879066
+  }
+ ],
+ "postal:821655": [
+  {
+   "blk_no": "655A",
+   "road_name": "PUNGGOL EAST",
+   "building": "WATERWAY SUNRISE I",
+   "address": "655A PUNGGOL EAST WATERWAY SUNRISE I SINGAPORE 821655",
+   "postal": "821655",
+   "lat": 1.399338573879268,
+   "lng": 103.9202177753168
+  }
+ ],
+ "postal:821677": [
+  {
+   "blk_no": "677A",
+   "road_name": "PUNGGOL DRIVE",
+   "building": "WATERWAY BROOKS",
+   "address": "677A PUNGGOL DRIVE WATERWAY BROOKS SINGAPORE 821677",
+   "postal": "821677",
+   "lat": 1.405289641608369,
+   "lng": 103.9092041237276
+  }
+ ],
+ "postal:822209": [
+  {
+   "blk_no": "209B",
+   "road_name": "PUNGGOL PLACE",
+   "building": "PUNGGOL CREST",
+   "address": "209B PUNGGOL PLACE PUNGGOL CREST SINGAPORE 822209",
+   "postal": "822209",
+   "lat": 1.39973051378134,
+   "lng": 103.9009354065174
+  }
+ ],
+ "postal:822229": [
+  {
+   "blk_no": "229B",
+   "road_name": "SUMANG LANE",
+   "building": "MATILDA SUNDECK",
+   "address": "229B SUMANG LANE MATILDA SUNDECK SINGAPORE 822229",
+   "postal": "822229",
+   "lat": 1.402883752339583,
+   "lng": 103.8917955366215
+  }
+ ],
+ "postal:822323": [
+  {
+   "blk_no": "323B",
+   "road_name": "SUMANG WALK",
+   "building": "PUNGGOL BAYVIEW",
+   "address": "323B SUMANG WALK PUNGGOL BAYVIEW SINGAPORE 822323",
+   "postal": "822323",
+   "lat": 1.412057105742864,
+   "lng": 103.8977615637127
+  }
+ ],
+ "postal:822421": [
+  {
+   "blk_no": "421B",
+   "road_name": "NORTHSHORE DRIVE",
+   "building": "NORTHSHORE STRAITSVIEW",
+   "address": "421B NORTHSHORE DRIVE NORTHSHORE STRAITSVIEW SINGAPORE 822421",
+   "postal": "822421",
+   "lat": 1.419246373674442,
+   "lng": 103.9047047084346
+  }
+ ],
+ "postal:823211": [
+  {
+   "blk_no": "211C",
+   "road_name": "PUNGGOL WALK",
+   "building": "PUNGGOL RIPPLES",
+   "address": "211C PUNGGOL WALK PUNGGOL RIPPLES SINGAPORE 823211",
+   "postal": "823211",
+   "lat": 1.400760492755734,
+   "lng": 103.8996135596005
+  }
+ ],
+ "postal:823217": [
+  {
+   "blk_no": "217C",
+   "road_name": "SUMANG WALK",
+   "building": "MATILDA PORTICO",
+   "address": "217C SUMANG WALK MATILDA PORTICO SINGAPORE 823217",
+   "postal": "823217",
+   "lat": 1.402358510003013,
+   "lng": 103.8954941106681
+  }
+ ],
+ "postal:823259": [
+  {
+   "blk_no": "259C",
+   "road_name": "PUNGGOL FIELD",
+   "building": "PUNGGOL TOPAZ",
+   "address": "259C PUNGGOL FIELD PUNGGOL TOPAZ SINGAPORE 823259",
+   "postal": "823259",
+   "lat": 1.404534085814557,
+   "lng": 103.8956655320423
+  }
+ ],
+ "postal:824268": [
+  {
+   "blk_no": "268D",
+   "road_name": "PUNGGOL FIELD",
+   "building": "PUNGGOL SAPPHIRE",
+   "address": "268D PUNGGOL FIELD PUNGGOL SAPPHIRE SINGAPORE 824268",
+   "postal": "824268",
+   "lat": 1.403313781113464,
+   "lng": 103.8983589251033
+  }
+ ],
+ "postal:824662": [
+  {
+   "blk_no": "662D",
+   "road_name": "EDGEDALE PLAINS",
+   "building": "WATERWAY SUNDEW",
+   "address": "662D EDGEDALE PLAINS WATERWAY SUNDEW SINGAPORE 824662",
+   "postal": "824662",
+   "lat": 1.401672559952281,
+   "lng": 103.9180028366854
+  }
+ ],
+ "postal:828629": [
+  {
+   "blk_no": "1",
+   "road_name": "PUNGGOL DRIVE",
+   "building": "ONE PUNGGOL",
+   "address": "1 PUNGGOL DRIVE ONE PUNGGOL SINGAPORE 828629",
+   "postal": "828629",
+   "lat": 1.408728475961338,
+   "lng": 103.9051549249232
+  }
+ ],
+ "postal:828815": [
+  {
+   "blk_no": "80",
+   "road_name": "PUNGGOL FIELD",
+   "building": "PUNGGOL 21 COMMUNITY CLUB",
+   "address": "80 PUNGGOL FIELD PUNGGOL 21 COMMUNITY CLUB SINGAPORE 828815",
+   "postal": "828815",
+   "lat": 1.393519715298798,
+   "lng": 103.9135823414907
+  }
+ ]
+}
