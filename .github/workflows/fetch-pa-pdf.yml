@@ -1,0 +1,27 @@
+name: Fetch PA's current list for inspection (temporary)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download PA's current list onto the pa-latest branch
+        run: |
+          url=$(curl -sL -m 30 -A "Mozilla/5.0" "https://www.pa.gov.sg/our-network/community-clubs/shelters/" \
+            | grep -oiE 'href="[^"]+\.pdf"' | grep -iE 'haze|shelter' | head -1 | sed -E 's/^href="//; s/"$//; s/ /%20/g; s/,/%2C/g')
+          echo "List URL: $url"
+          mkdir pa && cd pa
+          curl -sL -m 60 -o pa-latest.pdf "$url"
+          ls -la pa-latest.pdf
+          git init -q -b pa-latest
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pa-latest.pdf
+          git commit -q -m "PA's current haze shelter list (for inspection)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" pa-latest
