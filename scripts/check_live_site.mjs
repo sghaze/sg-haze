@@ -79,7 +79,8 @@ try {
   const mapped = data.shelters.filter((s) => typeof s.lat === 'number');
   check(data.count >= 300 && mapped.length === data.count, 'shelter data loads with coordinates',
     `${mapped.length}/${data.count} shelters, as at ${data.as_at}`);
-  check((await page.textContent('#as-at')) === data.as_at, 'footer shows the list date', data.as_at);
+  check((await page.textContent('footer .as-at')) === data.as_at, 'footer shows the list date', data.as_at);
+  check(((await page.textContent('#disclaimer')) || '').includes('personal project'), 'full disclaimer is on the page');
 
   const byPostal = new Map(data.shelters.map((s) => [s.postal, s]));
 
@@ -119,6 +120,7 @@ try {
   await page.waitForSelector('#results:not([hidden]) .card', { timeout: 20000 }).catch(() => {});
   check(((await page.textContent('#results-list .card h3')) || '').includes('Cheng San Diamond RN'),
     'shareable ?postal= link runs the search');
+  check(await page.isVisible('#results-disclaimer'), 'disclaimer is shown with the results');
 
   // ---- Invalid input ----
   await page.fill('#postal', '12345');

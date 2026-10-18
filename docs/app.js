@@ -22,7 +22,6 @@
     browse: $('browse'),
     filter: $('filter'),
     browseList: $('browse-list'),
-    asAt: $('as-at'),
   };
 
   let allShelters = [];
@@ -37,7 +36,7 @@
     .then((data) => {
       allShelters = data.shelters;
       mappedShelters = allShelters.filter((s) => typeof s.lat === 'number' && typeof s.lng === 'number');
-      if (data.as_at) els.asAt.textContent = data.as_at;
+      if (data.as_at) document.querySelectorAll('.as-at').forEach((el) => { el.textContent = data.as_at; });
     });
   dataReady.catch(() => setStatus("Sorry, the shelter list couldn't be loaded. Please refresh the page.", true));
 

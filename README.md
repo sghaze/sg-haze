@@ -71,6 +71,16 @@ Checked against PA's own [OnePA](https://www.onepa.gov.sg/) pages:
 | Sengkang West Zone 'K' RN | Anchorvole Road | Anchorvale Road | Spelling. |
 | 8 shelters (e.g. Kreta Ayer CC) | 5-digit postal codes, e.g. 88995 | 088995 | The PDF dropped leading zeros. |
 
+## Disclaimer
+
+The site states that it is a free, non-commercial personal project, not an official service, and
+that its information is provided "as is" with no liability accepted, to the fullest extent permitted
+by law. A short version appears above every set of results; the full text is in the page footer
+(`#disclaimer` in `docs/index.html`). Errors can be reported through this repository's Issues.
+
+Keep the project non-commercial (no ads, donations or sponsorship) if you want the "personal project"
+statement to stay accurate. This wording is not legal advice.
+
 ## Known limits
 
 - **Distances are straight-line**, not walking routes. Rivers, expressways and MRT lines can make
