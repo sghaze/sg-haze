@@ -1,0 +1,37 @@
+name: Probe PA shelter list location (temporary)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Look for the haze shelter list on PA and NEA pages
+        run: |
+          ua="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+          look() {
+            echo "================ $1"
+            curl -sL -m 25 -A "$ua" -D /tmp/h -o /tmp/p "$1" -w 'final=%{url_effective} code=%{http_code} size=%{size_download}\n' || echo "curl failed"
+            grep -iE '^(HTTP|content-type|location|server|cf-)' /tmp/h | tr -d '\r' | head -8
+            echo "--- title: $(grep -oiE '<title[^>]*>[^<]*' /tmp/p | head -1 | sed 's/<title[^>]*>//')"
+            echo "--- links mentioning haze/shelter/pdf:"
+            grep -oiE '(href|src|data-[a-z-]+)="[^"]+"' /tmp/p | grep -iE 'haze|shelter|\.pdf' | sort -u | head -40
+            echo "--- text near 'haze shelter':"
+            sed 's/<[^>]*>/ /g' /tmp/p | tr -s ' \n' ' ' | grep -oiE '.{0,160}haze shelter.{0,200}' | head -5
+            sleep 2
+          }
+          look "https://www.pa.gov.sg/our-network/community-clubs/shelters/"
+          look "https://www.pa.gov.sg/our-network/community-clubs/"
+          look "https://www.pa.gov.sg/"
+          look "https://www.haze.gov.sg/"
+          look "https://www.haze.gov.sg/resources/"
+          look "https://www.nea.gov.sg/media/news/news/index"
+          echo "================ PA sitemap entries mentioning haze/shelter"
+          curl -sL -m 25 -A "$ua" "https://www.pa.gov.sg/sitemap.xml" -o /tmp/sm -w 'code=%{http_code} size=%{size_download}\n'
+          grep -oiE '<loc>[^<]*(haze|shelter)[^<]*</loc>' /tmp/sm | head -30
+          grep -oiE '<sitemap>.{0,200}' /tmp/sm | head -5
