@@ -490,8 +490,14 @@
     frag.appendChild(tiles);
 
     if (pm) {
+      const pmBand = pm25Band(pm.value);
       const advice = el('p', 'air-advice');
-      advice.append(el('strong', '', 'NEA advice: '), pm25Band(pm.value).advice);
+      advice.append(el('strong', '', 'NEA advice for the next few hours (from 1-hr PM2.5): '), pmBand.advice);
+      // NEA bases activity advice on the 1-hr PM2.5 reading. The 24-hr PSI is
+      // an average over the past day, so the two can disagree; say why.
+      if (psi && psi.value > 100 && pmBand.level === 'good') {
+        advice.append(' The 24-hr PSI is an average over the past day, so it can stay high after the air has improved.');
+      }
       frag.appendChild(advice);
     }
 
