@@ -1,0 +1,74 @@
+name: Update data and publish site
+
+# Runs on every push. It re-reads data/source.pdf, looks up any new postal
+# codes on OneMap, commits the results, then publishes docs/ to GitHub Pages
+# (only from the repository's default branch).
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Check OneMap health and browser access (CORS)
+        run: |
+          curl -sS -D /tmp/headers.txt -o /tmp/body.json -H "Origin: https://example.github.io" \
+            "https://www.onemap.gov.sg/api/common/elastic/search?searchVal=560507&returnGeom=Y&getAddrDetails=Y&pageNum=1" || true
+          grep -i -E "^(HTTP|access-control)" /tmp/headers.txt || true
+          head -c 700 /tmp/body.json || true
+          echo
+
+      - name: Read the shelter PDF
+        run: python scripts/parse_pdf.py data/source.pdf data/shelters.csv
+
+      - name: Look up coordinates on OneMap
+        run: python scripts/geocode.py data/shelters.csv docs/shelters.json data/geocode-report.md
+
+      - name: Show review report
+        run: cat data/geocode-report.md
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs/shelters.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "Update shelter data from source PDF"
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v4
+        if: github.ref_name == github.event.repository.default_branch
+        with:
+          path: docs
+
+  deploy:
+    needs: data
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
