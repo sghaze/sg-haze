@@ -29,7 +29,7 @@ CACHE_PATH = os.environ.get("GEOCODE_CACHE", "data/geocode-cache.json")
 REQUEST_GAP_SECONDS = float(os.environ.get("GEOCODE_GAP", "0.3"))  # OneMap allows roughly 250 requests a minute
 SOURCE_NOTE = ("List of Community Haze Shelters at Community Clubs, Integrated Community Hubs, "
                "Residents' Centres and Residents' Network, People's Association")
-AS_AT = "September 2026"
+META_PATH = "data/source-meta.json"  # written by parse_pdf.py
 
 
 def onemap_search(query):
@@ -107,6 +107,9 @@ def main():
     with open(csv_path, encoding="utf-8") as f:
         shelters = list(csv.DictReader(f))
 
+    with open(META_PATH, encoding="utf-8") as f:
+        as_at = json.load(f)["as_at"]
+
     cache = load_cache()
     out, problems = [], []
     try:
@@ -168,14 +171,14 @@ def main():
     if os.path.exists(json_path):
         with open(json_path, encoding="utf-8") as f:
             old = json.load(f)
-        if old.get("shelters") == out and old.get("as_at") == AS_AT:
+        if old.get("shelters") == out and old.get("as_at") == as_at:
             generated = old.get("generated", generated)
 
     os.makedirs(os.path.dirname(json_path) or ".", exist_ok=True)
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump({
             "source": SOURCE_NOTE,
-            "as_at": AS_AT,
+            "as_at": as_at,
             "generated": generated,
             "count": len(out),
             "shelters": out,

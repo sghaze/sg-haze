@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://www.onemap.gov.sg; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Haze Shelter Finder</title>
+  <meta name="description" content="Enter a Singapore postal code to find the nearest community haze shelter.">
+  <meta name="theme-color" content="#b45309">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b45309'/%3E%3Cpath d='M6 16 16 7l10 9v9H6z' fill='%23fff'/%3E%3Cpath d='M12 25v-6h8v6' fill='%23b45309'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#results">Skip to results</a>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Find your nearest haze shelter</h1>
+      <p class="lede">Air-conditioned community haze shelters across Singapore.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <form id="search" class="search" novalidate>
+      <label for="postal">Your postal code</label>
+      <div class="search-row">
+        <input id="postal" name="postal" type="text" inputmode="numeric" autocomplete="postal-code"
+               maxlength="20" placeholder="e.g. 560507" aria-describedby="postal-help status" required>
+        <button type="submit" class="btn primary">Find shelters</button>
+      </div>
+      <p id="postal-help" class="help">6 digits. Your postal code is sent to OneMap (Singapore Land Authority) to find its location. This site doesn't store it.</p>
+      <p class="or"><span>or</span></p>
+      <button type="button" id="locate" class="btn secondary">Use my current location</button>
+    </form>
+
+    <aside class="notice" role="note">
+      <strong>Before you go:</strong> shelters are open only while the authorities have activated them, and opening hours differ by venue. Check with the venue if you can. Air quality readings: <a href="https://www.haze.gov.sg/" rel="noopener">haze.gov.sg</a>.
+    </aside>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="results" class="results" aria-labelledby="results-title" hidden>
+      <h2 id="results-title" tabindex="-1"></h2>
+      <p id="results-note" class="help"></p>
+      <ol id="results-list" class="cards"></ol>
+      <button type="button" id="more" class="btn secondary" hidden>Show 5 more</button>
+    </section>
+
+    <details id="browse" class="browse">
+      <summary>Browse all shelters</summary>
+      <label for="filter" class="filter-label">Filter by name, street or postal code</label>
+      <input id="filter" type="search" placeholder="e.g. Tampines" autocomplete="off">
+      <div id="browse-list"></div>
+    </details>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>This is not an official government website.</strong> Shelter list from the People's Association <em>List of Community Haze Shelters</em>, as at <span id="as-at">September 2026</span>. Three entries with conflicting addresses and postal codes were corrected using the OnePA website. Distances are straight-line, not walking routes.</p>
+      <p>Location search by <a href="https://www.onemap.gov.sg/" rel="noopener">OneMap</a> © Singapore Land Authority. Contact details and opening hours for each venue are on <a href="https://www.onepa.gov.sg/" rel="noopener">onepa.gov.sg</a>.</p>
+      <p>No cookies, no tracking. <a href="https://github.com/iamnuthin84-coder/Haze-Shelters" rel="noopener">Source code and data</a>.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

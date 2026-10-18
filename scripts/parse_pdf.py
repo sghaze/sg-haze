@@ -4,6 +4,8 @@ Usage:
     pip install pdfplumber
     python scripts/parse_pdf.py data/source.pdf data/shelters.csv
 
+Also writes data/source-meta.json with the list's "as at" date.
+
 The PDF is a 4-column table: District | Name of CC | Address of CC | Postal Code.
 This script:
   * drops title, header and "<X> District" section rows
@@ -14,6 +16,8 @@ This script:
 """
 
 import csv
+import json
+import os
 import re
 import sys
 
@@ -77,6 +81,7 @@ def valid_postal(code):
 
 def parse(pdf_path):
     rows = []
+    as_at = ""
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
             for table in page.extract_tables():
@@ -84,6 +89,9 @@ def parse(pdf_path):
                     cells = [clean(c) for c in raw] + [""] * (4 - len(raw))
                     district, name, address, postal = cells[:4]
                     if district not in VALID_DISTRICTS:
+                        m = re.search(r"\(as at ([^)]+)\)", district, re.I)
+                        if m and not as_at:
+                            as_at = m.group(1).strip()
                         continue  # title, header or section row
                     if not (name and address and postal):
                         raise SystemExit(f"Incomplete row: {cells}")
@@ -95,7 +103,9 @@ def parse(pdf_path):
                         "address": tidy_address(address),
                         "postal_code": postal,
                     })
-    return rows
+    if not as_at:
+        raise SystemExit('Could not find "(as at <date>)" in the PDF title.')
+    return rows, as_at
 
 
 def apply_corrections(rows):
@@ -112,7 +122,7 @@ def main():
     if len(sys.argv) != 3:
         raise SystemExit(__doc__)
     pdf_path, out_path = sys.argv[1], sys.argv[2]
-    rows = parse(pdf_path)
+    rows, as_at = parse(pdf_path)
     apply_corrections(rows)
 
     bad = [r for r in rows if not valid_postal(r["postal_code"])]
@@ -133,10 +143,15 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
 
+    meta_path = os.path.join(os.path.dirname(out_path) or ".", "source-meta.json")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump({"as_at": as_at}, f)
+        f.write("\n")
+
     by_district = {}
     for r in rows:
         by_district[r["district"]] = by_district.get(r["district"], 0) + 1
-    print(f"Wrote {len(rows)} shelters to {out_path}: {by_district}")
+    print(f"Wrote {len(rows)} shelters (as at {as_at}) to {out_path}: {by_district}")
 
 
 if __name__ == "__main__":
