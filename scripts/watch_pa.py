@@ -78,7 +78,14 @@ def main():
     url = urllib.parse.urljoin(PAGE_URL, link)
     updated = last_updated(page)
 
-    pdf = fetch(encode_url(url))
+    try:
+        pdf = fetch(encode_url(url))
+    except Exception as exc:  # noqa: BLE001 - report any network failure
+        print(f"Could not download the list from {url}: {exc}")
+        sys.exit(2)
+    if not pdf.startswith(b"%PDF"):
+        print(f"The list link returned something that isn't a PDF ({len(pdf)} bytes). PA's site may be blocking the check.")
+        sys.exit(2)
     new_sha = hashlib.sha256(pdf).hexdigest()
     with open(CURRENT_PDF, "rb") as f:
         current_sha = hashlib.sha256(f.read()).hexdigest()
