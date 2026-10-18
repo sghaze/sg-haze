@@ -124,6 +124,53 @@ input[aria-invalid="true"] { border-color: var(--error); }
 .results h2 { font-size: 1.3rem; margin: 8px 0 0; }
 .results h2:focus { outline: none; }
 
+.choices { margin-top: 12px; }
+.choices h2 { font-size: 1.2rem; margin: 0 0 10px; }
+.choices h2:focus { outline: none; }
+.choices ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.choice {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+.choice:hover { border-color: var(--accent); }
+
+.air {
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.air h3 { font-size: 1rem; margin: 0 0 10px; }
+.air .help { margin-top: 10px; }
+.air-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 10px; }
+.tile {
+  display: grid;
+  gap: 2px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+.tile-label { font-size: .8rem; color: var(--muted); }
+.tile-value { font-size: 1.75rem; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.band { display: inline-flex; align-items: center; gap: 6px; font-size: .9rem; font-weight: 600; }
+/* Status colours sit beside a text label, never carry meaning alone. */
+.dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.dot.good { background: #0ca30c; }
+.dot.warning { background: #fab219; }
+.dot.serious { background: #ec835a; }
+.dot.critical { background: #d03b3b; }
+.air-advice { margin: 10px 0 0; font-size: .95rem; }
+
 .results-disclaimer {
   margin: 12px 0 0;
   padding: 10px 14px;

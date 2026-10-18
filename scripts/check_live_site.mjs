@@ -35,8 +35,19 @@ const SAMPLE_POSTAL_CODES = [
   '129605', // South West, West Coast
 ];
 
+// Address and building-name searches, with the shelter that should come first.
+const SAMPLE_ADDRESSES = [
+  ['507 Ang Mo Kio Ave 8', 'Cheng San Diamond RN'],
+  ['Our Tampines Hub', 'Tampines Central CC'],
+];
+
 let failures = 0;
+let warnings = 0;
 const results = [];
+function warn(label, detail = '') {
+  console.log(`WARN  ${label}${detail ? `  (${detail})` : ''}`);
+  warnings += 1;
+}
 function check(ok, label, detail = '') {
   results.push({ ok, label, detail });
   console.log(`${ok ? 'PASS' : 'FAIL'}  ${label}${detail ? `  (${detail})` : ''}`);
@@ -58,7 +69,7 @@ try {
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e)));
-  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+  page.on('console', (m) => { if (m.type() === 'error') errors.push(`${m.text()} @ ${m.location()?.url || ''}`); });
   page.on('requestfailed', (r) => errors.push(`request failed: ${r.url()} ${r.failure()?.errorText}`));
 
   // Record what OneMap actually sent back, so CORS failures can be diagnosed.
@@ -69,6 +80,13 @@ try {
     const code = new URL(r.url()).searchParams.get('searchVal');
     onemap.set(code, `OneMap HTTP ${r.status()}, allow-origin=${h['access-control-allow-origin'] || 'MISSING'}`
       + `${h['x-cache'] ? `, x-cache=${h['x-cache']}` : ''}${h.server ? `, server=${h.server}` : ''}`);
+  });
+  // Same for data.gov.sg air quality requests.
+  const airResponses = [];
+  page.on('response', async (r) => {
+    if (!r.url().includes('data.gov.sg')) return;
+    const h = await r.allHeaders().catch(() => ({}));
+    airResponses.push(`${new URL(r.url()).pathname} HTTP ${r.status()} allow-origin=${h['access-control-allow-origin'] || 'MISSING'}`);
   });
 
   const res = await page.goto(SITE, { waitUntil: 'networkidle' });
@@ -93,7 +111,7 @@ try {
     }
     await page.waitForTimeout(SEARCH_GAP_MS);
     const started = Date.now();
-    await page.fill('#postal', pc);
+    await page.fill('#query', pc);
     await page.click('#search button[type=submit]');
     await page.waitForFunction(
       (code) => document.querySelector('#results-note')?.textContent.includes(code)
@@ -113,6 +131,24 @@ try {
       exact ? `first result: ${first.replace(/^Nearest/, '').trim()}, ${dist}, ${ms} ms`
         : `not an exact OneMap match. ${onemap.get(pc) || 'no OneMap response seen'}. note="${note}"`);
   }
+
+  // ---- Address and building-name searches ----
+  for (const [text, expectedName] of SAMPLE_ADDRESSES) {
+    await page.waitForTimeout(SEARCH_GAP_MS);
+    await page.fill('#query', text);
+    await page.click('#search button[type=submit]');
+    await page.waitForFunction(() => document.querySelector('#search').getAttribute('aria-busy') === 'false', null, { timeout: 20000 }).catch(() => {});
+    let picked = '';
+    if (await page.isVisible('#choices')) {
+      picked = (await page.textContent('#choices .choice')) || '';
+      await page.click('#choices .choice >> nth=0');
+    }
+    const first = (await page.textContent('#results-list .card h3').catch(() => '')) || '';
+    const note = (await page.textContent('#results-note')) || '';
+    const status = (await page.textContent('#status')) || '';
+    check(first.includes(expectedName), `address "${text}" finds ${expectedName}`,
+      `${picked ? `picked first of ${await page.$$eval('#choices .choice', (b) => b.length)} matches; ` : ''}${note || status}`.slice(0, 220));
+  }
   await page.screenshot({ path: `${outDir}/desktop.png`, fullPage: true });
 
   // ---- Shareable link ----
@@ -122,13 +158,30 @@ try {
     'shareable ?postal= link runs the search');
   check(await page.isVisible('#results-disclaimer'), 'disclaimer is shown with the results');
 
-  // ---- Invalid input ----
-  await page.fill('#postal', '12345');
-  await page.click('#search button[type=submit]');
-  check(((await page.textContent('#status')) || '').includes('6-digit'), 'rejects a 5-digit postal code');
+  // ---- Air quality panel (NEA readings via data.gov.sg) ----
+  await page.waitForFunction(() => {
+    const a = document.querySelector('#air');
+    return a && !a.hidden && (a.querySelector('.tile') || a.textContent.includes('unavailable'));
+  }, null, { timeout: 20000 }).catch(() => {});
+  const airText = ((await page.textContent('#air')) || '').replace(/\s+/g, ' ').trim();
+  if (await page.$('#air .tile')) {
+    check(/region/.test(airText) && /PSI\s*\d/.test(airText), 'air quality readings shown for the searched area', airText.slice(0, 200));
+  } else {
+    // data.gov.sg limits requests from shared addresses such as GitHub's
+    // servers, so an outage here is reported but doesn't fail the check.
+    warn('air quality readings unavailable', `${airResponses.join('; ') || 'no data.gov.sg response seen'}; panel="${airText}"`);
+  }
 
-  check(errors.length === 0, 'no browser errors (CSP, scripts, failed requests)',
-    errors.length ? `${errors.length} errors, first: ${errors[0]}` : '');
+  // ---- Invalid input ----
+  await page.fill('#query', '12345');
+  await page.click('#search button[type=submit]');
+  check(((await page.textContent('#status')) || '').includes('6 digits'), 'rejects a 5-digit postal code');
+
+  const airErrors = errors.filter((e) => e.includes('data.gov.sg'));
+  const siteErrors = errors.filter((e) => !e.includes('data.gov.sg'));
+  if (airErrors.length) warn('browser errors from data.gov.sg', airErrors.slice(0, 3).join(' | '));
+  check(siteErrors.length === 0, 'no browser errors (CSP, scripts, failed requests)',
+    siteErrors.length ? `${siteErrors.length} errors, first: ${siteErrors[0]}` : '');
   await context.close();
 
   // ---- Phone: layout and "use my location" ----
@@ -139,10 +192,10 @@ try {
   const mobile = await phone.newPage();
   await mobile.goto(SITE, { waitUntil: 'networkidle' });
   const inputVisible = await mobile.evaluate(() => {
-    const r = document.querySelector('#postal').getBoundingClientRect();
+    const r = document.querySelector('#query').getBoundingClientRect();
     return r.bottom <= window.innerHeight;
   });
-  check(inputVisible, 'postal code box visible without scrolling on a 360px phone');
+  check(inputVisible, 'search box visible without scrolling on a 360px phone');
   await mobile.screenshot({ path: `${outDir}/phone-home.png` });
   await mobile.click('#locate');
   await mobile.waitForSelector('#results:not([hidden]) .card', { timeout: 20000 }).catch(() => {});
@@ -155,5 +208,5 @@ try {
   await browser.close();
 }
 
-console.log(`\n${results.length - failures}/${results.length} checks passed for ${SITE}`);
+console.log(`\n${results.length - failures}/${results.length} checks passed, ${warnings} warnings, for ${SITE}`);
 process.exit(failures ? 1 : 0);

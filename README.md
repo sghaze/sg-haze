@@ -1,16 +1,17 @@
 # Haze Shelter Finder (Singapore)
 
-A one-page website: type a Singapore postal code (or tap **Use my current location**) and see the
-nearest community haze shelters, with straight-line distance and a Google Maps directions link.
+A one-page website: type a Singapore postal code, address or building name (or tap **Use my
+current location**) and see the nearest community haze shelters, with straight-line distance and a
+Google Maps directions link, plus NEA's latest PSI and PM2.5 readings for that part of Singapore.
 
 - 341 shelters from the People's Association list, *as at September 2026*
 - Works on phones, light and dark mode, no cookies or tracking, no external libraries
 - **Not an official government website**
 
-Once GitHub Pages is switched on (below), the site lives at
-**https://iamnuthin84-coder.github.io/Haze-Shelters/**
+Live site: **https://sghaze.github.io/sg-haze/** (the address follows the repository's name; renaming
+the repository changes it).
 
-## Switch the site on (one time)
+## Publishing settings
 
 1. In this repository on GitHub, open **Settings → Pages**.
 2. Under **Build and deployment → Source**, choose **GitHub Actions**.
@@ -36,11 +37,16 @@ docs/  (index.html, app.js, style.css, shelters.json, postal-areas.json) ──�
    It refuses to publish if fewer than 90% of shelters are found.
 3. The GitHub Action (`.github/workflows/site.yml`) runs both scripts on every push, commits any
    data changes, and publishes `docs/` to GitHub Pages.
-4. In the browser, `docs/app.js` asks OneMap for the visitor's postal code location, then sorts
-   shelters by distance. Nothing is sent to any other server.
-5. **`Check live site`** (`.github/workflows/check-site.yml`) opens the published site in a real
-   browser after every publish and every morning at 07:17 Singapore time. It runs live postal code
-   searches (`scripts/check_live_site.mjs`). If OneMap changes or the site breaks, the run fails
+4. In the browser, `docs/app.js` asks OneMap for the location of the visitor's postal code or
+   address, then sorts shelters by distance. If an address matches several places, the visitor picks
+   one from a list.
+5. It also fetches NEA's latest 24-hour PSI and 1-hour PM2.5 readings for all five regions from
+   [data.gov.sg](https://data.gov.sg/) and shows the region nearest the searched location, with
+   NEA's band names and advice. Only the request for all regions goes to data.gov.sg; the visitor's
+   location never leaves the browser. If data.gov.sg is unavailable, the shelters still show.
+6. **`Check live site`** (`.github/workflows/check-site.yml`) opens the published site in a real
+   browser after every publish and every morning at 07:17 Singapore time. It runs live postal code,
+   address and building searches and checks the air quality panel (`scripts/check_live_site.mjs`). If OneMap changes or the site breaks, the run fails
    and GitHub emails you. Screenshots are saved with each run.
 
 **Backup if OneMap is down:** `docs/postal-areas.json` holds the rough centre of every postal area
@@ -92,6 +98,11 @@ statement to stay accurate. This wording is not legal advice.
   CORS header, which browsers report as a network error. The site waits 1.5 s and retries once. If
   many people on one shared network (office, school, some mobile carriers) search at the same
   moment, some may still get the approximate postal-area result.
+- **Air quality is regional.** NEA publishes readings for five regions (north, south, east, west,
+  central), updated hourly. The site shows the region nearest the searched location, which can
+  differ from conditions on a particular street. Readings more than 3 hours old are flagged.
+  data.gov.sg limits how often one internet address can ask without an API key; if it refuses, the
+  panel says readings are unavailable and points to haze.gov.sg.
 - **English only.**
 - Two shelters are pinned to the next-door block (32–51 m away) because their address omits the
   block letter. See `data/geocode-report.md`.
@@ -113,6 +124,9 @@ arguments shown at the top of each file.
   Integrated Community Hubs, Residents' Centres and Residents' Network* (as at September 2026),
   kept here as `data/source.pdf`.
 - Location search: OneMap © Singapore Land Authority.
+- Air quality: contains information from NEA's PSI and PM2.5 readings, accessed live from
+  data.gov.sg (`api-open.data.gov.sg/v2/real-time/api/psi` and `/pm25`) and made available under the
+  terms of the Singapore Open Data Licence version 1.0.
 - Postal area backup table: derived from a 2017 dump of OneMap postal code results
   ([xkjyeah/singapore-postal-codes](https://github.com/xkjyeah/singapore-postal-codes)), under the
   Singapore Open Data Licence.

@@ -81,6 +81,13 @@ jobs:
           for pc in 791457 650116 690119 828629; do probe $pc headless "$headless"; sleep 2; done
           echo "== Burst, no pause =="
           for pc in 791457 650116 690119 828629 529204 390087 129605 560507 050034 793441; do probe $pc burst "$chrome"; done
+          echo "== data.gov.sg air quality readings =="
+          for path in psi pm25; do
+            curl -s -m 10 -D /tmp/h -o /tmp/b -H "Origin: $origin" "https://api-open.data.gov.sg/v2/real-time/api/$path" || true
+            printf '%s: %s | acao=%s | %s\n' "$path" "$(head -1 /tmp/h | tr -d '\r')" \
+              "$(grep -i '^access-control-allow-origin' /tmp/h | cut -d' ' -f2 | tr -d '\r')" "$(head -c 300 /tmp/b)"
+            sleep 2
+          done
 
       - uses: actions/upload-artifact@v4
         if: always()
