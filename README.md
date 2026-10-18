@@ -38,8 +38,10 @@ docs/  (index.html, app.js, style.css, shelters.json, postal-areas.json) ──�
 3. The GitHub Action (`.github/workflows/site.yml`) runs both scripts on every push, commits any
    data changes, and publishes `docs/` to GitHub Pages.
 4. In the browser, `docs/app.js` asks OneMap for the location of the visitor's postal code or
-   address, then sorts shelters by distance. If an address matches several places, the visitor picks
-   one from a list.
+   address, then sorts shelters by distance. Suggestions appear while typing; words OneMap doesn't
+   understand ("Block", "Blk", unit numbers like "#01-23") are removed first, and an address that
+   contains a postal code is searched by that code. If an address matches several places, the visitor
+   picks one from a list.
 5. It also fetches NEA's latest 24-hour PSI and 1-hour PM2.5 readings for all five regions from
    [data.gov.sg](https://data.gov.sg/) and shows the region nearest the searched location, with
    NEA's band names and advice. Only the request for all regions goes to data.gov.sg; the visitor's
@@ -54,6 +56,18 @@ docs/  (index.html, app.js, style.css, shelters.json, postal-areas.json) ──�
 8 seconds, the site shows shelters near that area and labels the result as approximate.
 
 ## Updating when a new list comes out
+
+**You're alerted automatically.** Every 3 hours, `Watch for a new PA shelter list`
+(`.github/workflows/watch-pa.yml`, `scripts/watch_pa.py`) compares the PDF linked on PA's
+[Community Haze Shelters page](https://www.pa.gov.sg/our-network/community-clubs/shelters/) with
+`data/source.pdf`. When they differ it opens an issue (label `pa-list`) listing added, removed and
+changed shelters, and the run fails so GitHub emails you. If PA's page can't be read, you get an
+issue and email about that instead.
+
+To put the new list on the site: **Actions → Watch for a new PA shelter list → Run workflow**, tick
+**Use PA's latest list on the site now**, and run it. The site republishes and the issue closes.
+
+To update by hand instead:
 
 1. On GitHub, go to the `data` folder, choose **Add file → Upload files**, and upload the new PDF
    named exactly **`source.pdf`** (it replaces the old one). Commit.

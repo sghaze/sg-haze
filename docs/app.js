@@ -13,12 +13,16 @@
   const AIR_STALE_MS = 3 * 60 * 60 * 1000;
   const PAGE_SIZE = 5;
   const MAX_CHOICES = 8;
+  const SUGGEST_DELAY_MS = 350;
+  const SUGGEST_MIN_CHARS = 3;
+  const MAX_SUGGESTIONS = 6;
   const SG_BOUNDS = { minLat: 1.15, maxLat: 1.48, minLng: 103.59, maxLng: 104.1 };
 
   const $ = (id) => document.getElementById(id);
   const els = {
     form: $('search'),
     query: $('query'),
+    suggestions: $('suggestions'),
     locate: $('locate'),
     submit: document.querySelector('#search button[type="submit"]'),
     status: $('status'),
@@ -93,13 +97,31 @@
     return sector >= 1 && sector <= 82 && sector !== 74;
   }
 
-  // "560507", "S560507", "Singapore 560507" are postal codes; anything with
-  // letters is treated as an address or building name.
+  // "560507", "S560507", "Singapore 560507" are postal codes. An address that
+  // contains a postal code ("91 Tanglin Halt Rd, Singapore 142091") is searched
+  // by that code. Anything else is cleaned up for OneMap, which doesn't
+  // understand words like "Block" or unit numbers.
   function parseQuery(raw) {
     const text = raw.trim().replace(/\s+/g, ' ');
     const withoutPrefix = text.replace(/^(singapore|s)\s*\(?\s*/i, '').replace(/\)\s*$/, '');
     if (/^[\d\s-]+$/.test(withoutPrefix)) return { kind: 'postal', value: withoutPrefix.replace(/\D/g, '') };
-    return { kind: 'address', value: text };
+    const embedded = text.match(/(?:^|\D)(\d{6})(?!\d)/);
+    if (embedded && validPostal(embedded[1])) return { kind: 'postal', value: embedded[1] };
+    return { kind: 'address', value: cleanAddress(text) };
+  }
+
+  function cleanAddress(text) {
+    const cleaned = text
+      .replace(/#\s*[a-z0-9]+\s*-\s*[a-z0-9]+/gi, ' ') // unit numbers like #01-23
+      .replace(/\b(?:blk|block|bk)\.?\s*(?=\d)/gi, '') // "Block 91" -> "91"
+      // Drop a trailing "Singapore" from street addresses ("91 Tanglin Halt
+      // Rd, Singapore") but not from names ("National University of Singapore").
+      .replace(/,\s*singapore\s*$/i, '')
+      .replace(/^(\d.*?)\s+singapore\s*$/i, '$1')
+      .replace(/[,;]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return cleaned || text;
   }
 
   function distanceKm(aLat, aLng, bLat, bLng) {
@@ -138,9 +160,10 @@
     return a;
   }
 
-  async function fetchJson(url, timeoutMs) {
+  async function fetchJson(url, timeoutMs, outerSignal) {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    if (outerSignal) outerSignal.addEventListener('abort', () => ctrl.abort(), { once: true });
     try {
       const res = await fetch(url, { signal: ctrl.signal, referrerPolicy: 'no-referrer' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -169,9 +192,9 @@
 
   // Returns a list of places ({lat, lng, postal, label}). Throws if OneMap
   // can't be reached.
-  async function onemapSearch(query) {
+  async function onemapSearch(query, signal) {
     const params = new URLSearchParams({ searchVal: query, returnGeom: 'Y', getAddrDetails: 'Y', pageNum: '1' });
-    const data = await fetchJson(`${ONEMAP_URL}?${params}`, ONEMAP_TIMEOUT_MS);
+    const data = await fetchJson(`${ONEMAP_URL}?${params}`, ONEMAP_TIMEOUT_MS, signal);
     return (data.results || []).map(toPlace).filter(Boolean);
   }
 
@@ -305,6 +328,20 @@
     setBusy(false);
 
     if (!places.length) {
+      // "91 Tanglin Halt Rd" not found? Offer the addresses on that street.
+      const street = text.match(/^\d+[a-z]?\s+(.{3,})$/i);
+      if (street) {
+        try {
+          const nearby = uniquePlaces(await withRetry(() => onemapSearch(street[1])));
+          if (nearby.length) {
+            setStatus('');
+            showChoices(nearby.slice(0, MAX_CHOICES), `We couldn't find “${text}”. Is it one of these?`);
+            return;
+          }
+        } catch {
+          /* fall through to the message below */
+        }
+      }
       els.results.hidden = true;
       setStatus(`No match for “${text}”. Try a postal code, a block and street (for example 507 Ang Mo Kio Ave 8), or a building name.`, true);
       return;
@@ -324,8 +361,9 @@
       `From ${place.label}. Distances are straight-line; walking routes will be longer.`);
   }
 
-  function showChoices(places) {
+  function showChoices(places, title = 'Which one did you mean?') {
     els.results.hidden = true;
+    els.choicesTitle.textContent = title;
     const frag = document.createDocumentFragment();
     places.forEach((place) => {
       const li = el('li');
@@ -492,20 +530,23 @@
     if (pm) {
       const pmBand = pm25Band(pm.value);
       const advice = el('p', 'air-advice');
-      advice.append(el('strong', '', 'NEA advice for the next few hours (from 1-hr PM2.5): '), pmBand.advice);
+      advice.append(el('strong', '', 'NEA advice for the next few hours: '), pmBand.advice);
       // NEA bases activity advice on the 1-hr PM2.5 reading. The 24-hr PSI is
       // an average over the past day, so the two can disagree; say why.
       if (psi && psi.value > 100 && pmBand.level === 'good') {
-        advice.append(' The 24-hr PSI is an average over the past day, so it can stay high after the air has improved.');
+        advice.append(' (The 24-hr PSI is a past-day average, so it lags behind.)');
+      }
+      if (pmBand.level !== 'good') {
+        advice.append(el('span', 'air-note', ' Vulnerable: the elderly, pregnant women, children, people with heart or lung disease.'));
       }
       frag.appendChild(advice);
     }
 
     const time = (psi && psi.time) || (pm && pm.time);
     const meta = el('p', 'help');
-    const when = time ? ` at ${formatTime(time)}` : '';
-    meta.append(`NEA readings for the whole ${regionName} region${when}, via data.gov.sg. Vulnerable people: the elderly, pregnant women, children and people with heart or lung disease. Official readings and advice: `,
-      link('haze.gov.sg', 'https://www.haze.gov.sg/'), '.');
+    const when = time ? `, ${formatTime(time)}` : '';
+    meta.append(`NEA readings for the whole region${when}, via data.gov.sg · Official: `,
+      link('haze.gov.sg', 'https://www.haze.gov.sg/'));
     frag.appendChild(meta);
 
     if (time && Date.now() - new Date(time).getTime() > AIR_STALE_MS) {
@@ -594,10 +635,131 @@
     els.browseList.replaceChildren(frag);
   }
 
+  // ---------- suggestions while typing ----------
+
+  let suggestTimer;
+  let suggestCtrl = null;
+  let suggestSeq = 0;
+  let suggested = [];
+  let activeIndex = -1;
+
+  function hideSuggestions() {
+    clearTimeout(suggestTimer);
+    if (suggestCtrl) suggestCtrl.abort();
+    suggestSeq += 1;
+    suggested = [];
+    activeIndex = -1;
+    els.suggestions.hidden = true;
+    els.suggestions.replaceChildren();
+    els.query.setAttribute('aria-expanded', 'false');
+    els.query.removeAttribute('aria-activedescendant');
+  }
+
+  function setActive(index) {
+    const items = els.suggestions.children;
+    if (activeIndex >= 0 && items[activeIndex]) {
+      items[activeIndex].classList.remove('active');
+      items[activeIndex].setAttribute('aria-selected', 'false');
+    }
+    activeIndex = index;
+    if (index >= 0 && items[index]) {
+      items[index].classList.add('active');
+      items[index].setAttribute('aria-selected', 'true');
+      items[index].scrollIntoView({ block: 'nearest' });
+      els.query.setAttribute('aria-activedescendant', items[index].id);
+    } else {
+      els.query.removeAttribute('aria-activedescendant');
+    }
+  }
+
+  function renderSuggestions(places) {
+    if (!places.length) {
+      hideSuggestions();
+      return;
+    }
+    suggested = places;
+    activeIndex = -1;
+    const frag = document.createDocumentFragment();
+    places.forEach((place, i) => {
+      const li = el('li', '', place.label);
+      li.id = `suggestion-${i}`;
+      li.setAttribute('role', 'option');
+      li.setAttribute('aria-selected', 'false');
+      // Keep focus in the box so the list doesn't close before the tap lands.
+      li.addEventListener('mousedown', (e) => e.preventDefault());
+      li.addEventListener('click', () => chooseSuggestion(i));
+      frag.appendChild(li);
+    });
+    els.suggestions.replaceChildren(frag);
+    els.suggestions.hidden = false;
+    els.query.setAttribute('aria-expanded', 'true');
+  }
+
+  async function fetchSuggestions(text) {
+    const seq = ++suggestSeq;
+    if (suggestCtrl) suggestCtrl.abort();
+    suggestCtrl = new AbortController();
+    try {
+      const places = uniquePlaces(await onemapSearch(text, suggestCtrl.signal)).slice(0, MAX_SUGGESTIONS);
+      if (seq === suggestSeq && document.activeElement === els.query) renderSuggestions(places);
+    } catch {
+      // Suggestions are a convenience; on any error just don't show them.
+      if (seq === suggestSeq) hideSuggestions();
+    }
+  }
+
+  async function chooseSuggestion(index) {
+    const place = suggested[index];
+    if (!place) return;
+    hideSuggestions();
+    els.query.value = place.label;
+    els.query.removeAttribute('aria-invalid');
+    try {
+      await dataReady;
+    } catch {
+      setStatus("Sorry, the shelter list couldn't be loaded. Please refresh the page.", true);
+      return;
+    }
+    setStatus('');
+    showPlace(place);
+  }
+
+  els.query.addEventListener('input', () => {
+    clearTimeout(suggestTimer);
+    const text = els.query.value.trim();
+    const q = parseQuery(text);
+    const tooShort = q.kind === 'postal' ? q.value.length < 6 : q.value.length < SUGGEST_MIN_CHARS;
+    if (tooShort) {
+      hideSuggestions();
+      return;
+    }
+    suggestTimer = setTimeout(() => fetchSuggestions(q.value), SUGGEST_DELAY_MS);
+  });
+
+  els.query.addEventListener('keydown', (e) => {
+    if (els.suggestions.hidden) return;
+    const count = suggested.length;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActive((activeIndex + 1) % count);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActive(activeIndex <= 0 ? count - 1 : activeIndex - 1);
+    } else if (e.key === 'Enter' && activeIndex >= 0) {
+      e.preventDefault();
+      chooseSuggestion(activeIndex);
+    } else if (e.key === 'Escape') {
+      hideSuggestions();
+    }
+  });
+
+  els.query.addEventListener('blur', () => setTimeout(hideSuggestions, 150));
+
   // ---------- events ----------
 
   els.form.addEventListener('submit', (e) => {
     e.preventDefault();
+    hideSuggestions();
     search(els.query.value);
   });
 

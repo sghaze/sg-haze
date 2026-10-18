@@ -24,11 +24,15 @@
     <form id="search" class="search" novalidate>
       <label for="query">Postal code or address</label>
       <div class="search-row">
-        <input id="query" name="q" type="text" autocomplete="postal-code" enterkeyhint="search"
-               maxlength="100" placeholder="e.g. 560507 or 507 Ang Mo Kio Ave 8" aria-describedby="query-help status" required>
+        <div class="query-wrap">
+          <input id="query" name="q" type="text" autocomplete="off" enterkeyhint="search" spellcheck="false"
+                 role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions"
+                 maxlength="100" placeholder="e.g. 560507 or 507 AMK Ave 8" aria-describedby="query-help status" required>
+          <ul id="suggestions" class="suggestions" role="listbox" aria-label="Suggested places" hidden></ul>
+        </div>
         <button type="submit" class="btn primary">Find shelters</button>
       </div>
-      <p id="query-help" class="help">A postal code, a block and street, or a building name. Your search is sent to OneMap (Singapore Land Authority) to find its location. This site doesn't store it.</p>
+      <p id="query-help" class="help">Or a building name. Searches go to OneMap (SLA) and aren't stored here.</p>
       <p class="or"><span>or</span></p>
       <button type="button" id="locate" class="btn secondary">Use my current location</button>
     </form>
@@ -49,9 +53,7 @@
       <h2 id="results-title" tabindex="-1"></h2>
       <p id="results-note" class="help"></p>
       <section id="air" class="air" aria-label="Air quality" aria-live="polite" hidden></section>
-      <p id="results-disclaimer" class="results-disclaimer" role="note">
-        Free personal project, not an official service. Details may be out of date or wrong, and distances and air readings are estimates. Check with the venue before going. Medical emergency: call 995. <a href="#disclaimer">Disclaimer</a>
-      </p>
+      <p id="results-disclaimer" class="results-disclaimer" role="note">Not an official service; details may be wrong. Check with the venue before going. Emergency: call 995. <a href="#disclaimer">Disclaimer</a></p>
       <ol id="results-list" class="cards"></ol>
       <button type="button" id="more" class="btn secondary" hidden>Show 5 more</button>
     </section>
@@ -67,7 +69,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <details id="disclaimer" class="disclaimer">
-        <summary>Disclaimer: a free personal project, not an official service. Information may be wrong.</summary>
+        <summary>Free personal project, not an official service. Information may be wrong. <span class="summary-more">Disclaimer and data sources</span></summary>
         <div class="disclaimer-body">
         <p><strong>A personal project.</strong> Haze Shelter Finder is a free, non-commercial project made by a private individual in their own time. It is not run, endorsed or checked by the People's Association, the National Environment Agency, the Singapore Land Authority or any other Singapore Government agency.</p>
         <p><strong>No guarantee of accuracy.</strong> Everything on this site, including shelter names, addresses, locations, distances and directions, is provided "as is" for general reference only. It may be incomplete, out of date or wrong. The shelter list is copied from a People's Association document dated <span class="as-at">September 2026</span>. That document contained errors; some were corrected here, and others may remain.</p>
@@ -76,10 +78,10 @@
         <p><strong>Your decision, your risk.</strong> You use this site at your own risk and remain responsible for your own safety and decisions. It is not medical or emergency advice. In a medical emergency, call 995.</p>
         <p><strong>No liability.</strong> To the fullest extent permitted by law, the creator of this site accepts no liability for any loss, damage, injury or inconvenience arising from using or relying on this site or its information, or from the site being unavailable.</p>
         <p>By using this site, you accept this disclaimer. Spotted a mistake? <a href="https://github.com/sghaze/sg-haze/issues" rel="noopener">Report it</a>.</p>
+        <p><strong>Data sources.</strong> Shelter list: People's Association, <em>List of Community Haze Shelters</em>, as at <span class="as-at">September 2026</span>. Location search by <a href="https://www.onemap.gov.sg/" rel="noopener">OneMap</a> © Singapore Land Authority. Air quality: contains information from NEA's PSI and PM2.5 readings, accessed live from <a href="https://data.gov.sg/" rel="noopener">data.gov.sg</a> and made available under the terms of the Singapore Open Data Licence version 1.0. Venue contact details and opening hours: <a href="https://www.onepa.gov.sg/" rel="noopener">onepa.gov.sg</a>.</p>
         </div>
       </details>
-      <p>Shelter list: People's Association, <em>List of Community Haze Shelters</em>, as at <span class="as-at">September 2026</span>. Location search by <a href="https://www.onemap.gov.sg/" rel="noopener">OneMap</a> © Singapore Land Authority. Air quality: contains information from NEA's PSI and PM2.5 readings, accessed live from <a href="https://data.gov.sg/" rel="noopener">data.gov.sg</a> and made available under the terms of the Singapore Open Data Licence version 1.0. Venue contact details and opening hours: <a href="https://www.onepa.gov.sg/" rel="noopener">onepa.gov.sg</a>.</p>
-      <p>No cookies, no tracking. <a href="https://github.com/sghaze/sg-haze" rel="noopener">Source code and data</a>.</p>
+      <p class="footer-line">Data: People's Association · OneMap © SLA · NEA via data.gov.sg · No cookies or tracking · <a href="https://github.com/sghaze/sg-haze" rel="noopener">Source code</a></p>
     </div>
   </footer>
 

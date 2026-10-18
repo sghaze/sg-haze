@@ -149,6 +149,28 @@ try {
     check(first.includes(expectedName), `address "${text}" finds ${expectedName}`,
       `${picked ? `picked first of ${await page.$$eval('#choices .choice', (b) => b.length)} matches; ` : ''}${note || status}`.slice(0, 220));
   }
+
+  // A real visitor's input that used to fail: OneMap doesn't understand "block".
+  await page.waitForTimeout(SEARCH_GAP_MS);
+  await page.fill('#query', 'block 91 Tanglin halt road');
+  await page.click('#search button[type=submit]');
+  await page.waitForFunction(() => document.querySelector('#search').getAttribute('aria-busy') === 'false', null, { timeout: 20000 }).catch(() => {});
+  const tanglin = (await page.textContent('#results-note')) || (await page.textContent('#status')) || '';
+  check(await page.isVisible('#results') && tanglin.startsWith('From 91 Tanglin Halt'), '"block 91 Tanglin halt road" finds the block', tanglin.slice(0, 120));
+
+  // Suggestions while typing.
+  await page.waitForTimeout(SEARCH_GAP_MS);
+  await page.fill('#query', '');
+  await page.click('#query');
+  await page.keyboard.type('507 ang mo', { delay: 60 });
+  const shown = await page.waitForSelector('#suggestions:not([hidden]) li', { timeout: 10000 }).then(() => true).catch(() => false);
+  const firstSuggestion = shown ? await page.textContent('#suggestions li') : '';
+  check(shown && firstSuggestion.includes('Ang Mo Kio'), 'suggestions appear while typing', firstSuggestion);
+  if (shown) {
+    await page.click('#suggestions li');
+    await page.waitForSelector('#results:not([hidden]) .card', { timeout: 20000 }).catch(() => {});
+    check(((await page.textContent('#results-list .card h3')) || '').length > 0, 'choosing a suggestion shows shelters');
+  }
   await page.screenshot({ path: `${outDir}/desktop.png`, fullPage: true });
 
   // ---- Shareable link ----

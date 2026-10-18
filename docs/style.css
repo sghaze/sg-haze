@@ -81,6 +81,33 @@ main { padding-top: 20px; padding-bottom: 32px; }
 }
 .search label { display: block; font-weight: 700; margin-bottom: 8px; }
 .search-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.query-wrap { position: relative; flex: 1 1 10rem; min-width: 0; display: flex; }
+.query-wrap input { flex: 1; }
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.suggestions li {
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: .95rem;
+  line-height: 1.35;
+}
+.suggestions li:hover, .suggestions li.active { background: var(--bg); box-shadow: inset 3px 0 0 var(--accent); }
 
 input[type="text"], input[type="search"] {
   flex: 1 1 10rem;
@@ -119,6 +146,7 @@ input[aria-invalid="true"] { border-color: var(--error); }
 .or::before, .or::after { content: ""; flex: 1; border-top: 1px solid var(--border); }
 
 .status { min-height: 1.5em; margin: 16px 0 0; font-weight: 600; }
+.status:empty { min-height: 0; margin: 0; }
 .status.error { color: var(--error); }
 
 .results h2 { font-size: 1.3rem; margin: 8px 0 0; }
@@ -170,6 +198,7 @@ input[aria-invalid="true"] { border-color: var(--error); }
 .dot.serious { background: #ec835a; }
 .dot.critical { background: #d03b3b; }
 .air-advice { margin: 10px 0 0; font-size: .95rem; }
+.air-note { color: var(--muted); font-size: .85rem; }
 
 .results-disclaimer {
   margin: 10px 0 0;
@@ -219,10 +248,12 @@ input[aria-invalid="true"] { border-color: var(--error); }
 .browse li { padding: 8px 0; border-top: 1px solid var(--border); font-size: .95rem; }
 .browse li strong { display: block; }
 
-.site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; padding: 18px 0 28px; }
+.site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem; padding: 10px 0 20px; }
 .site-footer a { color: inherit; }
-.disclaimer { margin-bottom: 12px; }
+.disclaimer { margin-bottom: 4px; }
 .disclaimer summary { cursor: pointer; padding: 4px 0; }
+.summary-more { text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+.footer-line { margin: 0; }
 .disclaimer summary:hover { color: var(--text); }
 .disclaimer-body { margin-top: 6px; font-size: .8rem; line-height: 1.5; }
 .disclaimer-body p { margin: 0 0 6px; }
