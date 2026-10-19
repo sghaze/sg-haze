@@ -25,8 +25,8 @@ const SAMPLE_POSTAL_CODES = [
   '560507', // Central, Ang Mo Kio
   '050034', // leading zero
   '791457', // corrected: Fernvale Zone K RN
-  '793441', // corrected: Fernvale Zone H RN
-  '650116', // corrected: Bukit Batok Zone 1 RN
+  '401038', // moved in PA's 16 October 2026 list: Eunos Village RN
+  '650116', // Bukit Batok Zone '1' RN (block number was wrong in the September list)
   '690119', // Tengah, newest estate
   '828629', // One Punggol
   '529204', // North East, Tampines

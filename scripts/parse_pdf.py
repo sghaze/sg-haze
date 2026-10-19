@@ -35,14 +35,6 @@ CORRECTIONS = [
     # https://www.onepa.gov.sg/rc/fernvale-zone-k-rn
     ("Fernvale Zone K RN", "postal_code", "792451", "791457",
      "Postal code belonged to a different block"),
-    # PDF postal 792441 is Blk 441B; the RN is at 441C (postal 793441).
-    # https://www.onepa.gov.sg/rc/fernvale-zone-h-rn
-    ("Fernvale Zone H RN", "postal_code", "792441", "793441",
-     "Postal code belonged to the neighbouring block"),
-    # OnePA lists 116 Bukit Batok West Ave 6 #01-228, Singapore 650116.
-    # https://www.onepa.gov.sg/rc/bukit-batok-zone-1-rn
-    ("Bukit Batok Zone 1 RN", "address", "16 Bukit Batok West Ave 6",
-     "116 Bukit Batok West Ave 6 #01-228", "Block number missing a digit"),
 ]
 
 VALID_DISTRICTS = {"Central", "North East", "North West", "South East", "South West"}

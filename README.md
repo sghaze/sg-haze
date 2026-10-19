@@ -4,7 +4,7 @@ A one-page website: type a Singapore postal code, address or building name (or t
 current location**) and see the nearest community haze shelters, with straight-line distance and a
 Google Maps directions link, plus NEA's latest PSI and PM2.5 readings for that part of Singapore.
 
-- 341 shelters from the People's Association list, *as at September 2026*
+- 372 shelters from the People's Association list, *as of 16 October 2026*
 - Works on phones, light and dark mode, no cookies or tracking, no external libraries
 - **Not an official government website**
 
@@ -79,17 +79,16 @@ To update by hand instead:
 If the Action fails at "Read the shelter PDF", the new PDF's layout has changed and the parser
 needs updating.
 
-## Corrections made to the September 2026 PDF
+## Corrections made to PA's list
 
-Checked against PA's own [OnePA](https://www.onepa.gov.sg/) pages:
+Checked against PA's own [OnePA](https://www.onepa.gov.sg/) pages. These still apply to the
+16 October 2026 list:
 
 | Shelter | In the PDF | Corrected to | Why |
 |---|---|---|---|
 | Fernvale Zone K RN | postal 792451 | 791457 | 792451 is Blk 451B Sengkang West Way, ~500 m away. OnePA lists the RN at 457A Sengkang West Rd. |
-| Fernvale Zone H RN | postal 792441 | 793441 | 792441 is Blk 441B; the RN is at 441C. |
-| Bukit Batok Zone 1 RN | 16 Bukit Batok West Ave 6 | 116 Bukit Batok West Ave 6 #01-228 | Missing digit; OnePA and the postal code (650116) both say Blk 116. |
 | Sengkang West Zone 'K' RN | Anchorvole Road | Anchorvale Road | Spelling. |
-| 8 shelters (e.g. Kreta Ayer CC) | 5-digit postal codes, e.g. 88995 | 088995 | The PDF dropped leading zeros. |
+| Any shelter | 5-digit postal codes, e.g. 88995 | 088995 | The September 2026 PDF dropped leading zeros (8 shelters); the parser restores them. |
 
 ## Disclaimer
 
@@ -135,7 +134,7 @@ arguments shown at the top of each file.
 ## Sources and credits
 
 - Shelter list: People's Association, *List of Community Haze Shelters at Community Clubs,
-  Integrated Community Hubs, Residents' Centres and Residents' Network* (as at September 2026),
+  Integrated Community Hubs, Residents' Centres and Residents' Network* (as of 16 October 2026),
   kept here as `data/source.pdf`.
 - Location search: OneMap © Singapore Land Authority.
 - Air quality: contains information from NEA's PSI and PM2.5 readings, accessed live from
