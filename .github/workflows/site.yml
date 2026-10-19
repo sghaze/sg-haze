@@ -51,7 +51,9 @@ jobs:
             echo "No data changes."
           else
             git commit -m "Update shelter data from source PDF"
-            git push
+            # Another workflow (e.g. the PA list watcher) may have pushed since checkout.
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
           fi
 
       - uses: actions/upload-pages-artifact@v4

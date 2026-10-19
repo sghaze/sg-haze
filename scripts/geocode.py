@@ -135,6 +135,13 @@ def main():
                 # Second opinion: search the written address instead.
                 street = re.sub(r"#.*$", "", s["address"]).replace("Blk ", "").strip(" ,")
                 alt = cached_search(cache, f"address:{street}", street)
+                # "Bougainvillea Park, 500 Dunearn Rd": OneMap may know one part
+                # of a written address but not the whole of it.
+                for part in [p.strip() for p in street.split(",")] if "," in street else []:
+                    if alt:
+                        break
+                    if len(part) >= 4:
+                        alt = cached_search(cache, f"address:{part}", part)
                 alt_best = alt[0] if alt else None
                 problems.append({
                     "shelter": s,
