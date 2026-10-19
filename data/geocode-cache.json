@@ -21,6 +21,17 @@
    "lng": 103.7764722987432
   }
  ],
+ "address:Bougainvillea Park": [
+  {
+   "blk_no": "",
+   "road_name": "NIL",
+   "building": "BOUGAINVILLEA PARK",
+   "address": "BOUGAINVILLEA PARK",
+   "postal": "NIL",
+   "lat": 1.326733223479867,
+   "lng": 103.8076305693292
+  }
+ ],
  "address:Bougainvillea Park, 500 Dunearn Rd": [],
  "postal:050034": [
   {
