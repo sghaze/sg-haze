@@ -71,7 +71,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/source.pdf
           git commit -m "Use PA's latest haze shelter list"
-          git push
+          # The publish workflow may have committed data since checkout.
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
           # Pushes made by this workflow don't start other workflows, so start
           # the publish workflow directly.
           gh workflow run site.yml --ref "$GITHUB_REF_NAME"

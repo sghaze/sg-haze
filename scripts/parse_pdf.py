@@ -4,13 +4,13 @@ Usage:
     pip install pdfplumber
     python scripts/parse_pdf.py data/source.pdf data/shelters.csv
 
-Also writes data/source-meta.json with the list's "as at" date.
+Also writes data/source-meta.json with the list's "as at" (or "as of") date.
 
 The PDF is a 4-column table: District | Name of CC | Address of CC | Postal Code.
 This script:
   * drops title, header and "<X> District" section rows
   * restores leading zeros the PDF lost (e.g. 50034 -> 050034)
-  * tidies unit-number spacing ("#01 - 06" -> "#01-06")
+  * tidies addresses ("#01 - 06" -> "#01-06", drops a leading "Blk")
   * applies the small list of known corrections in CORRECTIONS below
   * fails loudly if a postal code is not a valid Singapore code
 """
@@ -58,6 +58,14 @@ def clean(text):
 def tidy_address(addr):
     # "#01 -270", "# 01-43", "#01 - 1288", "#01- 20" -> "#01-270" etc.
     addr = re.sub(r"#\s*(\d+)\s*-\s*(\d)", r"#\1-\2", addr)
+    # "Blk 115 Pasir Ris St 11" -> "115 Pasir Ris St 11", like most rows.
+    addr = re.sub(r"^(?:Blk|Block)\.?\s+(?=\d)", "", addr, flags=re.I)
+    # "714, Ang Mo Kio Ave 6,#01-4018" -> "714 Ang Mo Kio Ave 6 #01-4018"
+    addr = re.sub(r"^(\d+[A-Za-z]?)\s*,\s*", r"\1 ", addr)
+    addr = re.sub(r"\s*,\s*#", " #", addr)
+    addr = re.sub(r"\s*,\s*", ", ", addr)
+    # "1 Pasir Ris Drive 4, Singapore 519457": the postal code has its own column.
+    addr = re.sub(r",?\s*Singapore\s+\d{6}$", "", addr, flags=re.I)
     return addr
 
 
@@ -89,7 +97,7 @@ def parse(pdf_path):
                     cells = [clean(c) for c in raw] + [""] * (4 - len(raw))
                     district, name, address, postal = cells[:4]
                     if district not in VALID_DISTRICTS:
-                        m = re.search(r"\(as at ([^)]+)\)", district, re.I)
+                        m = re.search(r"\(as (?:at|of) ([^)]+)\)", district, re.I)
                         if m and not as_at:
                             as_at = m.group(1).strip()
                         continue  # title, header or section row
@@ -104,7 +112,7 @@ def parse(pdf_path):
                         "postal_code": postal,
                     })
     if not as_at:
-        raise SystemExit('Could not find "(as at <date>)" in the PDF title.')
+        raise SystemExit('Could not find "(as at <date>)" or "(as of <date>)" in the PDF title.')
     return rows, as_at
 
 

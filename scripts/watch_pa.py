@@ -55,9 +55,50 @@ def encode_url(url):
     return urllib.parse.urlunsplit(parts._replace(path=urllib.parse.quote(parts.path)))
 
 
-def shelters_by_key(csv_path):
+def read_rows(csv_path):
     with open(csv_path, encoding="utf-8") as f:
-        return {(r["name"], r["postal_code"]): r for r in csv.DictReader(f)}
+        return list(csv.DictReader(f))
+
+
+def name_key(name):
+    # "Elias View Residents' Network" and "Hougang Zone '1' RN" compare equal to
+    # "Elias View RN" and "Hougang Zone 1 RN": PA often restyles names.
+    name = re.sub(r"residents' network", "rn", name.lower())
+    return re.sub(r"\s+", " ", re.sub(r"['\"]", "", name)).strip()
+
+
+def compare(old_rows, new_rows):
+    """Pair up shelters across the two lists.
+
+    Same name and postal code -> unchanged (or address changed); same postal
+    code only -> renamed; same name only -> moved. The rest are added/removed.
+    """
+    old, new = list(old_rows), list(new_rows)
+    result = {"address": [], "renamed": [], "moved": [], "restyled": 0}
+
+    def pair(same, record):
+        for o in list(old):
+            n = next((n for n in new if same(o, n)), None)
+            if n is not None:
+                old.remove(o)
+                new.remove(n)
+                record(o, n)
+
+    def same_name(o, n):
+        if o["name"] != n["name"]:
+            result["restyled"] += 1
+        if o["address"] != n["address"]:
+            result["address"].append((o, n))
+
+    pair(lambda o, n: o["postal_code"] == n["postal_code"] and name_key(o["name"]) == name_key(n["name"]), same_name)
+    pair(lambda o, n: o["postal_code"] == n["postal_code"], lambda o, n: result["renamed"].append((o, n)))
+    pair(lambda o, n: name_key(o["name"]) == name_key(n["name"]), lambda o, n: result["moved"].append((o, n)))
+    result["added"], result["removed"] = new, old
+    return result
+
+
+def place(row):
+    return f"{row['address']}, {row['postal_code']}"
 
 
 def main():
@@ -120,24 +161,31 @@ def main():
                       "", "```", (parsed.stdout + parsed.stderr)[-1500:], "```"]
         else:
             result["readable"] = True
-            old, new = shelters_by_key(CURRENT_CSV), shelters_by_key(new_csv)
-            added = sorted(set(new) - set(old))
-            removed = sorted(set(old) - set(new))
-            changed = sorted(k for k in set(old) & set(new) if old[k]["address"] != new[k]["address"])
+            old, new = read_rows(CURRENT_CSV), read_rows(new_csv)
+            diff = compare(old, new)
             with open(os.path.join(out, "source-meta.json"), encoding="utf-8") as f:
                 as_at = json.load(f)["as_at"]
-            result.update({"as_at": as_at, "count": len(new), "added": len(added), "removed": len(removed)})
+            result.update({"as_at": as_at, "count": len(new),
+                           **{k: len(diff[k]) for k in ("added", "removed", "moved", "renamed", "address")}})
             lines += [f"New list: **{len(new)} shelters**, as at {as_at} (site currently has {len(old)}).", ""]
-            for title, keys, source in (("Added", added, new), ("Removed", removed, old)):
-                lines.append(f"**{title} ({len(keys)})**")
-                lines += [f"- {source[k]['name']}, {source[k]['address']}, {k[1]}" for k in keys[:60]] or ["- none"]
-                if len(keys) > 60:
-                    lines.append(f"- … and {len(keys) - 60} more")
+            sections = (
+                ("Added", diff["added"], lambda r: f"{r['name']}, {place(r)}"),
+                ("Removed", diff["removed"], lambda r: f"{r['name']}, {place(r)}"),
+                ("Moved", diff["moved"], lambda p: f"{p[1]['name']}: {place(p[0])} → {place(p[1])}"),
+                ("Renamed", diff["renamed"], lambda p: f"{p[0]['name']} → {p[1]['name']} ({place(p[1])})"),
+                ("Address changed", diff["address"], lambda p: f"{p[1]['name']}: {p[0]['address']} → {p[1]['address']}"),
+            )
+            for title, items, fmt in sections:
+                if not items and title not in ("Added", "Removed"):
+                    continue
+                lines.append(f"**{title} ({len(items)})**")
+                lines += [f"- {fmt(item)}" for item in items[:60]] or ["- none"]
+                if len(items) > 60:
+                    lines.append(f"- … and {len(items) - 60} more")
                 lines.append("")
-            if changed:
-                lines.append(f"**Address changed ({len(changed)})**")
-                lines += [f"- {old[k]['name']}: {old[k]['address']} → {new[k]['address']}" for k in changed[:30]]
-                lines.append("")
+            if diff["restyled"]:
+                lines += [f"{diff['restyled']} other names changed only in style "
+                          "(quotes, \"Residents' Network\" → \"RN\").", ""]
             if parsed.stdout.strip():
                 lines += ["Parser notes:", "```", parsed.stdout.strip()[-1500:], "```"]
     else:

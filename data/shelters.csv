@@ -118,12 +118,12 @@ Central,Radin Mas CC,Community Club,51 Telok Blangah Crescent,098917
 Central,Tiong Bahru CC,Community Club,67A Eu Chin St,169715
 Central,Tanjong Pagar CC,Community Club,101 Cantonment Road,089774
 Central,Telok Blangah CC,Community Club,450 Telok Blangah St 31,108943
-Central,Dover CC (Void Deck),Community Club,Blk 1 Dover Road #01-300,130001
-North East,Elias View Residents' Network,Residents' Network Centre,Blk 612 Elias Road #01-138,510612
-North East,Brontosaur Park Residents' Network,Residents' Network Centre,Blk 766 Pasir Ris Street 71 #01-308,510766
-North East,Green Oval Park Residents' Network,Residents' Network Centre,Blk 706 Pasir Ris Drive 10 #01-157,510706
-North East,Pasir Ris Meridian Residents' Network,Residents' Network Centre,Blk 753 Pasir Ris Street 71 #01-118,510753
-North East,Pasir Ris Atlantis Residents' Network,Residents' Network Centre,Blk 741 Pasir Ris Street 71 #01-39,510741
+Central,Dover CC (Void Deck),Community Club,1 Dover Road #01-300,130001
+North East,Elias View Residents' Network,Residents' Network Centre,612 Elias Road #01-138,510612
+North East,Brontosaur Park Residents' Network,Residents' Network Centre,766 Pasir Ris Street 71 #01-308,510766
+North East,Green Oval Park Residents' Network,Residents' Network Centre,706 Pasir Ris Drive 10 #01-157,510706
+North East,Pasir Ris Meridian Residents' Network,Residents' Network Centre,753 Pasir Ris Street 71 #01-118,510753
+North East,Pasir Ris Atlantis Residents' Network,Residents' Network Centre,741 Pasir Ris Street 71 #01-39,510741
 North East,Costa Ris RN,Residents' Network Centre,527B Pasir Ris St 51 #01-717,512527
 North East,Pasir Ris Zone '7' RN,Residents' Network Centre,207 Pasir Ris St 21 #01-356,510207
 North East,Pasir Ris Zone '4' RN,Residents' Network Centre,484 Pasir Ris Dr 4 #01-367,510484
@@ -164,16 +164,16 @@ North East,Tampines Greenridges RN,Residents' Network Centre,605C Tampines St 61
 North East,Tampines Weaveview RN,Residents' Network Centre,610C Tampines North Drive 1 #01-472,523610
 North East,Pasir Ris Elias CC,Community Club,93 Pasir Ris Drive 3,519498
 North East,Pasir Ris Central CC,Community Club,536 Pasir Ris Drive 1 #01-286,510536
-North East,Pasir Ris East CC,Community Club,"1 Pasir Ris Drive 4, Singapore 519457",519457
+North East,Pasir Ris East CC,Community Club,1 Pasir Ris Drive 4,519457
 North East,One Punggol CC,Community Club,1 Punggol Drive #04-05,828629
 North East,Punggol 21 CC,Community Club,80 Punggol Field #01-01,828815
-North East,Punggol West CC,Community Club,Blk 259C Punggol Field #01-47,823259
+North East,Punggol West CC,Community Club,259C Punggol Field #01-47,823259
 North East,Anchorvale CC,Community Club,59 Anchorvale Road,544965
 North East,Rivervale CC,Community Club,2 Rivervale Close #01-01,544583
 North East,Sengkang CC,Community Club,2 Sengkang Square #01-01,545025
 North East,Tampines Central CC,Community Club,"1 Tampines Walk #04-04, Our Tampines Hub",528523
 North East,Tampines Changkat CC,Community Club,13 Tampines St 11,529453
-North East,Tampines East CC,Community Club,"10, Tampines St 23",529341
+North East,Tampines East CC,Community Club,10 Tampines St 23,529341
 North East,Tampines North CC,Community Club,2 Tampines St 41,529204
 North East,Tampines West CC,Community Club,5 Tampines Ave 3,529705
 North West,Bukit Panjang Zone '10' RC,Residents' Committee Centre,441 Fajar Rd #01-458,670441
@@ -206,22 +206,22 @@ North West,Canberra Zone 10 RN,Residents' Network Centre,782A Woodlands Crescent
 North West,Naval Base Forward RN,Residents' Network Centre,462 Sembawang Drive #01-201,750462
 North West,East Canberra Zone 1 RN,Residents' Network Centre,107 Canberra Street #01-567,751107
 North West,Sembawang Central Zone B RN,Residents' Network Centre,510B Wellington Circle #01-77,752510
-North West,Nee Soon Link CC,Community Club,Blk 413 Yishun Ring Road #01-1887,760413
+North West,Nee Soon Link CC,Community Club,413 Yishun Ring Road #01-1887,760413
 North West,Zhenghua CC,Community Club,1 Segar Road,677738
 North West,Senja-Cashew CC,Community Club,101 Bukit Panjang Road,679910
 North West,Bukit Timah CC,Community Club,20 Toh Yi Drive,596569
 North West,Ulu Pandan CC,Community Club,170 Ghim Moh Road #01-01,279621
 North West,Bukit Panjang CC,Community Club,8 Pending Road,678295
-North West,Marsiling CC,Community Club,Blk 2 Marsiling Drive #01-45,730002
-North West,Woodgrove CC,Community Club,Blk 353 Woodlands Ave 1 #01-753,730353
+North West,Marsiling CC,Community Club,2 Marsiling Drive #01-45,730002
+North West,Woodgrove CC,Community Club,353 Woodlands Ave 1 #01-753,730353
 North West,Fuchun CC,Community Club,1 Woodlands St 31,738581
 North West,Yew Tee CC,Community Club,20 Chua Chu Kang St 52 #01-01,689286
-North West,Limbang Park RN,Residents' Network Centre,"505 Chua Chu Kang Street 51, #01-191",680505
-North West,Limbang View RN,Residents' Network Centre,"549 Chua Chu Kang Street 52, #01-13",680549
-North West,Limbang Green RN,Residents' Network Centre,"561 Chua Chu Kang North 6, #01-82",680561
-North West,Stagmont View RN,Residents' Network Centre,"753 Chua Chu Kang North 5, #01-213",680753
+North West,Limbang Park RN,Residents' Network Centre,505 Chua Chu Kang Street 51 #01-191,680505
+North West,Limbang View RN,Residents' Network Centre,549 Chua Chu Kang Street 52 #01-13,680549
+North West,Limbang Green RN,Residents' Network Centre,561 Chua Chu Kang North 6 #01-82,680561
+North West,Stagmont View RN,Residents' Network Centre,753 Chua Chu Kang North 5 #01-213,680753
 North West,Stagmont Park RN,Residents' Network Centre,785 Chua Chu Kang Drive #01-223,680785
-North West,Chong Pang Zone 2 RC,Residents' Committee Centre,Blk 120 Yishun Ring Road,760120
+North West,Chong Pang Zone 2 RC,Residents' Committee Centre,120 Yishun Ring Road,760120
 North West,Nee Soon Central CC,Community Club,1 Northpoint Drive #01-201,768019
 North West,Nee Soon East CC,Community Club,1 Yishun Ave 9,768893
 North West,Nee Soon South CC,Community Club,30 Yishun St 81,768455
@@ -269,8 +269,8 @@ South East,Punggol CC,Community Club,3 Hougang Ave 6,538808
 South East,Eunos CC,Community Club,180 Bedok Reservoir Road,479220
 South East,Hougang CC,Community Club,35 Hougang Ave 3,538840
 South East,Kaki Bukit CC,Community Club,670 Bedok North St 3,469627
-South East,Paya Lebar Kovan CC,Community Club,Blk 207 Hougang St 21,530207
-South East,Aljunied CC (Void Deck),Community Club,Blk 110 Hougang Ave 1 #01-1048,530110
+South East,Paya Lebar Kovan CC,Community Club,207 Hougang St 21,530207
+South East,Aljunied CC (Void Deck),Community Club,110 Hougang Ave 1 #01-1048,530110
 South East,The Serangoon CC,Community Club,10 Serangoon North Ave 2,555877
 South East,Bedok CC,Community Club,850 New Upper Changi Road,467352
 South East,Siglap CC,Community Club,151 Bedok South Road,460151
@@ -335,7 +335,7 @@ South West,Yuhua CC,Community Club,90 Boon Lay Way,609958
 South West,Hong Kah North CC,Community Club,30 Bukit Batok St 31,659440
 South West,Nanyang CC,Community Club,60 Jurong West St 91,649040
 South West,Jurong Spring CC,Community Club,8 Jurong West St 52,649296
-South West,Gek Poh Ville CC,Community Club,Blk 760 Jurong West St 74 #01-08,640760
+South West,Gek Poh Ville CC,Community Club,760 Jurong West St 74 #01-08,640760
 South West,Boon Lay CC,Community Club,10 Boon Lay Place,649882
 South West,The Frontier CC,Community Club,60 Jurong West Central 3 #01-01,648346
 South West,Taman Jurong CC,Community Club,1 Yung Sheng Rd,618495

@@ -60,8 +60,8 @@ docs/  (index.html, app.js, style.css, shelters.json, postal-areas.json) ──�
 **You're alerted automatically.** Every 3 hours, `Watch for a new PA shelter list`
 (`.github/workflows/watch-pa.yml`, `scripts/watch_pa.py`) compares the PDF linked on PA's
 [Community Haze Shelters page](https://www.pa.gov.sg/our-network/community-clubs/shelters/) with
-`data/source.pdf`. When they differ it opens an issue (label `pa-list`) listing added, removed and
-changed shelters, and the run fails so GitHub emails you. If PA's page can't be read, you get an
+`data/source.pdf`. When they differ it opens an issue (label `pa-list`) listing shelters added,
+removed, moved, renamed or with a changed address, and the run fails so GitHub emails you. If PA's page can't be read, you get an
 issue and email about that instead.
 
 To put the new list on the site: **Actions → Watch for a new PA shelter list → Run workflow**, tick
