@@ -165,7 +165,7 @@ def main():
             diff = compare(old, new)
             with open(os.path.join(out, "source-meta.json"), encoding="utf-8") as f:
                 as_at = json.load(f)["as_at"]
-            result.update({"as_at": as_at, "count": len(new),
+            result.update({"as_at": as_at, "count": len(new), "previous_count": len(old),
                            **{k: len(diff[k]) for k in ("added", "removed", "moved", "renamed", "address")}})
             lines += [f"New list: **{len(new)} shelters**, as at {as_at} (site currently has {len(old)}).", ""]
             sections = (

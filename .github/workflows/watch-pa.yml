@@ -1,16 +1,19 @@
 name: Watch for a new PA shelter list
 
 # Every 3 hours, compare the list PA links on its Community Haze Shelters page
-# with the one the site uses. If they differ, open an issue listing what
-# changed and fail this run so GitHub emails you. To put the new list on the
-# site, run this workflow by hand with "Use PA's latest list" ticked.
+# with the one the site uses. When PA's list changes:
+#   * if it reads cleanly and hasn't shrunk by more than 20%, it goes on the
+#     site straight away, and an issue lists what changed for you to review;
+#   * otherwise nothing is published, an issue explains why, and this run
+#     fails so GitHub emails you. Run this workflow by hand with "Use PA's
+#     latest list" ticked to publish it anyway.
 on:
   schedule:
     - cron: "41 */3 * * *"
   workflow_dispatch:
     inputs:
       apply:
-        description: "Use PA's latest list on the site now (if it changed)"
+        description: "Use PA's latest list on the site even if the automatic checks would hold it back"
         type: boolean
         default: false
 
@@ -47,8 +50,12 @@ jobs:
           set -e
           echo "exit=$code" >> "$GITHUB_OUTPUT"
           if [ -f watch-output/result.json ]; then
-            echo "changed=$(jq -r .changed watch-output/result.json)" >> "$GITHUB_OUTPUT"
-            echo "sha=$(jq -r .sha256 watch-output/result.json | cut -c1-12)" >> "$GITHUB_OUTPUT"
+            r=watch-output/result.json
+            echo "changed=$(jq -r .changed $r)" >> "$GITHUB_OUTPUT"
+            echo "sha=$(jq -r .sha256 $r | cut -c1-12)" >> "$GITHUB_OUTPUT"
+            # Safe to publish without a person looking first?
+            safe=$(jq -r '(.readable == true) and ((.count // 0) >= 0.8 * (.previous_count // 1))' $r)
+            echo "safe=$safe" >> "$GITHUB_OUTPUT"
             cat watch-output/summary.md >> "$GITHUB_STEP_SUMMARY"
           fi
 
@@ -64,7 +71,8 @@ jobs:
           exit 1
 
       - name: Put the new list on the site
-        if: steps.watch.outputs.changed == 'true' && github.event.inputs.apply == 'true'
+        id: apply
+        if: steps.watch.outputs.changed == 'true' && (steps.watch.outputs.safe == 'true' || github.event.inputs.apply == 'true')
         run: |
           cp watch-output/new.pdf data/source.pdf
           git config user.name "github-actions[bot]"
@@ -77,12 +85,27 @@ jobs:
           # Pushes made by this workflow don't start other workflows, so start
           # the publish workflow directly.
           gh workflow run site.yml --ref "$GITHUB_REF_NAME"
+          commit=$(git rev-parse --short HEAD)
           for n in $(gh issue list --state open --label pa-list --json number --jq '.[].number'); do
-            gh issue close "$n" --comment "Applied in $(git rev-parse --short HEAD). The site is republishing with PA's latest list."
+            gh issue close "$n" --comment "Superseded: PA's latest list is now on the site ($commit)."
           done
+          {
+            echo "@${{ github.actor }} PA published a different list, and it is now on the site ($commit)."
+            echo
+            cat watch-output/summary.md
+            echo
+            echo "## Please check"
+            echo
+            echo "- In a few minutes, \`data/geocode-report.md\` lists any new shelter whose address and postal code disagree. Fixes go in \`CORRECTIONS\` in \`scripts/parse_pdf.py\`."
+            echo "- The \"Check live site\" run that follows should pass; GitHub emails you if it doesn't."
+            echo
+            echo "Close this issue when you're done."
+          } > body.md
+          gh label create pa-list --color E99695 --description "PA published a different shelter list" --force
+          gh issue create --title "PA's new shelter list is on the site (${{ steps.watch.outputs.sha }})" --body-file body.md --label pa-list
 
-      - name: Alert that PA has a new list
-        if: steps.watch.outputs.changed == 'true' && github.event.inputs.apply != 'true'
+      - name: Alert that PA's new list needs a look before publishing
+        if: steps.watch.outputs.changed == 'true' && steps.apply.outcome == 'skipped'
         run: |
           sha="${{ steps.watch.outputs.sha }}"
           existing=$(gh issue list --state open --search "$sha in:title" --json number --jq '.[0].number // empty')
@@ -91,15 +114,15 @@ jobs:
             exit 0
           fi
           {
+            echo "@${{ github.actor }} PA published a different list, but it was **not** put on the site automatically: either it couldn't be read, or it has over 20% fewer shelters than the site. See below."
+            echo
             cat watch-output/summary.md
             echo
-            echo "## To use it on the site"
+            echo "## To use it anyway"
             echo
-            echo "Open **Actions → Watch for a new PA shelter list → Run workflow**, tick **Use PA's latest list on the site now**, and click **Run workflow**. The site republishes in a few minutes and this issue closes itself."
-            echo
-            echo "Then check \`data/geocode-report.md\` for entries whose address and postal code disagree."
+            echo "Open **Actions → Watch for a new PA shelter list → Run workflow**, tick **Use PA's latest list**, and click **Run workflow**. If the list couldn't be read, the parser needs updating first."
           } > body.md
           gh label create pa-list --color E99695 --description "PA published a different shelter list" --force
-          gh issue create --title "New PA haze shelter list available ($sha)" --body-file body.md --label pa-list
-          echo "::error::PA has published a different shelter list. See the new issue."
+          gh issue create --title "New PA haze shelter list needs a look ($sha)" --body-file body.md --label pa-list
+          echo "::error::PA has published a different shelter list that wasn't published automatically. See the new issue."
           exit 1

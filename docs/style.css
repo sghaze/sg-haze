@@ -41,6 +41,11 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  /* Keep the footer at the bottom of the screen when the page is short. */
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   color: var(--text);
   font: 18px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -62,7 +67,7 @@ a { color: var(--accent-strong); text-underline-offset: 2px; }
 .site-header h1 { margin: 0 0 6px; font-size: 1.75rem; line-height: 1.2; }
 .lede { margin: 0; opacity: .92; }
 
-main { padding-top: 20px; padding-bottom: 32px; }
+main { flex: 1 0 auto; width: 100%; box-sizing: border-box; padding-top: 20px; padding-bottom: 32px; }
 
 .notice {
   background: var(--notice-bg);
@@ -248,7 +253,7 @@ input[aria-invalid="true"] { border-color: var(--error); }
 .browse li { padding: 8px 0; border-top: 1px solid var(--border); font-size: .95rem; }
 .browse li strong { display: block; }
 
-.site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem; padding: 10px 0 20px; }
+.site-footer { flex-shrink: 0; border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem; padding: 10px 0 20px; }
 .site-footer a { color: inherit; }
 .disclaimer { margin-bottom: 4px; }
 .disclaimer summary { cursor: pointer; padding: 4px 0; }
