@@ -1,12 +1,13 @@
 district,name,type,address,postal_code
 Central,Ang Mo Kio-Hougang Pinetree RN,Residents' Network Centre,572 Hougang St 51 #01-31,530572
-Central,Cheng San Diamond RN,Residents' Network Centre,507 AMK Ave 8 #01-2722,560507
 Central,Buangkok Vale RN,Residents' Network Centre,981D Buangkok Cres #01-07,537981
 Central,Buangkok Park RN,Residents' Network Centre,985A Buangkok Cres #01-06,531985
+Central,Cheng San Diamond RN,Residents' Network Centre,507 AMK Ave 8 #01-2722,560507
 Central,Fernvale River RN,Residents' Network Centre,414B Fernvale Link #01-06,792414
 Central,Teck Ghee Vista RN,Residents' Network Centre,309B Ang Mo Kio Ave 1 #01-01,563309
 Central,Teck Ghee ARC RN,Residents' Network Centre,404 Ang Mo Kio Ave 10 #01-645,560404
 Central,Teck Ghee Care RN,Residents' Network Centre,321 Ang Mo Kio Ave 1 #01-1555,560321
+Central,Teck Ghee Centraville RN,Residents' Network Centre,714 Ang Mo Kio Ave 6 #01-4018,560714
 Central,Teck Ghee Evergreen RN,Residents' Network Centre,344 Ang Mo Kio Ave 3 #01-2218,560344
 Central,Teck Ghee Garden View RN,Residents' Network Centre,220 Ang Mo Kio Ave 1 #01-797,560220
 Central,Teck Ghee Heartlands RN,Residents' Network Centre,418 Ang Mo Kio Ave 10 #01-1053,560418
@@ -43,15 +44,18 @@ Central,Whampoa Lorong Limau RC,Residents' Committee Centre,76 Lor Limau #01-07,
 Central,Whampoa McNair RC,Residents' Committee Centre,111 McNair Rd #01-225,320111
 Central,Jalan Besar Bendemeer RC,Residents' Committee Centre,22 Boon Keng Rd #01-09,330022
 Central,Whampoa Drive RC,Residents' Committee Centre,116 Jalan Tenteram #01-05,320116
-Central,Fernvale Zone K RN,Residents' Network Centre,457A Sengkang West Rd #01-352,791457
+Central,Fernvale Coral RN,Residents' Network Centre,412A Fernvale Rd #01-13,791412
 Central,Fernvale Zone A RN,Residents' Network Centre,472B Fernvale Street #01-43,792472
 Central,Fernvale Zone B RN,Residents' Network Centre,468B Fernvale Link #01-547,792468
-Central,Fernvale Zone H RN,Residents' Network Centre,441C Fernvale Rd #01-335,793441
+Central,Fernvale Zone K RN,Residents' Network Centre,457A Sengkang West Rd #01-352,791457
+Central,Fernvale Spring View RN,Residents' Network Centre,406B Fernvale Rd #01-49,792406
+Central,Kebun Baru Spring RN,Residents' Network Centre,134 Ang Mo Kio Avenue 3 #01-1699/1695,560134
+Central,Kebun Baru Grove RN,Residents' Network Centre,154 Ang Mo Kio Avenue 5 #01-3112/3114,560154
+Central,Kebun Baru Heights RN,Residents' Network Centre,106 Ang Mo Kio Avenue 4 #01-166,560106
 Central,Kebun Baru Link RN,Residents' Network Centre,177 Ang Mo Kio Ave 4 #01-901,560177
-Central,Kebun Baru Bestari RN,Residents' Network Centre,253 Ang Mo Kio St 21 #01-187,560253
 Central,Kebun Baru View RN,Residents' Network Centre,112 Ang Mo Kio Ave 4 #01-301,560112
 Central,Vista Oasis @ Bidadari RN,Residents' Network Centre,107A Bidadari Park Drive #01-270,341107
-Central,Hock San Zone RC,Residents' Committee Centre,3 Jalan Bukit Merah #01-5054,150003
+Central,Brickworks RN,Residents' Network Centre,3 Jalan Bukit Merah #01-5054,150003
 Central,Lengkok Bahru RN,Residents' Network Centre,49 Hoy Fatt Rd #01-101/103,150049
 Central,Mei Ling RN,Residents' Network Centre,150 Mei Ling St #01-65,141150
 Central,Kampong Tiong Bahru West RN,Residents' Network Centre,109 Jalan Bukit Merah #01-1748,160109
@@ -61,13 +65,12 @@ Central,Mt Faber Zone 'C' RN,Residents' Network Centre,34 Telok Blangah Way #01-
 Central,Redhill Gardens RN,Residents' Network Centre,82 Redhill Lane #01-65,150082
 Central,Redhill Rise RN,Residents' Network Centre,75B Redhill Lane #01-64,152075
 Central,Buona Vista Commonwealth Close RN,Residents' Network Centre,83B Commonwealth Close,143083
-Central,Buona Vista Commonwealth Crescent RN,Residents' Network Centre,104 Commonwealth Cres #01-136,140104
-Central,Buona Vista Zone 'B' RN,Residents' Network Centre,4 Holland Cl #01-37,271004
 Central,Buona Vista Commonwealth Drive RN,Residents' Network Centre,53 Commonwealth Drive #01-556,142053
 Central,Dawson RN,Residents' Network Centre,95A Dawson Road #01-02,142095
 Central,Delta RC,Residents' Committee Centre,61 Strathmore Ave #01-01,141061
 Central,Bukit Merah View Zone 'A' RC,Residents' Committee Centre,119 Bukit Merah View #01-61,152119
 Central,Bukit Merah View Zone 'B' RC,Residents' Committee Centre,129 Bukit Merah View #01-148,150129
+Central,Henderson Crescent RN,Residents' Network Centre,105 Henderson Crescent #01-05,150105
 Central,Henderson CityVue RC,Residents' Committee Centre,96A Henderson Road #01-56,151096
 Central,Pek Kio RN,Residents' Network Centre,48 Dorset Rd #01-113,210048
 Central,Jalan Membina RN,Residents' Network Centre,8 Kim Tian Place #01-53,163008
@@ -80,8 +83,7 @@ Central,Telok Blangah 'Blangah Square' RN,Residents' Network Centre,75 Telok Bla
 Central,Telok Blangah Dover Rd RN,Residents' Network Centre,5 Dover Cres #01-14,130005
 Central,Yio Chu Kang Court RN,Residents' Network Centre,212 AMK Ave 3 #01-1488,560212
 Central,Yio Chu Kang Concord Ville RN,Residents' Network Centre,121 AMK Ave 3 #01-1715,560121
-Central,Yio Chu Kang View RN,Residents' Network Centre,624 AMK Ave 4 #01-1078,560624
-Central,Yio Chu Kang Vista RN,Residents' Network Centre,646 AMK Ave 6 #01-4935,560646
+Central,Yio Chu Kang Oasis RN,Residents' Network Centre,616 AMK AVE 5 #01-1027,560616
 Central,Fernvale CC,Community Club,21 Sengkang West Ave #01-01,797650
 Central,Ci Yuan CC,Community Club,51 Hougang Ave 9 #01-01,538776
 Central,Cheng San CC,Community Club,6 Ang Mo Kio St 53,569205
@@ -119,17 +121,21 @@ Central,Tiong Bahru CC,Community Club,67A Eu Chin St,169715
 Central,Tanjong Pagar CC,Community Club,101 Cantonment Road,089774
 Central,Telok Blangah CC,Community Club,450 Telok Blangah St 31,108943
 Central,Dover CC (Void Deck),Community Club,1 Dover Road #01-300,130001
-North East,Elias View Residents' Network,Residents' Network Centre,612 Elias Road #01-138,510612
-North East,Brontosaur Park Residents' Network,Residents' Network Centre,766 Pasir Ris Street 71 #01-308,510766
-North East,Green Oval Park Residents' Network,Residents' Network Centre,706 Pasir Ris Drive 10 #01-157,510706
-North East,Pasir Ris Meridian Residents' Network,Residents' Network Centre,753 Pasir Ris Street 71 #01-118,510753
-North East,Pasir Ris Atlantis Residents' Network,Residents' Network Centre,741 Pasir Ris Street 71 #01-39,510741
+North East,Elias View RN,Residents' Network Centre,612 Elias Road #01-138,510612
+North East,Brontosaur Park RN,Residents' Network Centre,766 Pasir Ris Street 71 #01-308,510766
+North East,Green Oval Park RN,Residents' Network Centre,706 Pasir Ris Drive 10 #01-157,510706
+North East,Pasir Ris Meridian RN,Residents' Network Centre,753 Pasir Ris Street 71 #01-118,510753
+North East,Pasir Ris Atlantis RN,Residents' Network Centre,741 Pasir Ris Street 71 #01-39,510741
 North East,Costa Ris RN,Residents' Network Centre,527B Pasir Ris St 51 #01-717,512527
 North East,Pasir Ris Zone '7' RN,Residents' Network Centre,207 Pasir Ris St 21 #01-356,510207
 North East,Pasir Ris Zone '4' RN,Residents' Network Centre,484 Pasir Ris Dr 4 #01-367,510484
 North East,Pasir Ris Zone '8' RN,Residents' Network Centre,226 Pasir Ris St 21 #01-76,510226
 North East,Pasir Ris Zone '11' RN,Residents' Network Centre,140 Pasir Ris St 11 #01-171,510140
-North East,Pasir Ris Zone '10' RN,Residents' Network Centre,192 Pasir Ris St 12 #01-06,510192
+North East,Eco Ris RN,Residents' Network Centre,115 Pasir Ris St 11,510115
+North East,Elias Rise RN,Residents' Network Centre,520 Pasir Ris St 52,510520
+North East,Coral Ris RN,Residents' Network Centre,569 Pasir Ris St 51,510569
+North East,Coral Heights RN,Residents' Network Centre,560 Pasir Ris St 51,510560
+North East,Coastar RN,Residents' Network Centre,585 Pasir Ris St 53,510585
 North East,Punggol Sunrise RN,Residents' Network Centre,677 A Punggol Drive #01-800,821677
 North East,Punggol Raydew RN,Residents' Network Centre,662D Edgedale Plains #01-712,824662
 North East,Punggol Waterway Sunrise 1 RN,Residents' Network Centre,655A Punggol East #01-700,821655
@@ -153,13 +159,24 @@ North East,Buangkok CC,Community Club,70 Compassvale Bow #01-25,544692
 North East,Tampines Vista RN,Residents' Network Centre,874 Tampines St 84 #01-13,520874
 North East,Tampines Spring RN,Residents' Network Centre,880 Tampines Ave 8 #01-278,520880
 North East,Tampines Green Meadows RN,Residents' Network Centre,519D Tampines Central 8 #01-87,524519
-North East,Tampines East Zone '1' RN,Residents' Network Centre,209 Tampines St 21 #01-1339,520209
+North East,Tampines North SunPlaza RN,Residents' Network Centre,418 Tampines St 41 #01-72,520418
+North East,Tampines East Zone 1 RN,Residents' Network Centre,209 Tampines St 21 #01-1339,520209
+North East,Tampines East Zone 2 RN,Residents' Network Centre,216 Tampines St 23 #01-37,520216
+North East,Tampines East Zone 4 RN,Residents' Network Centre,257 Tampines St 21 #01-208,520257
+North East,Tampines East Zone 5 RN,Residents' Network Centre,270 Tampines St 21 #01-165,520270
+North East,Tampines East Zone 6 RN,Residents' Network Centre,230B Tampines Street 24 #01-21,525230
+North East,Tampines East Zone 7 RN,Residents' Network Centre,387 Tampines St 32 #01-87,520387
+North East,Tampines East Zone 8 RN,Residents' Network Centre,364 Tampines Street 34 #01-133,520364
 North East,Tampines North Zone '3' RN,Residents' Network Centre,430 Tampines St 41 #01-525,520430
+North East,Tampines North Zone '4' RN,Residents' Network Centre,450 Tampines St 42 #01-98,520450
 North East,Tampines North Zone '7' RN,Residents' Network Centre,498M Tampines St 45 #01-498,529498
 North East,Tampines North Zone '5' RN,Residents' Network Centre,480 Tampines St 44 #01-257,520480
 North East,Tampines North Zone '6' RN,Residents' Network Centre,494B Tampines Ave 9 #01-458,520494
 North East,Tampines-Changkat Zone '3' RN,Residents' Network Centre,111 Tampines St 11 #01-217,521111
 North East,Tampines-Changkat Zone '4' RN,Residents' Network Centre,285 Tampines St 22 #01-225,520285
+North East,Tampines GreenCourt RN,Residents' Network Centre,633B Tampines North Drive 2 #02-219,522633
+North East,Tampines DewFoliage RN,Residents' Network Centre,647 Tampines Street 62 #01-02,520647
+North East,Tampines GreenVerge RN,Residents' Network Centre,623A Tampines Avenue 12 #02-61,521623
 North East,Tampines Greenridges RN,Residents' Network Centre,605C Tampines St 61 #01-340,523605
 North East,Tampines Weaveview RN,Residents' Network Centre,610C Tampines North Drive 1 #01-472,523610
 North East,Pasir Ris Elias CC,Community Club,93 Pasir Ris Drive 3,519498
@@ -177,15 +194,20 @@ North East,Tampines East CC,Community Club,10 Tampines St 23,529341
 North East,Tampines North CC,Community Club,2 Tampines St 41,529204
 North East,Tampines West CC,Community Club,5 Tampines Ave 3,529705
 North West,Bukit Panjang Zone '10' RC,Residents' Committee Centre,441 Fajar Rd #01-458,670441
+North West,Watten Hub,Community venue,"Bougainvillea Park, 500 Dunearn Rd",289618
 North West,Toh Yi RN,Residents' Network Centre,4 Toh Yi Dr #01-217,590004
+North West,Bukit Timah Zone 5 RC,Residents' Committee Centre,319 Clementi Ave 4 #01-85,120319
+North West,Clementi Meadows RN,Residents' Network Centre,306 Clementi Ave 4 #01-465,120306
+North West,Gateway View RN,Residents' Network Centre,204 Clementi Ave 6 #01-09,120204
+North West,Trivelis RN,Residents' Network Centre,311B Clementi Ave 4 #01-17,122311
+North West,Ridges RN,Residents' Network Centre,312A Clementi Ave 4 #01-171,121312
 North West,Ghim Moh Gardens RN,Residents' Network Centre,17 Ghim Moh Rd #01-75,270017
 North West,Zhenghua-Segar Meadows RN,Residents' Network Centre,456 Segar Rd #01-117,670456
-North West,Zhenghua-Senja View RC,Residents' Committee Centre,635B Senja Rd #02-269,672635
+North West,Zhenghua-Senja View RN,Residents' Network Centre,635B Senja Rd #02-269,672635
 North West,Marsiling Zone '2' RN,Residents' Network Centre,8 Marsiling Dr #01-18,730008
 North West,Marsiling Zone '3' RN,Residents' Network Centre,123 Marsiling Rise #01-98,730123
 North West,Marsiling Zone '7' RN,Residents' Network Centre,206 Marsiling Dr #01-298,730206
 North West,Marsiling Zone '9' RN,Residents' Network Centre,185 Woodlands St 13 #02-671,732185
-North West,Woodgrove Zone '10' RN,Residents' Network Centre,310 Woodlands St 31 #01-02,730310
 North West,Woodgrove Zone '3' RC,Residents' Committee Centre,890A Woodlands Drive 50 #01-277,731890
 North West,Woodgrove Zone '4' RN,Residents' Network Centre,572B Woodlands Ave 1 #01-836,732572
 North West,Chong Pang Zone '1' RC,Residents' Committee Centre,108 Yishun Ring Rd #01-301/305,760108
@@ -216,6 +238,8 @@ North West,Marsiling CC,Community Club,2 Marsiling Drive #01-45,730002
 North West,Woodgrove CC,Community Club,353 Woodlands Ave 1 #01-753,730353
 North West,Fuchun CC,Community Club,1 Woodlands St 31,738581
 North West,Yew Tee CC,Community Club,20 Chua Chu Kang St 52 #01-01,689286
+North West,Yew Tee Zone 9 RC,Residents' Committee Centre,690A Choa Chu Kang Crescent #01-104,681690
+North West,Yew Tee Zone 10 RC,Residents' Committee Centre,639 Choa Chu Kang Street 64 #01-31,680639
 North West,Limbang Park RN,Residents' Network Centre,505 Chua Chu Kang Street 51 #01-191,680505
 North West,Limbang View RN,Residents' Network Centre,549 Chua Chu Kang Street 52 #01-13,680549
 North West,Limbang Green RN,Residents' Network Centre,561 Chua Chu Kang North 6 #01-82,680561
@@ -235,9 +259,11 @@ South East,Eunos Zone '2' RN,Residents' Network Centre,616 Bedok Reservoir Rd #0
 South East,Eunos Zone '3' RN,Residents' Network Centre,627 Bedok Reservoir Rd #01-1608,470627
 South East,Kaki Bukit Ville RN,Residents' Network Centre,504 Bedok North St 3 #01-144,460504
 South East,Kaki Bukit Bloom RN,Residents' Network Centre,546 Bedok North St 3 #01-1436,460546
+South East,Kaki Bukit Garden RN,Residents' Network Centre,526 Bedok North Street 3 #01-490,460526
 South East,Kaki Bukit Green RN,Residents' Network Centre,517 Bedok North Ave 2 #01-155,460517
 South East,Kaki Bukit Park RN,Residents' Network Centre,550 Bedok North Ave 1 #01-496/498,460550
 South East,Paya Lebar Zone '2' RC,Residents' Committee Centre,101 Hougang Ave 1 #01-1153/1151,530101
+South East,Paya Lebar Zone 7 RN,Residents' Network Centre,132 Lorong Ah Soo #01-412,530132
 South East,Hwi Yoh Garden RC,Residents' Committee Centre,123 Serangoon North Ave 1 #01-149,550123
 South East,Boundary Ville RC,Residents' Committee Centre,228 Serangoon Ave 4 #01-49,550228
 South East,Hwi Yoh Court RC,Residents' Committee Centre,103 Serangoon North Ave 1 #01-757,550103
@@ -251,8 +277,12 @@ South East,Ping Yi Greens RN,Residents' Network Centre,808A Chai Chee Road #01-1
 South East,Ansar RN,Residents' Network Centre,32 Chai Chee Avenue #01-218,461032
 South East,Ping An RN,Residents' Network Centre,61 Chai Chee Rd #01-840,460061
 South East,Ping An Green RN,Residents' Network Centre,43 Chai Chee St #01-70,461043
-South East,Hougang Zone '1' RN,Residents' Network Centre,2 Hougang Ave 3 #01-292,530002
-South East,Hougang Zone '4' RN,Residents' Network Centre,341 Hougang Ave 7 #01-457,530341
+South East,Hougang Zone 1 RN,Residents' Network Centre,2 Hougang Ave 3 #01-292,530002
+South East,Hougang Zone 2 RN,Residents' Network Centre,306 Hougang Ave 5 #01-359,530306
+South East,Hougang Zone 3 RN,Residents' Network Centre,332 Hougang Ave 5 #01-222,530332
+South East,Hougang Zone 4 RN,Residents' Network Centre,341 Hougang Ave 7 #01-457,530341
+South East,Hougang Zone 5 RN,Residents' Network Centre,705 Hougang Ave 2 #01-247,530705
+South East,Hougang Zone 6 RN,Residents' Network Centre,836 Hougang Central #01-539,530836
 South East,Balam RN,Residents' Network Centre,31 Balam Rd #01-109,370031
 South East,MacPherson Seasons RN,Residents' Network Centre,82B Circuit Road #01-26,372082
 South East,MacPherson Aljunied Crescent Zone '2' RN,Residents' Network Centre,96 Aljunied Cres #01-481,380096
@@ -260,7 +290,7 @@ South East,MacPherson Zone 'A' RN,Residents' Network Centre,42 Circuit Rd #01-53
 South East,MacPherson Zone 'B' RN,Residents' Network Centre,65 Circuit Rd #01-381,370065
 South East,MacPherson Zone 'E' RN,Residents' Network Centre,90 Pipit Road #01-131,370090
 South East,Braddell Heights Zone 'B' RC,Residents' Committee Centre,6 Lor Lew Lian #01-118,531006
-South East,Eunos Village RN,Residents' Network Centre,415 Eunos Rd 5 #01-46,400415
+South East,Eunos Village RN,Residents' Network Centre,38A Eunos Road 2 #01-340,401038
 South East,Eunos Crescent RC,Residents' Committee Centre,10 Eunos Cres #01-2733,400010
 South East,Ubi Grove RN (new RN Centre),Residents' Network Centre,358D Ubi Road 3 #01-208,404358
 South East,Marine Terrace Breeze RC,Residents' Committee Centre,20 Marine Terrace #01-124,440020
@@ -287,26 +317,24 @@ South East,Marine Drive Garden RC,Residents' Committee Centre,61 Marine Drive,44
 South East,Joo Chiat CC,Community Club,405 Joo Chiat Road,427633
 South East,Katong CC,Community Club,51 Kampong Arang Road,438178
 South East,Mountbatten CC,Community Club,87 Jalan Satu,390087
-South West,Bukit Batok Zone 1 RN,Residents' Network Centre,116 Bukit Batok West Ave 6 #01-228,650116
-South West,Bukit Batok Zone 2 RN,Residents' Network Centre,104 Bukit Batok Central #01-283,650104
-South West,Bukit Batok Zone 3 RN,Residents' Network Centre,120 Bukit Batok Central,650120
+South West,Bukit Batok Zone '1' RN,Residents' Network Centre,116 Bukit Batok West Ave 6 #01-220,650116
+South West,Bukit Batok Zone '2' RN,Residents' Network Centre,104 Bukit Batok Central #01-283,650104
+South West,Bukit Batok Zone '3' RN,Residents' Network Centre,125 Bukit Batok Central #01-389,650125
 South West,Bukit Batok East Zone '7' RN,Residents' Network Centre,210 Bukit Batok St 21 #01-202,650210
 South West,Sunshine RN,Residents' Network Centre,489A Chua Chu Kang Ave 5 #01-193,681489
 South West,Axis Colours RN,Residents' Network Centre,807B Chua Chu Kang Ave 1 #01-530,682807
 South West,Bukit Gombak Sunshine RC,Residents' Committee Centre,531 Bukit Batok St 51 #01-122,650531
-South West,Chua Chu Kang Zone 1 RN,Residents' Network Centre,163 Jalan Teck Whye #01-220,680163
-South West,Chua Chu Kang Zone 2 RN,Residents' Network Centre,15 Teck Whye Lane #01-147,680015
+South West,Chua Chu Kang Zone '1' RN,Residents' Network Centre,163 Jalan Teck Whye #01-220,680163
+South West,Chua Chu Kang Zone '2' RN,Residents' Network Centre,15 Teck Whye Lane #01-147,680015
 South West,Clementi Spring RN,Residents' Network Centre,359 Clementi Ave 2 #01-301,120359
 South West,Clementi Green RN,Residents' Network Centre,343 Clementi Ave 5 #01-216,120343
 South West,Jurong Central Zone 'A' RN,Residents' Network Centre,475 Jurong West St 41 #01-384,640475
 South West,Jurong Central Zone 'D' RN,Residents' Network Centre,340 Jurong East Ave 1 #01-1662,600340
 South West,Jurong Central Zone 'F' RN,Residents' Network Centre,320 Jurong East St 31 #01-80,600320
-South West,Yuhua Zone '2' RC,Residents' Committee Centre,240 Jurong East St 21 #01-368,600240
 South West,Yuhua Zone '1' RN,Residents' Network Centre,260 Jurong East St 24 #01-547,600260
+South West,Yuhua Zone '2' RC,Residents' Committee Centre,240 Jurong East St 21 #01-368,600240
 South West,Yuhua Zone '7' RN,Residents' Network Centre,107 Jurong East St 13 #01-240,600107
 South West,Yuhua Zone '10' @ TGV RN,Residents' Network Centre,282 Toh Guan Rd #01-231,600282
-South West,West Crest West Valley RN,Residents' Network Centre,448C Bukit Batok West Ave 9 #01-48,653448
-South West,West Terra RN,Residents' Network Centre,451C Bukit Batok West Ave 6 #01-20,653451
 South West,West Ridges RN,Residents' Network Centre,441C Bukit Batok West Ave 8 #01-923,653441
 South West,West Rock West Quarry RN,Residents' Network Centre,461A Bukit Batok West Ave 8 #01-706,651461
 South West,Hong Kah North Zone '1' RN,Residents' Network Centre,419 Bukit Batok West Ave 2 #01-213,650419
@@ -314,6 +342,10 @@ South West,West Plains Le Quest RN,Residents' Network Centre,464A Bukit Batok We
 South West,West Edge RN,Residents' Network Centre,439C Bukit Batok West Ave 8 #01-945,653439
 South West,Jurong Spring Zone 'E' RC,Residents' Committee Centre,527 Jurong West St 52 #01-315,640527
 South West,Jurong Spring Zone 'F' RC,Residents' Committee Centre,555 Jurong West St 42 #01-371,640555
+South West,Taman Jurong Zone 'A' RN,Residents' Network Centre,153 Yung Ho Rd #01-45,610153
+South West,Taman Jurong Zone 'C' RN,Residents' Network Centre,359 Yung An Rd #01-79,610359
+South West,Taman Jurong Zone 'D' RN,Residents' Network Centre,353 Kang Ching Rd #01-39,610353
+South West,Taman Jurong Zone 'E' RN,Residents' Network Centre,337B Tah Ching Rd #51-01,612337
 South West,Taman Jurong Zone 'F' RN,Residents' Network Centre,175B Yung Kuang Rd #01-11324,612175
 South West,Taman Jurong Zone 'G' RN,Residents' Network Centre,138B Yuan Ching Rd #01-121,612138
 South West,Boon Lay Meadow-Grove RN,Residents' Network Centre,183A Boon Lay Dr #01-712,641183
@@ -321,7 +353,6 @@ South West,Boon Lay Zone 'C' RN,Residents' Network Centre,260 Boon Lay Dr #01-52
 South West,Boon Lay Zone 'D' RN,Residents' Network Centre,190 Boon Lay Dr #01-224,640190
 South West,Nanyang Zone '3' RC,Residents' Committee Centre,726 Jurong West Ave 5 #01-232,640726
 South West,Nanyang Zone '6' RN,Residents' Network Centre,705 Jurong West St 71 #01-78,640705
-South West,Teban Gardens RN,Residents' Network Centre,32 Teban Gardens Rd #01-362,600032
 South West,Teban Place RN,Residents' Network Centre,20 Teban Gardens Rd #01-107,600020
 South West,Ayer Rajah CC,Community Club,150 Pandan Gardens,609335
 South West,Hillview CC,Community Club,1 Hillview Rise #01-01,667970
