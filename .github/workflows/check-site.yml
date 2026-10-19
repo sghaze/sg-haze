@@ -82,7 +82,7 @@ jobs:
           echo "== Burst, no pause =="
           for pc in 791457 650116 690119 828629 529204 390087 129605 560507 050034 793441; do probe $pc burst "$chrome"; done
           echo "== Site addresses people may type =="
-          for u in "$origin/" "$SITE_URL" "${SITE_URL%/}" "http://${origin#https://}/sg-haze/"; do
+          for u in "$origin/" "$SITE_URL" "${SITE_URL%/}" "http://${origin#https://}/" "$origin/sg-haze/"; do
             printf '%s -> %s\n' "$u" "$(curl -s -m 10 -o /dev/null -w '%{http_code} %{redirect_url}' "$u" || echo error)"
           done
           echo "== data.gov.sg air quality readings =="

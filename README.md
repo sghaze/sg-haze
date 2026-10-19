@@ -8,8 +8,9 @@ Google Maps directions link, plus NEA's latest PSI and PM2.5 readings for that p
 - Works on phones, light and dark mode, no cookies or tracking, no external libraries
 - **Not an official government website**
 
-Live site: **https://sghaze.github.io/sg-haze/** (the address follows the repository's name; renaming
-the repository changes it).
+Live site: **https://sghaze.github.io/**. This works because the repository is named
+`sghaze.github.io`; renaming it would move the site to `https://sghaze.github.io/<new-name>/`.
+The old address, `https://sghaze.github.io/sg-haze/`, no longer works.
 
 ## Publishing settings
 
@@ -103,7 +104,8 @@ Checked against PA's own [OnePA](https://www.onepa.gov.sg/) pages. These still a
 The site states that it is a free, non-commercial personal project, not an official service, and
 that its information is provided "as is" with no liability accepted, to the fullest extent permitted
 by law. A short version appears above every set of results; the full text is in the page footer
-(`#disclaimer` in `docs/index.html`). Errors can be reported through this repository's Issues.
+(`#disclaimer` in `docs/index.html`). Visitors report errors through a Google Form (https://forms.gle/EGpRxE4Sg7hduxv97); responses go to
+the owner's Google Sheet, so no email address is shown on the site.
 
 Keep the project non-commercial (no ads, donations or sponsorship) if you want the "personal project"
 statement to stay accurate. This wording is not legal advice.

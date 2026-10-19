@@ -28,7 +28,7 @@ import urllib.request
 PAGE_URL = "https://www.pa.gov.sg/our-network/community-clubs/shelters/"
 CURRENT_PDF = "data/source.pdf"
 CURRENT_CSV = "data/shelters.csv"
-UA = "Mozilla/5.0 (compatible; haze-shelter-finder/1.0; +https://sghaze.github.io/sg-haze/)"
+UA = "Mozilla/5.0 (compatible; haze-shelter-finder/1.0; +https://sghaze.github.io/)"
 
 
 def fetch(url):
