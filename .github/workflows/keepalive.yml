@@ -1,0 +1,30 @@
+name: Keep scheduled checks running
+
+# GitHub switches off scheduled workflows in a public repository after 60 days
+# with no activity. If PA doesn't publish a new list for two months, nothing
+# else would commit, and the PA watcher and the daily site check would stop
+# silently. This records a date once a month so that never happens.
+on:
+  schedule:
+    - cron: "23 2 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Record that the checks are still running
+        run: |
+          date -u +%Y-%m-%d > .github/last-keepalive
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/last-keepalive
+          git commit -m "Monthly keep-alive for scheduled checks"
+          # Another workflow may have pushed since checkout.
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
