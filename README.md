@@ -72,7 +72,7 @@ docs/  (index.html, app.js, style.css, shelters.json, postal-areas.json) ──�
 If PA's page can't be read, you get an issue and email about that instead.
 
 GitHub switches off scheduled workflows in a public repository after 60 days with no activity, so
-`Keep scheduled checks running` (`.github/workflows/keepalive.yml`) commits the date to
+`Keep scheduled checks running` (`.github/workflows/keepalive.yml`) commits the date and time to
 `.github/last-keepalive` on the 1st of each month.
 
 To update by hand instead:
