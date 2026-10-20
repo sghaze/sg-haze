@@ -1288,6 +1288,28 @@
    "lng": 103.9306234665326
   }
  ],
+ "postal:460004": [
+  {
+   "blk_no": "4",
+   "road_name": "BEDOK SOUTH AVENUE 1",
+   "building": "NIL",
+   "address": "4 BEDOK SOUTH AVENUE 1 SINGAPORE 460004",
+   "postal": "460004",
+   "lat": 1.322489622965892,
+   "lng": 103.9334052825851
+  }
+ ],
+ "postal:460033": [
+  {
+   "blk_no": "33",
+   "road_name": "BEDOK SOUTH AVENUE 2",
+   "building": "NIL",
+   "address": "33 BEDOK SOUTH AVENUE 2 SINGAPORE 460033",
+   "postal": "460033",
+   "lat": 1.322837033022408,
+   "lng": 103.9391245259508
+  }
+ ],
  "postal:460037": [
   {
    "blk_no": "37",
@@ -1308,6 +1330,17 @@
    "postal": "460061",
    "lat": 1.325108719282373,
    "lng": 103.9207381888836
+  }
+ ],
+ "postal:460071": [
+  {
+   "blk_no": "71",
+   "road_name": "BEDOK SOUTH ROAD",
+   "building": "SIGLAP LUCKY VALLEY",
+   "address": "71 BEDOK SOUTH ROAD SIGLAP LUCKY VALLEY SINGAPORE 460071",
+   "postal": "460071",
+   "lat": 1.320416017366189,
+   "lng": 103.942732310081
   }
  ],
  "postal:460093": [
@@ -1341,6 +1374,17 @@
    "postal": "460151",
    "lat": 1.317322244857148,
    "lng": 103.9468001465131
+  }
+ ],
+ "postal:460167": [
+  {
+   "blk_no": "167",
+   "road_name": "BEDOK SOUTH AVENUE 3",
+   "building": "SIGLAP EAST",
+   "address": "167 BEDOK SOUTH AVENUE 3 SIGLAP EAST SINGAPORE 460167",
+   "postal": "460167",
+   "lat": 1.319639686226661,
+   "lng": 103.9449652302426
   }
  ],
  "postal:460504": [
@@ -1462,6 +1506,17 @@
    "postal": "462187",
    "lat": 1.330381466074705,
    "lng": 103.9400884012029
+  }
+ ],
+ "postal:463152": [
+  {
+   "blk_no": "152C",
+   "road_name": "BEDOK SOUTH ROAD",
+   "building": "BEDOK SOUTH HORIZON",
+   "address": "152C BEDOK SOUTH ROAD BEDOK SOUTH HORIZON SINGAPORE 463152",
+   "postal": "463152",
+   "lat": 1.318717037520852,
+   "lng": 103.9470124230528
   }
  ],
  "postal:467352": [
