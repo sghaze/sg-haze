@@ -70,7 +70,12 @@ try {
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e)));
   page.on('console', (m) => { if (m.type() === 'error') errors.push(`${m.text()} @ ${m.location()?.url || ''}`); });
-  page.on('requestfailed', (r) => errors.push(`request failed: ${r.url()} ${r.failure()?.errorText}`));
+  // ERR_ABORTED is the site cancelling a request it no longer needs (an older
+  // search or suggestion), not a failure.
+  page.on('requestfailed', (r) => {
+    const why = r.failure()?.errorText || '';
+    if (!why.includes('ERR_ABORTED')) errors.push(`request failed: ${r.url()} ${why}`);
+  });
   const counted = [];
   page.on('request', (r) => { if (r.url().includes('goatcounter.com')) counted.push(r.url()); });
 
