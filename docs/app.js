@@ -12,6 +12,7 @@
   const AIR_CACHE_MS = 10 * 60 * 1000;
   const AIR_STALE_MS = 3 * 60 * 60 * 1000;
   const PAGE_SIZE = 5;
+  const WALK_MAX_KM = 1.5; // suggest walking directions up to this distance
   const MAX_CHOICES = 8;
   const SUGGEST_DELAY_MS = 350;
   const SUGGEST_MIN_CHARS = 3;
@@ -559,6 +560,7 @@
 
   function showResults(origin, title, note) {
     current = {
+      origin,
       approx: Boolean(origin.approx),
       shown: 0,
       sorted: mappedShelters
@@ -583,6 +585,17 @@
     els.more.hidden = current.shown >= current.sorted.length;
   }
 
+  // Start the route from the searched place, not wherever Google Maps thinks
+  // the device is (on a laptop that guess can be kilometres off). Skipped for
+  // approximate postal-area results, whose centre isn't where the visitor is.
+  function directionsUrl(s, km) {
+    const params = new URLSearchParams({ api: '1', destination: `${s.lat},${s.lng}` });
+    const o = current.origin;
+    if (o && !current.approx) params.set('origin', `${o.lat},${o.lng}`);
+    if (km <= WALK_MAX_KM) params.set('travelmode', 'walking');
+    return `https://www.google.com/maps/dir/?${params}`;
+  }
+
   function card(s, km, index) {
     const li = el('li', index === 0 && !current.approx ? 'card nearest' : 'card');
 
@@ -594,7 +607,7 @@
 
     const actions = el('div', 'card-actions');
     const directions = el('a', '', 'Directions');
-    directions.href = `https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}`;
+    directions.href = directionsUrl(s, km);
     directions.target = '_blank';
     directions.rel = 'noopener';
     directions.setAttribute('aria-label', `Directions to ${s.name} (opens Google Maps)`);

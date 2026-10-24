@@ -150,6 +150,13 @@ try {
       `${picked ? `picked first of ${await page.$$eval('#choices .choice', (b) => b.length)} matches; ` : ''}${note || status}`.slice(0, 220));
   }
 
+  // Directions start from the searched place (not Google's guess of where the
+  // device is) and use walking for a nearby shelter.
+  const href = (await page.getAttribute('#results-list .card a[href*="google.com/maps"]', 'href').catch(() => '')) || '';
+  const params = new URL(href || 'https://x/').searchParams;
+  check(/^1\.\d+,103\.\d+$/.test(params.get('origin') || '') && params.get('travelmode') === 'walking',
+    'directions start from the searched place', href.slice(0, 160));
+
   // A real visitor's input that used to fail: OneMap doesn't understand "block".
   await page.waitForTimeout(SEARCH_GAP_MS);
   await page.fill('#query', 'block 91 Tanglin halt road');
