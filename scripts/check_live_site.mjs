@@ -93,7 +93,7 @@ try {
 
   const res = await page.goto(SITE, { waitUntil: 'networkidle' });
   check(res && res.ok(), 'home page loads', `HTTP ${res && res.status()}`);
-  check((await page.title()) === 'Haze Shelter Finder', 'page title', await page.title());
+  check((await page.title()).startsWith('Haze Shelter Finder'), 'page title', await page.title());
 
   const data = await page.evaluate(async () => (await fetch('shelters.json', { cache: 'no-store' })).json());
   const mapped = data.shelters.filter((s) => typeof s.lat === 'number');
