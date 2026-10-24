@@ -9,6 +9,7 @@
     pm25: 'https://api-open.data.gov.sg/v2/real-time/api/pm25',
   };
   const AIR_TIMEOUT_MS = 8000;
+  const COUNT_URL = 'https://sg-haze.goatcounter.com/count';
   const AIR_CACHE_MS = 10 * 60 * 1000;
   const AIR_STALE_MS = 3 * 60 * 60 * 1000;
   const PAGE_SIZE = 5;
@@ -556,6 +557,29 @@
     els.air.replaceChildren(frag);
   }
 
+  // ---------- anonymous visit counts ----------
+
+  // Counted with GoatCounter (no cookies). Only the page path or the word
+  // "searched" is sent, plus the website the visitor came from: never what
+  // they typed, the ?postal= value, or their location. Skipped for automated
+  // browsers (such as this site's own daily check) and when Do Not Track is on.
+  function count(path, title, isEvent) {
+    try {
+      if (navigator.webdriver || navigator.doNotTrack === '1' || location.protocol !== 'https:') return;
+      const params = new URLSearchParams({ p: path, t: title });
+      if (isEvent) {
+        params.set('e', 'true');
+      } else if (document.referrer) {
+        const from = new URL(document.referrer);
+        if (from.origin !== location.origin) params.set('r', from.origin);
+      }
+      params.set('rnd', Math.random().toString(36).slice(2));
+      new Image().src = `${COUNT_URL}?${params}`;
+    } catch {
+      // Counting must never get in the way of finding a shelter.
+    }
+  }
+
   // ---------- rendering ----------
 
   function showResults(origin, title, note) {
@@ -574,6 +598,7 @@
     els.results.hidden = false;
     els.title.focus();
     renderAir(origin);
+    count('searched', 'Searched for shelters', true);
   }
 
   function renderMore() {
@@ -806,6 +831,8 @@
     clearTimeout(filterTimer);
     filterTimer = setTimeout(() => renderBrowse(els.filter.value), 150);
   });
+
+  count(location.pathname, document.title, false);
 
   // Support shareable links like ?postal=560507
   const fromUrl = new URLSearchParams(location.search).get('postal');

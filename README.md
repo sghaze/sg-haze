@@ -5,7 +5,9 @@ current location**) and see the nearest community haze shelters, with straight-l
 Google Maps directions link, plus NEA's latest PSI and PM2.5 readings for that part of Singapore.
 
 - 372 shelters from the People's Association list, *as of 16 October 2026*
-- Works on phones, light and dark mode, no cookies or tracking, no external libraries
+- Works on phones, light and dark mode, no cookies, anonymous visit counts
+  ([GoatCounter](https://sg-haze.goatcounter.com), sent without loading any outside script), no
+  external libraries
 - **Not an official government website**
 
 Live site: **https://sghaze.github.io/**. This works because the repository is named

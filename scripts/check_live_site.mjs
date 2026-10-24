@@ -71,6 +71,8 @@ try {
   page.on('pageerror', (e) => errors.push(String(e)));
   page.on('console', (m) => { if (m.type() === 'error') errors.push(`${m.text()} @ ${m.location()?.url || ''}`); });
   page.on('requestfailed', (r) => errors.push(`request failed: ${r.url()} ${r.failure()?.errorText}`));
+  const counted = [];
+  page.on('request', (r) => { if (r.url().includes('goatcounter.com')) counted.push(r.url()); });
 
   // Record what OneMap actually sent back, so CORS failures can be diagnosed.
   const onemap = new Map();
@@ -209,6 +211,8 @@ try {
   const airErrors = errors.filter((e) => e.includes('data.gov.sg'));
   const siteErrors = errors.filter((e) => !e.includes('data.gov.sg'));
   if (airErrors.length) warn('browser errors from data.gov.sg', airErrors.slice(0, 3).join(' | '));
+  // This check is an automated browser, so the site must not count its visits.
+  check(counted.length === 0, 'automated checks are not counted as visitors', counted[0] || '');
   check(siteErrors.length === 0, 'no browser errors (CSP, scripts, failed requests)',
     siteErrors.length ? `${siteErrors.length} errors, first: ${siteErrors[0]}` : '');
   await context.close();
